@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in an HTML file (Test Site)</title>
+
+    <script>
+        alert("Hello, World!");
+    </script>
+
+    <script src="first.js"></script>
+</head>
+<body>
+    <p>Nothing going on yet.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let person = prompt("Please enter your name", "Harry Potter");
+
+        if (person != null) {
+            document.getElementById("demo").innerHTML = "Hello " + person + "!  How are you today?";
+        }
+    </script>
+
+    <h1>The Window Object</h1>
+    <h2>The confirm() Method</h2>
+    <p>Click the button to see line-breaks in a confirm box.</p>
+
+    <button onclick="myFuntion()">Try it</button>
+
+
+    <p class="demo2"></p>
+    
+    <script>
+        function myFunction() {
+            let text = "Press a button!\nEither OK or Cancel.";
+            if(confirm(text) == true) {
+                text = "You pressed OK!";
+            } else {
+                text = "You canceled!";
+            }
+
+            document.getElementsByClassName ("demo2").innerHTML = text;  
+        }
+
+    </script>
+</body>
+</html>

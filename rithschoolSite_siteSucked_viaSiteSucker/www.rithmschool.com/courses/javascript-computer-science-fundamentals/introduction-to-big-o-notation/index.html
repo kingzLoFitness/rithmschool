@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn essential JavaScript Computer Science Fundamentals including data structures and algorithms, time and space complexity, big O notation and recursion">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free JavaScript Computer Science Course | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-898d5e549744bda561b0fe4cf113c8e45cc9ac22adbc510f0abf70f7223a9c65.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-1ee25ca5dae4b7455729ae69f9a574d958400000995d342c0850fdc8d695deb3.css" />
+
+  <script src="../../../assets/application-b300e95eb2f198640c0c0129a9c721fb0fb58d99de8617baa968d96afea7c988.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="VEkD19FO09gwumaooSmObsOIjVPolkPCzkRDwl2ndl7ct8/Ixwn3TBZMWBrFD+qteNgkC49Hm4+7IQn+6tKBow==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    <link rel="stylesheet" media="screen" href="../../../assets/sidebar-b92be40c45347064e43abeea74fbfa2becea39916b6315f12eda5d1c9c0e14b4.css" />
+
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">1 Complexity Analysis and Recursion</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      5 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="index.html">Introduction to Big O Notation</a>
+      </li>
+      <li>
+        <a href="../big-o-notation-exercises/index.html">Big O Exercises</a>
+      </li>
+      <li>
+        <a href="../introduction-to-recursion/index.html">Introduction to Recursion</a>
+      </li>
+      <li>
+        <a href="../recursion-exercises/index.html">Recursion Exercises</a>
+      </li>
+      <li>
+        <a href="../dynamic-programming/index.html">Dynamic Programming</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">2 Search and Sorting Algorithms</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../searching-algorithms/index.html">Searching Algorithms</a>
+      </li>
+      <li>
+        <a href="../basic-sorting-algorithms/index.html">Basic Sorting Algorithms</a>
+      </li>
+      <li>
+        <a href="../intermediate-sorting-algorithms/index.html">Intermediate Sorting Algorithms</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">3 Linked Lists</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      5 sections, 1 - 2 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../arrays-revisited/index.html">Arrays Revisited</a>
+      </li>
+      <li>
+        <a href="../singly-linked-lists/index.html">Singly Linked Lists</a>
+      </li>
+      <li>
+        <a href="../singly-linked-lists-exercises/index.html">Singly Linked Lists Exercises</a>
+      </li>
+      <li>
+        <a href="../doubly-linked-lists/index.html">Doubly Linked Lists</a>
+      </li>
+      <li>
+        <a href="../doubly-linked-lists-exercises/index.html">Doubly Linked Lists Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">4 Stacks and Queues</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-stacks/index.html">Introduction to Stacks</a>
+      </li>
+      <li>
+        <a href="../stacks-exercises/index.html">Stacks Exercises</a>
+      </li>
+      <li>
+        <a href="../introduction-to-queues/index.html">Introduction to Queues</a>
+      </li>
+      <li>
+        <a href="../queues-exercises/index.html">Queues Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">5 Binary Search Trees and Heaps</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      6 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-binary-search-trees/index.html">Introduction to Binary Search Trees</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-traversal/index.html">Binary Search Trees - Traversal</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-removal/index.html">Binary Search Trees - Removal</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-exercises/index.html">Binary Search Trees Exercises</a>
+      </li>
+      <li>
+        <a href="../binary-heaps-introduction/index.html">Binary Heaps</a>
+      </li>
+      <li>
+        <a href="../binary-heaps-exercises/index.html">Binary Heaps Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">6 Hash Tables</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-hash-tables/index.html">Introduction to Hash Tables</a>
+      </li>
+      <li>
+        <a href="../hash-tables-handling-collisions/index.html">Handling Collisions</a>
+      </li>
+      <li>
+        <a href="../hash-tables-exercises/index.html">Hash Tables Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">7 Graphs</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-graphs/index.html">Introduction to Graphs</a>
+      </li>
+      <li>
+        <a href="../graph-traversal-and-search/index.html">Graph Traversal and Search</a>
+      </li>
+      <li>
+        <a href="../pathfinding-with-graphs/index.html">Pathfinding with Graphs</a>
+      </li>
+      <li>
+        <a href="../graphs-exercises/index.html">Graphs Exercises</a>
+      </li>
+  </ul>
+</div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="nav-links text-center">
+      <a href="../index.html">Table of Contents</a>
+        | <a id="next-link" href="../big-o-notation-exercises/index.html">Next</a>
+    </div>
+    <h1 class="begin-text heading" >{&nbsp;Introduction to Big O Notation.&nbsp;}</h1>
+
+    <button id="show-courses">
+      <i class="fa fa-angle-double-right fa-2x"></i>
+    </button>
+
+    <div data-locked-chapter="false" data-unit="1" id="course-content">
+      <h3>Objectives</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Describe big-O notation</li>
+<li>Evaluate the runtime of algorithms using big-O notation</li>
+<li>Compare fastest to slowest asymptotic complexities of common runtimes (e.g. O(1), O(log(n)), O(n), O(nlog(n)), O(n<sup>2</sup>), etc).</li>
+<li>Explain the difference between time complexity and space complexity</li>
+</ul>
+
+<h3>Algorithm Performance</h3>
+
+<p>When you are working on a solution to a problem, often times you will want to see how &quot;fast&quot; your solution is.  Unfortunately, there are many variables that go into the speed of your program.  For example, the hardware on your computer, the data set that you&#39;re using, the other programs running on the computer, and even the temperature in the room can all affect the speed of a program.  So simply using a timer to measure the speed of a program can be useful, but it may not always be a reliable way to compare one implementation to another.</p>
+
+<h3>Big O Notation: Background</h3>
+
+<p>A more theoretical way of comparing one algorithm to another is called <strong>big O</strong> notation.  Big O notation is a concept borrowed from mathematics that gives you an approximate upper bound on the runtime of your algorithm based on the size of the data set that the algorithm will use. If you&#39;re curious about a rigorous definition of the notation, check out <a target="_blank" href="https://en.wikipedia.org/wiki/Big_O_notation">this</a> article. For now, we&#39;ll focus on building an intuitive understanding of the notation so that you can apply it effectively.</p>
+
+<h3>Big O Notation</h3>
+
+<p>To get started with Big O notation, it is useful to understand what is important and what is not.  There are a couple of rules with the notation to remember:</p>
+
+<h4>1. Constants are ignored</h4>
+
+<h4>2. Smaller components are ignored</h4>
+
+<p>Keeping those rules in mind, the following are equivalent:</p>
+
+<ul>
+<li>O(500 * n) --&gt; O(n)</li>
+<li>O(99999999999) --&gt; O(1)</li>
+<li>O(10*n<sup>2</sup> + 5n + 20)  --&gt; O(n<sup>2</sup>)</li>
+<li>O(n * n) --&gt; O(n<sup>2</sup>)</li>
+<li>O(n*log(n) + 30000 * n) --&gt; O(n * log(n))</li>
+</ul>
+
+<p>Notice that in all examples, constant values are replaced with 1, and all smaller components that are added are ignored.</p>
+
+<h3>Examples Big O Runtimes</h3>
+
+<p>Next, let&#39;s learning about analyzing an algorithm using Big O notation:</p>
+
+<p><strong>O(1)</strong></p>
+
+<p>The following functions are <strong>O(1)</strong> or <strong>constant time</strong> because the algorithm is not dependent on a variable size data set. In other words, regardless of the input size, the runtime of the algorithm will not grow beyond some constant size. (In many cases, it will be roughly the same regardless of the input).</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">add</span>(num1, num2, num3) {
+   <span class="keyword">return</span> num1 + num2 + num3;
+}
+</pre></div>
+</div>
+
+<p>In the above example, <code>add</code> requires two addition operations. The size of the numbers doesn&#39;t affect how many additions need to be performed, so in this case the runtime isn&#39;t dependent on the size of the inputs.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">sayHello</span>() {
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; <span class="integer">100</span>; i++) {
+       console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello</span><span class="delimiter">&quot;</span></span>);
+    }
+}
+</pre></div>
+</div>
+
+<p><code>sayHello</code> logs a message to the console 100 times whenever it is called. This function is also O(1); it doesn&#39;t even have any inputs!</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">logMultiples</span>(num) {
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; <span class="integer">10</span>; i++) {
+        console.log(i * num);
+    }
+}
+</pre></div>
+</div>
+
+<p>The <code>logMultiples</code> function logs the first ten multiples of the input to the console. Regardless of the size of <code>num</code>, however, only the first ten multiples will ever be logged. In other words, the runtime once again does not depend on the size of the input, and this function is also O(1).</p>
+
+<p><strong>O(n)</strong></p>
+
+<p>The following algorithms are <strong>O(n)</strong>, or <strong>linear time</strong>, because the data set is iterated over approximately one time:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">sayHello</span>(numberOfTimes) {
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; numberOfTimes; i++) {
+        console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello</span><span class="delimiter">&quot;</span></span>);
+    }
+}
+</pre></div>
+</div>
+
+<p>Unlike our previous <code>sayHello</code> function, this one takes an argument, which controls how many times <code>Hello</code> gets logged to the console. In this case, the runtime of the function should be roughly proportional to the size of <code>numberOfTimes</code>. For example, it should take roughly ten times as long to log <code>Hello</code> 1,000 times as it does to log <code>Hello</code> 100 times. Setting <code>numberOfTimes</code> equal to <code>n</code>, the size of the input, this means that the runtime of <code>sayHello</code> is O(n).</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">doubleThenTriple</span>(numbers) {
+    <span class="keyword">var</span> doubled = numbers.map(<span class="keyword">function</span>(num) {
+        <span class="keyword">return</span> num * <span class="integer">2</span>;
+    });
+
+    <span class="keyword">return</span> doubled.map(<span class="keyword">function</span>(num) {
+        <span class="keyword">return</span> num * <span class="integer">3</span>;
+    });
+}
+</pre></div>
+</div>
+
+<p>In the above example we map over the data set twice.  So you could say the runtime is <strong>O(n + n)</strong> or <strong>O(2*n)</strong>.  However, in big O notation, constants are ignored.  So, <strong>O(2*n)</strong> is equivalent to <strong>O(n)</strong>. What matters is that the runtime scales in proportion to the input size, not the details of the proportional relationship.</p>
+
+<p><strong>O(n<sup>2</sup>)</strong></p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">allPairs</span>(arr) {
+    <span class="keyword">var</span> pairs = [];
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; arr.length; i++) {
+        <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="integer">1</span>; j &lt; arr.length; j++) {
+            pairs.push([arr[i], arr[j]]);
+        }
+    }
+
+    <span class="keyword">return</span> pairs;
+}
+</pre></div>
+</div>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">bubbleSort</span>(arr) {
+  <span class="keyword">var</span> len = arr.length;
+  <span class="keyword">var</span> lastSwap;
+  <span class="keyword">var</span> temp
+  <span class="keyword">while</span> (len != <span class="integer">0</span>) {
+    lastSwap = <span class="integer">0</span>;
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">1</span>; i &lt; len; i++) {
+      <span class="keyword">if</span> (arr[i - <span class="integer">1</span>] &gt; arr[i]) {
+        <span class="comment">// Swap the two elements</span>
+        temp = arr[i-<span class="integer">1</span>];
+        arr[i-<span class="integer">1</span>] = arr[i];
+        arr[i] = temp;
+        lastSwap = i;
+      }
+    }
+    len = lastSwap;
+  }
+}
+</pre></div>
+</div>
+
+<p>In these two examples, within each element of the array, we are iterating over all elements again.  Therefore, the runtime is O(n * n) or <strong>O(n<sup>2</sup>)</strong>.</p>
+
+<p>It&#39;s a helpful rule of thumb that in general, if you see nested loops, the runtime will be O(n<sup>levels of nesting</sup>). In other words, a function with a single <code>for</code> loop will be O(n), a function with a loop inside of a loop will be O(n<sup>2</sup>), a function with a loop inside of a loop inside of a loop will be O(n<sup>3),</sup> and so on. However, this rule of thumb doesn&#39;t always hold, as the following examples show:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">logMultiples</span>(n) {
+    <span class="keyword">for</span> (<span class="keyword">var</span> num1 = <span class="integer">1</span>; num1 &lt;= n; num1++) {
+        <span class="keyword">for</span> (<span class="keyword">var</span> num2 = <span class="integer">1</span>; num2 &lt;= n; num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+
+<span class="keyword">function</span> <span class="function">logSomeMultiples</span>(n) {
+    <span class="keyword">for</span> (<span class="keyword">var</span> num1 = <span class="integer">1</span>; num1 &lt; n=; num1++) {
+        <span class="keyword">for</span> (<span class="keyword">var</span> num2 = <span class="integer">1</span>; num2 &lt;= Math.min(n, <span class="integer">10</span>); num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+</pre></div>
+</div>
+
+<p>The first function, <code>logMultiples</code>, is O(n<sup>2</sup>). When <code>n</code> is 1, the function logs 1 multiple; when <code>n</code> is 2, the function logs 4 multiples; when <code>n</code> is 3, the function logs 9 multiples, and so on.</p>
+
+<p>What about the second function, <code>logSomeMultiples</code>? It might seem like this function should be O(n<sup>2</sup>) as well, because of the inner loop. However, the runtime of the inner loop is not proportional to n! The inner loop will run a maximum of 10 times, so it is actually an O(1) operation. This means that the outer loop, which is still O(n), performs an O(1) operation for each value of <code>num1</code>. Therefore, <code>logSomeMultiples</code> is itself O(n), not O(n<sup>2</sup>).</p>
+
+<h3>Comparing Common Big O Runtimes</h3>
+
+<p>In the following chart the X axis represents the size of the input (size of the array of data for example) and the Y axis represents a unit of time to run the program.</p>
+
+<p><strong>Legend</strong></p>
+
+<table><thead>
+<tr>
+<th>Color</th>
+<th>Big O Runtime</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Blue</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>O(log(n))</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>O(n*log(n))</td>
+</tr>
+<tr>
+<td>Purple</td>
+<td>O(n<sup>2</sup>)</td>
+</tr>
+</tbody></table>
+
+<p><img src="../../../content/javascript_computer_science/big_o_graph.png" alt="Big O Graph"></p>
+
+<p>As you can see from the chart, as the input size goes up, the performance of these algorithms is dramatically different.</p>
+
+<h3>Across Time and Space</h3>
+
+<p>So far we&#39;ve only been talking about the runtime of different algorithms using Big O Notation. This is often referred to as analyzing the <strong>time complexity</strong> of the algorithm. </p>
+
+<p>But Big O isn&#39;t just used to talk about the time it takes our programs to run; it&#39;s also used to talk about how much space (i.e. memory) our program requires. This is often referred to as analyzing the <strong>space complexity</strong> of the algorithm.</p>
+
+<p>Very often we&#39;re concerned primarily with <strong>auxiliary space complexity</strong>, that is, how much additional memory does the algorithm require beyond what needs to be allocated for the inputs themselves?</p>
+
+<p>Let&#39;s look at a couple of examples:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">total</span>(array) {
+    <span class="keyword">var</span> total = <span class="integer">0</span>;
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; array.length; i++) {
+        total += array[i];
+    }
+    <span class="keyword">return</span> total;
+}
+</pre></div>
+</div>
+
+<p>In this example, <code>total</code> takes one input, which is an array. Let&#39;s let <code>n</code> denote the length of the array. Note that the time complexity of <code>total</code> is O(n), since we&#39;re looping through the array once and adding to the total. However, the space complexity is just O(1), since we only require one additional unit of space, for the number stored in <code>total</code>.</p>
+
+<p>Here&#39;s another example:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="reserved">double</span>(array) {
+    <span class="keyword">var</span> newArray = [];
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; array.length; i++) {
+        newArray.push(<span class="integer">2</span> * array[i]);
+    }
+    <span class="keyword">return</span> newArray;
+}
+</pre></div>
+</div>
+
+<p>Here, our function <code>double</code> takes each element of the input array, doubles it, and returns a new array of doubled values. In this case, both the time and space complexities are O(n). Space complexity is larger in this case because we need n additional units of space: one for each element in the original array.</p>
+
+    </div>
+
+    <p>
+        When you're ready, move on to <a id="next-link" href="../big-o-notation-exercises/index.html">Big O Exercises</a>
+
+    </p>
+
+    <p class="text-center">
+    <a class="apply-now" href="../big-o-notation-exercises/index.html">Continue</a>
+</p>
+  </div>
+</div>
+<script src="../../../assets/online_course_chapter-f3311881902b6b595dc86c6e981f2010c8ee4df14b9389b5bbb945badae6f42b.js"></script>
+<script src="../../../assets/online_course-d9a4889bd8a88fe2cbd56af4193f8f10873f1228aeaa35e863920564c4706528.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#01686f676e41736875696c7262696e6e6d2f626e6c"><span class="__cf_email__" data-cfemail="1a73747c755a68736e727769797275757634797577">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="Buh5P/bJctI/BsTe4099KHgIUng1eZB9LotkZkMATjKOFrUg4I5WRhnw+myHaRnrw1j7IFKoSDBb7i5a9HW5zw==" />  <div id="modal-email-known" style="display:none;">
+    <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
+    <div class="email-errors text-center"></div>
+    <hr class="modal--bar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="form-group">
+          <input class="form-control" placeholder="Email" type="email" id="confirm-email-input">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <button id="confirm-email" type="submit" class="btn btn-xl">Sign In</button>
+    <div class="text-center">
+      <a href="javascript:void(0)" style="margin-top:-20px; display:block;" class="modal-go-back">Go Back</a>
+    </div>
+  </div>
+  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+          <a class="text-center email-known" href="javascript:void(0)">Already signed up?</a>
+    </div>
+  </div>
+    <div id="modal-second-part" style="display:none;">
+      <h1 class="text-center">Tell us more about yourself</h1>
+        <div class="col-sm-offset-2 col-sm-8">
+          <hr class="modal--bar">
+          <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+          <div class="errors text-center"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            How would you define your skill as a developer?
+            <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+            <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+            <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            Would you like to learn more about Rithm School's in-person courses and how to apply?
+            <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+            <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script> -->
+
+<!-- Google Code for Free Content Leads Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858935159;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "LdkJCOzLlXAQ957JmQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/858935159/?label=LdkJCOzLlXAQ957JmQM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

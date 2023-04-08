@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Familiarize yourself with the basic syntax and structure of JavaScript. This popular programming language is great for beginners looking to dive into coding.">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free JavaScript Fundamentals Course | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-311b580d4f39aec53c868044c9c4ddd3dcb9f6b785075ced94beae423f2fe997.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-73b12655e06c0656e106350abb90762bd63ab97cd8134948e3ed89f65216b009.css" />
+
+  <script src="../../../assets/application-cc8be59eb7a71132791fe5ed500b55b1df74021b49c9df6547756bc21c564bf2.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kq7G2Kk3CjWs/T1uD8DDcVElJXuMK8bfAKk/hUzuUJZsACbL9CY0VamY9j7UoU6TdSO/Ra4Qo3nG2hActhTeMw==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- start Mixpanel -->
+
+  <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("5080e5eebdaa906ad44bebec9a917acb");</script>
+
+
+<!-- end Mixpanel --><!-- end Mixpanel -->
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right" id="mixpanelNav">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="#apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+<h1 class="begin-text heading" >{&nbsp;JavaScript History and Setup.&nbsp;}</h1>
+
+<div data-locked-chapter="false" data-unit="1" id="course-content">
+  <h3>Objectives</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Define what JavaScript is, where it can be used, and how it came to be</li>
+<li>Describe the evolution of JavaScript and how it has changed rapidly</li>
+<li>Show messages using <code>alert</code> and <code>console.log</code></li>
+<li>Include a script in an HTML file</li>
+</ul>
+
+<h3>Introduction to JavaScript</h3>
+
+<p>So, what&#39;s JavaScript? JavaScript is a programming language that is essential for web development. If you think of any web page you interact with today, JavaScript is most likely providing the action on the page. JavaScript can be used to change the status of a button when it is clicked on, create a chat window at the bottom of your screen, or even create a web-based game.  With modern tools like <a target="_blank" href="https://nodejs.org">Node.js</a>, JavaScript can now also be used to save data to a database or to create desktop applications. The applications are limitless, and we&#39;re excited to see what you&#39;ll create. Along with HTML and CSS, JavaScript is one of the three major tools you&#39;ll need to understand if you want to build a modern website. While this course won&#39;t focus on HTML or CSS, a little later on we&#39;ll show you how to include JavaScript in a basic HTML file.</p>
+
+<p>Before we get there, though, let&#39;s begin with a little history about JavaScript.</p>
+
+<p>From <a target="_blank" href="https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript">W3C</a>:</p>
+
+<blockquote>
+<p>JavaScript, not to be confused with Java, was created in 10 days in May 1995 by Brendan Eich, then working at Netscape and now of Mozilla. JavaScript was not always known as JavaScript: the original name was Mocha, a name chosen by Marc Andreessen, founder of Netscape. In September of 1995 the name was changed to LiveScript, then in December of the same year, upon receiving a trademark license from Sun, the name JavaScript was adopted. This was somewhat of a marketing move at the time, with Java being very popular around then.</p>
+</blockquote>
+
+<h3>ECMAScript</h3>
+
+<p>Often in the JavaScript community you&#39;ll hear the word ECMAScript thrown around as well, as in ECMAScript 2015 (abbreviated to ES2015, or sometimes ES6). So what&#39;s the difference between ECMAScript and JavaScript? There are plenty of resources online discussing the difference, but essentially ECMAScript is a <em>standard</em>. JavaScript is an implementation of that standard. The standard dictates certain features and sets of functionality, but there can be different implementations that follow the standard. There are many different JavaScript engines that implement the ECMAScript standard and are competing for dominance; the most popular right now is Google&#39;s V8 engine, but you can see a list of others <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript_engine">here</a>.</p>
+
+<p>So how did this standardization process develop? From <a target="_blank" href="http://archive.oreilly.com/pub/a/javascript/2001/04/06/js_history.html">JavaScript: How Did We Get Here?</a></p>
+
+<blockquote>
+<p>The introduction of IE3 and its unfortunate lack of support for the document.images array led Netscape and Sun to standardize the language with help from the European Computer Manufacturers Association (ECMA), giving us yet another name for what had by now become a strange hybrid of powerful and universally supported core functionality and often incompatible object models: ECMAScript. Standardization was begun in conjunction with ECMA in November 1996 and adopted in June 1997 by ECMA and by ISO in April 1998.</p>
+</blockquote>
+
+<p>JavaScript standardization is now run by a committee called TC39, which governs how ECMAScript features are designed, starting with ECMAScript 2016 (or what is called ES2016).</p>
+
+<h3>Tools For JavaScript Development</h3>
+
+<p>To help you get set up like a JavaScript developer, we&#39;d like you to install a few tools:</p>
+
+<ul>
+<li><a target="_blank" href="https://www.google.com/chrome/browser/">Google&#39;s Chrome Web Browser</a> - Google Chrome has great tools for working with JavaScript in your browser. You may be used to a different browser (e.g. Firefox or Safari) for surfing the web, but we <em>highly</em> encourage you to use Google Chrome for all of your web development.</li>
+<li><a target="_blank" href="https://www.sublimetext.com/3">Sublime Text 3</a> - Sublime Text is a text editor used for development.  It highlights your code and makes your development experience much nicer.  It&#39;s not stricly necessary, as there are other text editors around, but Sublime Text is a great option.</li>
+</ul>
+
+<h3>Where we will be writing most of our SHORT JavaScript</h3>
+
+<p>For most of our short JavaScript examples, we will be using the Chrome console. To open up the console press <code>Option + Command + j</code> on a Mac (or <code>Control + Shift + J</code> on Windows and Linux).  Another way to get to the console is to right click on the web page, select Inspect, and then move to the tab called <code>Console</code>.</p>
+
+<p>Inside of this console you can write JavaScript! So let&#39;s start by alerting a message. In the Chrome Console, type the following:</p>
+<div class="CodeRay">
+  <div class="code"><pre>alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">JavaScript is sweet!</span><span class="delimiter">&quot;</span></span>);
+</pre></div>
+</div>
+
+<p>Hit enter, and you should see a pop-up window with the message you typed inside of the <code>alert</code>. (Make sure that when you are writing commands in the Chrome console, you always press enter after you type your code; otherwise, the code won&#39;t run.) Try it again with a different message!</p>
+
+<p>If you find those pop-ups annoying, you can also tell JavaScript to log a message directly to the console, using a function called <code>console.log</code>. Try it out:</p>
+<div class="CodeRay">
+  <div class="code"><pre>console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">This is less obtrusive.</span><span class="delimiter">&quot;</span></span>);
+</pre></div>
+</div>
+
+<p>Once again, after you&#39;ve written the JavaScript, press enter to execute your code. You should see this message logged in the console.</p>
+
+<p>As you start typing more in the console, you will see it begins to fill up quickly. If you would like to clear the console you can either type in <code>clear()</code> and press enter or press <code>command + k</code>. You can watch the following video to learn more about how to get started with the chrome console.</p>
+
+<h3>Getting started with the chrome console</h3>
+
+<p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/184161239' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div></p>
+
+<p>If you would like see learn some more keyboard shortcuts with the chrome console, you can learn more about that <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts?hl=en">here</a></p>
+
+<h3>Writing longer scripts</h3>
+
+<p>The console is great for writing little bits of JavaScript. But if you need to write code that spans multiple lines, it can be a little annoying. You&#39;ll need to type <code>shift + enter</code> to get a line break in the console, since just hitting <code>enter</code> executes your code. This isn&#39;t too much trouble for code that&#39;s a few lines, but writing a lot of JavaScript in this way can quickly get tiring.</p>
+
+<p>If you want to write longer scripts, you have a few options. We&#39;ll outline some of them here:</p>
+
+<p><strong>Option 1: Use an online editor</strong></p>
+
+<p>There are a number of websites out there that will let you write a larger chunk of code, then run it at the click of a button. Some popular ones are <a target="_blank" href="http://www.jsbin.com">JS Bin</a>, <a target="_blank" href="https://repl.it/">Repl.it</a>, <a target="_blank" href="https://jsfiddle.net/">JS Fiddle</a>, and <a target="_blank" href="http://codepen.io/">CodePen</a>. These aren&#39;t tools you&#39;ll be using to write extensive JavaScript applications, but they can be helpful learning tools to use until you get more comfortable combining HTML, CSS, and JavaScript.</p>
+
+<p>These tools do have a few quirks, though, and they all have a bit of a learning curve. So eventually it&#39;s probably best to move on to one of the following options.</p>
+
+<p><strong>Option 2: Include JavaScript in an HTML file</strong></p>
+
+<p>Another option is to create an HTML file that we can save and edit, and include our JavaScript in that file. To get started, open up a text editor like Sublime Text and create a file with a .html extension (<code>index.html</code> for example). Save your file! </p>
+
+<p>Every HTML file needs a little bit of boilerplate to get started. For now, you can copy and paste the following code in your <code>index.html</code> file:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+<span class="tag">&lt;title&gt;</span>JavaScript Test Site<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>Nothing going on yet.<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>How do we add JavaScript? For now, edit the file by adding a <code>&lt;script&gt;&lt;/script&gt;</code> tag. Inside of the <code>&lt;script&gt;&lt;/script&gt;</code> tag you can write JavaScript. Here&#39;s an example of how that might look:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+<span class="tag">&lt;title&gt;</span>JavaScript Test Site<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+<span class="inline">
+    alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello, World!</span><span class="delimiter">&quot;</span></span>);</span>
+
+<span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>Nothing going on yet.<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>Now all you need to do is open this file in Chrome. In Sublime Text this is pretty straightforward: You can <code>control + click</code> on the code and select &quot;Open in Browser&quot; to open the file.</p>
+
+<p>Once the page loads in Chrome, you should see the alert message pop up. In other words, the JavaScript executes automatically, there&#39;s no need for you to take any action.</p>
+
+<p>Once you get that working, try writing a few lines of JavaScript inside of your <code>script</code> tags. </p>
+
+<p><strong>Option 3: JavaScript and HTML in 2 Separate Files</strong></p>
+
+<p>Another option is to keep your HTML and JavaScript in separate files. This is a better practice, especially as your HTML and JavaScript files get longer. To do this, you still need to include a <code>script</code> tag in your HTML, but now this tag should link to a separate JavaScript file. Here&#39;s how you could do that if you have a file called <code>first.js</code>:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+<span class="tag">&lt;title&gt;</span>JavaScript Test Site<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">first.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>Nothing going on yet.<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>In this case, we also need a additional JavaScript file called <code>first.js</code>! So create this file, and inside of it write some JavaScript. Maybe it looks like this:</p>
+<div class="CodeRay">
+  <div class="code"><pre>alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">Coming to you from first.js!</span><span class="delimiter">&quot;</span></span>);
+</pre></div>
+</div>
+
+<p>As before, the code should execute as soon as you open the HTML page in Chrome. </p>
+
+<h3>Exercises</h3>
+
+<ol>
+<li>What is the difference between JavaScript and ECMAScript?</li>
+<li>Who is Brendan Eich?</li>
+<li>How do you hide and show the Chrome console?</li>
+<li>Create a simple page with a script tag. Inside of the script tag declare a couple of variables and then log their values to the console.</li>
+<li>Research <code>prompt</code> and <code>confirm</code> - what do they do?</li>
+</ol>
+
+</div>
+
+<p>
+    When you're ready, move on to <a id="next-link" href="../introduction-to-javascript-variables-and-primitives/index.html">Variables and Primitives</a>
+
+</p>
+
+<p class="text-center">
+    <a class="apply-now" href="../introduction-to-javascript-variables-and-primitives/index.html">Continue</a>
+</p>
+<script src="../../../assets/online_course_chapter-7184317fdfc1eadd48d978323e8253c1efbfd066fe264614c17f90cb37de011c.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#c2abaca4ad82b0abb6aaafb1a1aaadadaeeca1adaf"><span class="__cf_email__" data-cfemail="4821262e27083a213c20253b2b20272724662b2725">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="8pFAth6aGdjcboSaVR59BX9ckv+LbKsRarXd95LKHP0MP6ClQ4snuNkLT8qOf/DnW1oIwalXzresxvJuaDCSWA==" />  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+    </div>
+  </div>
+      <div id="modal-second-part" style="display:none;">
+        <h1 class="text-center">Tell us more about yourself</h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+            <div class="errors text-center"></div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              How would you define your skill as a developer?
+              <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+              <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+              <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              Would you like to learn more about Rithm School's in-person courses and how to apply?
+              <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+              <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script>
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

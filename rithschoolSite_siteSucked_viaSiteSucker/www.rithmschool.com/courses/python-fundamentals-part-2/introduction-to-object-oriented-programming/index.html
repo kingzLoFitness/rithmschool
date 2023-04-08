@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Familiarize yourself with the more advanced concepts in Python. This popular programming language is great for beginners looking to dive into programming and data science.">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free Python Fundamentals Course Part 2 | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-898d5e549744bda561b0fe4cf113c8e45cc9ac22adbc510f0abf70f7223a9c65.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-1ee25ca5dae4b7455729ae69f9a574d958400000995d342c0850fdc8d695deb3.css" />
+
+  <script src="../../../assets/application-b300e95eb2f198640c0c0129a9c721fb0fb58d99de8617baa968d96afea7c988.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cTeN2ivXk+bJlhprycVxyCGylBkvkuptHgeNBRAjxFj5yUHFPZC3cu9gJNmt4xULmuI9QUhDMiBrYsc5p1YzpQ==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    <link rel="stylesheet" media="screen" href="../../../assets/sidebar-b92be40c45347064e43abeea74fbfa2becea39916b6315f12eda5d1c9c0e14b4.css" />
+
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">1 Object Oriented Programming with Python</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="index.html">Introduction to Object Oriented Programming in Python</a>
+      </li>
+      <li>
+        <a href="../python-inheritance-and-mro/index.html">Inheritance and MRO</a>
+      </li>
+      <li>
+        <a href="../python-special-methods-and-polymorphism/index.html">Special Methods and Polymorphism</a>
+      </li>
+      <li>
+        <a href="../python-object-oriented-programming-exercises/index.html">Object Oriented Programming in Python Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">2 File IO</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../python-file-io-introduction/index.html">File I/O Introduction</a>
+      </li>
+      <li>
+        <a href="../python-file-io-csv/index.html">File I/O with CSVs</a>
+      </li>
+      <li>
+        <a href="../python-file-io-exercise/index.html">File I/O Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">3 Generators, Iterators and Decorators</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 1 - 2 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../python-generators-and-iterators/index.html">Generators and Iterators</a>
+      </li>
+      <li>
+        <a href="../python-decorators/index.html">Decorators</a>
+      </li>
+      <li>
+        <a href="../python-lambdas-and-dates/index.html">Lambdas and Dates</a>
+      </li>
+      <li>
+        <a href="../python-generators-iterators-and-decorators-exercises/index.html">Generators, Iterators and Decorators Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">4 Web Scraping and Server Side Requests</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../python-web-scraping-basics/index.html">Web Scraping</a>
+      </li>
+      <li>
+        <a href="../python-server-side-requests/index.html">Server Side HTTP Requests</a>
+      </li>
+      <li>
+        <a href="../python-web-scraping-exercises/index.html">Web Scraping Exercises</a>
+      </li>
+  </ul>
+</div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="nav-links text-center">
+      <a href="../index.html">Table of Contents</a>
+        | <a id="next-link" href="../python-inheritance-and-mro/index.html">Next</a>
+    </div>
+    <h1 class="begin-text heading" >{&nbsp;Introduction to Object Oriented Programming in Python.&nbsp;}</h1>
+
+    <button id="show-courses">
+      <i class="fa fa-angle-double-right fa-2x"></i>
+    </button>
+
+    <div data-locked-chapter="false" data-unit="1" id="course-content">
+      <h3>Objectives:</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Describe OOP without talking about code</li>
+<li>Describe what encapsulation is</li>
+<li>Describe what abstraction is</li>
+<li>Create classes using Python</li>
+<li>Write class and instance methods </li>
+</ul>
+
+<p>In Python 3, everything is an object! We can examine what kind of object using the <code>type()</code> function. We&#39;ve seen examples of this with built-in data types like booleans, strings, and integers. In this chapter, we&#39;ll create our own data types, in a way, using <em>classes</em>. Any instances of that class that we create will have a type equal to that class.</p>
+
+<h3>What is Object Oriented Programming?</h3>
+
+<p>Object oriented programming is a method of programming that attempts to model some process or thing in the world as a <strong>class</strong> or <strong>object</strong>. Conceptually, you can think of a class or object as something that has data and can perform operations on that data.  With object oriented programming, the goal is to <em>encapsulate</em> your code into logical groupings using classes so that you can reason about your code at a higher level. Before we get ahead of ourselves, though, let&#39;s define some terminology and see an example:</p>
+
+<p><strong>Class</strong> - A blueprint for objects. Classes can contain methods and properties. We commonly use classes to reduce code duplication.  </p>
+
+<p><strong>Instance</strong> - objects that are made from a class by calling the class. Instances share a similar structure because they all come from the same blueprint (i.e. class).</p>
+
+<h3>Poker Example</h3>
+
+<p>Say we want to model a game of poker in our program.  We could write the program using a list to represent the deck of cards, and then other lists to represent what each player has in their hand.  Then we&#39;d have to write a lot of functions to do things like deal, draw cards, see who wins, etc.</p>
+
+<p>When you end up writing large functions and lots of code in one file, there is usually a better way to organize your code.  Instead of trying to do everything at once, we could <strong>separate concerns</strong>.</p>
+
+<p>When thinking about a game of poker, some larger processes and objects stand out that you will want to capture in your code:</p>
+
+<ul>
+<li>Card</li>
+<li>Deck of cards</li>
+<li>Poker hand</li>
+<li>Poker game</li>
+<li>Discard pile (maybe)</li>
+<li>Player</li>
+<li>Bets</li>
+</ul>
+
+<p>Each one of these components could be a class in your program.  Let&#39;s pick one of the potential classes and figure out the data that it will hold and the functions that it should be able to perform:</p>
+
+<p><strong>Deck of cards</strong></p>
+
+<ul>
+<li>Cards - the deck should have 52 different playing cards</li>
+<li>Shuffle - the deck should be able to shuffle itself</li>
+<li>Deal a card - remove a card from the deck and deal it to a player</li>
+<li>Deal a hand - The deck may also be used to deal a hand to a player, or a set of players</li>
+</ul>
+
+<p>Now that we can conceptualize how a problem can be broken down into classes, let&#39;s talk about why programming this way can be useful.</p>
+
+<h3>Encapsulation</h3>
+
+<p>Encapsulation is the idea that data and processes on that data are owned by a class.  Other functions or classes outside of that class should not be able to directly change the data.</p>
+
+<p>In our deck class, we have 52 cards. The player class should not be able to choose any card he or she wants from the deck or change the order of a deck manually.  Instead a player can only be dealt a hand.  The contents of the deck is said to be <em>encapsulated</em> into the deck class because the deck owns the list of cards and it will not allow other classes to access it directly.</p>
+
+<h3>Abstraction</h3>
+
+<p>Abstraction is the result of a good object oriented design.  Rather than thinking about the details of how a class works internally, you can think about it at a higher level.  You can see all of the functions that are made available by the class and understand what the class does without having to see all of the code or worry about implementation details.</p>
+
+<p>Continuing with our example, if you had a deck of cards class and you saw that you could call the <code>.shuffle()</code> function or the <code>.deal()</code> function, you would have a good understanding of what the class does without having to understand how the functions are working internally.</p>
+
+<p>Other hallmarks of object oriented programming include inheritance and polymorphism. We&#39;ll discuss these later.</p>
+
+<h3>Creating a class</h3>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">class</span> <span class="class">Vehicle</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="predefined-constant">self</span>,make,model,year):
+        <span class="predefined-constant">self</span>.make = make
+        <span class="predefined-constant">self</span>.model = model
+        <span class="predefined-constant">self</span>.year = year
+</pre></div>
+</div>
+
+<p>Every class needs an <code>__init__</code> method. Every time you create an instance from a class in Python, that instance will get run through the <code>__init__</code> method. <code>self</code> inside of this method refers to the instance.</p>
+
+<p>To create an instance from a class, we instantiate the class using () and pass in the values to initialize the instance (these are defined in <code>__init__</code>).</p>
+<div class="CodeRay">
+  <div class="code"><pre>v = Vehicle(<span class="string"><span class="delimiter">'</span><span class="content">toyota</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">corolla</span><span class="delimiter">'</span></span>, <span class="integer">2012</span>)`
+</pre></div>
+</div>
+
+<h3>Methods and properties for instances</h3>
+
+<p>To add methods on instances, we simply define them in the class. When defining instance methods, the first argument should always be called <code>self</code>, and refers to the current instance. If you need to pass other arguments, do so after passing in <code>self</code>. Note that when you call these instance methods, you never pass in <code>self</code>. Here are a couple of examples: </p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">class</span> <span class="class">Person</span>():
+
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="predefined-constant">self</span>, first_name, last_name):
+        <span class="predefined-constant">self</span>.first_name = first_name
+        <span class="predefined-constant">self</span>.last_name = last_name
+
+    <span class="keyword">def</span> <span class="function">full_name</span>(<span class="predefined-constant">self</span>):
+        <span class="keyword">return</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">My name is {} {}</span><span class="delimiter">&quot;</span></span>.format(<span class="predefined-constant">self</span>.first_name, <span class="predefined-constant">self</span>.last_name)
+
+    <span class="keyword">def</span> <span class="function">likes</span>(<span class="predefined-constant">self</span>, thing):
+          <span class="keyword">return</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">{} likes {}!</span><span class="delimiter">&quot;</span></span>.format(<span class="predefined-constant">self</span>.first_name, thing)
+
+p = Person(<span class="string"><span class="delimiter">'</span><span class="content">Tim</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Garcia</span><span class="delimiter">'</span></span>)
+
+p.full_name() <span class="comment"># My name is Tim Garcia</span>
+p.likes(<span class="string"><span class="delimiter">&quot;</span><span class="content">computers</span><span class="delimiter">&quot;</span></span>) <span class="comment"># Tim likes computers!</span>
+</pre></div>
+</div>
+
+<p>Notice that we <strong>must</strong> add <code>self</code> as the first parameter to each of our instance methods.</p>
+
+<h3>Writing Class Methods</h3>
+
+<p>We&#39;ve seen how to add methods on instances. But what if we want to add a method on the class itself? To do this, we use a decorator! We&#39;ll talk more about decorators later. For now, it&#39;s enough to know that there are two decorators we can use to create class methods:</p>
+
+<p><strong>@classmethod</strong></p>
+
+<p>One way use to use the <code>@classmethod</code> decorator:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">class</span> <span class="class">Person</span>():
+
+    <span class="decorator">@classmethod</span>
+    <span class="keyword">def</span> <span class="function">say_hello</span>(cls):
+        <span class="keyword">return</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">HI!</span><span class="delimiter">&quot;</span></span>
+
+Person.say_hello() <span class="comment"># &quot;HI!&quot;</span>
+</pre></div>
+</div>
+
+<p>Similar to instance methods, the first argument in a class method has special meaning. For an instance method, the first argument refers to the instance, and is called <code>self</code>. For a class method, the first argument refers to the class, and is typically written as <code>cls</code>.</p>
+
+<p><strong>@staticmethod</strong></p>
+
+<p>Another decorator we can use is the <code>@staticmethod</code> decorator:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">class</span> <span class="class">Person</span>():
+
+    <span class="decorator">@staticmethod</span>
+    <span class="keyword">def</span> <span class="function">say_hello</span>():
+        <span class="keyword">return</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">HI!</span><span class="delimiter">&quot;</span></span>
+
+Person.say_hello() <span class="comment"># &quot;HI!&quot;</span>
+</pre></div>
+</div>
+
+<p>So what are the differences between these two? See if you can spot it and head over <a target="_blank" href="http://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python">here</a> after!</p>
+
+    </div>
+
+    <p>
+        When you're ready, move on to <a id="next-link" href="../python-inheritance-and-mro/index.html">Inheritance and MRO</a>
+
+    </p>
+
+    <p class="text-center">
+    <a class="apply-now" href="../python-inheritance-and-mro/index.html">Continue</a>
+</p>
+  </div>
+</div>
+<script src="../../../assets/online_course_chapter-f3311881902b6b595dc86c6e981f2010c8ee4df14b9389b5bbb945badae6f42b.js"></script>
+<script src="../../../assets/online_course-d9a4889bd8a88fe2cbd56af4193f8f10873f1228aeaa35e863920564c4706528.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#a9c0c7cfc6e9dbc0ddc1c4dacac1c6c6c587cac6c4"><span class="__cf_email__" data-cfemail="f69f989099b6849f829e9b85959e99999ad895999b">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="sdiz+9hRD11xi7ydQa9vtD/4R+YC3bBsBr1bO/JoCbc5Jn/kzhYryVd9gi8liQt3hKjuvmUMaCFz2BEHRR3+Sg==" />  <div id="modal-email-known" style="display:none;">
+    <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
+    <div class="email-errors text-center"></div>
+    <hr class="modal--bar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="form-group">
+          <input class="form-control" placeholder="Email" type="email" id="confirm-email-input">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <button id="confirm-email" type="submit" class="btn btn-xl">Sign In</button>
+    <div class="text-center">
+      <a href="javascript:void(0)" style="margin-top:-20px; display:block;" class="modal-go-back">Go Back</a>
+    </div>
+  </div>
+  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+          <a class="text-center email-known" href="javascript:void(0)">Already signed up?</a>
+    </div>
+  </div>
+    <div id="modal-second-part" style="display:none;">
+      <h1 class="text-center">Tell us more about yourself</h1>
+        <div class="col-sm-offset-2 col-sm-8">
+          <hr class="modal--bar">
+          <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+          <div class="errors text-center"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            How would you define your skill as a developer?
+            <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+            <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+            <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            Would you like to learn more about Rithm School's in-person courses and how to apply?
+            <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+            <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script> -->
+
+<!-- Google Code for Free Content Leads Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858935159;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "LdkJCOzLlXAQ957JmQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/858935159/?label=LdkJCOzLlXAQ957JmQM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

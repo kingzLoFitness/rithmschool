@@ -1,0 +1,51 @@
+n<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Specificity</title>
+	<style>
+
+	/*
+		We have 3 conflicting rules.  Which one wins?
+		- The element styling?
+		- the class styling?
+		- the id styling?
+
+		selector 		/ 	weighing
+		______________________________
+		- element 		/ 	1
+		- class 		/ 	10
+		- id 			/ 	100
+		- inline-style	/	1000
+		- !important	/ 	10000+
+	
+
+		- Cascading only applies when the rules have the same degree of specificity
+		- Rules about specificity determine the style, not rules about cascading
+
+		We previously mentioned that using inline styling (a <style> < /style> tag) can have some unintended consequences. Strong specificity is one of them! Remember that inline styling is equal to 1000 points and is far more specific than any id, class or element! Even more, using !important will override ANY styling that you have (unless you have a more specific !important) so try your best to not use it. Not only does it make it more difficult to write future CSS, but it can get complicated quickly when working with other developers. If we catch you writing !important in your CSS, we'll ask you to refactor immediately!
+
+
+	*/
+		#main {
+			background: green;
+		}
+		.container {
+			background: blue;
+		}
+		div {
+			background: red;
+			height: 200px;
+			width: 200px;
+		}
+		.winner {
+			background: aqua !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="container winner" id="main">
+	I AM A DIV!
+	</div>	
+</body>
+</html>

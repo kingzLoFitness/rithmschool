@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Javascript by reference vs. by value - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Javascript by reference vs. by value">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m looking for some good comprehensive reading material on when Javascript passes something by value and when by reference and when modifying a passed item affects the value outside a function and...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value">
+    <link rel="canonical" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value">
+
+    
+    
+    <script type="text/javascript" async="" src="./Javascript by reference vs. by value - Stack Overflow_files/ados"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/quant.js"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/beacon.js"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./Javascript by reference vs. by value - Stack Overflow_files/ados.js"></script><script src="./Javascript by reference vs. by value - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./Javascript by reference vs. by value - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Javascript by reference vs. by value - Stack Overflow_files/all.css">
+
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:3,shownCommentCount:3,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:6605640});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '6605640');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1492482084,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"http"},"user":{"fkey":"b54add863e1a97d04d62d610702c3172","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"958780d675b3","js/moderator.en.js":"cf1140838a54","js/full-anon.en.js":"54b8bcbc7ccb","js/full.en.js":"041af1af60bb","js/wmd.en.js":"eb09cf23b758","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"978c4e09340e","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8427f3abb985","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"47de10a8358f","js/review.en.js":"d88165840fb0","js/tagsuggestions.en.js":"ddb0e41afe26","js/post-validation.en.js":"1685ad6c0ae3","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"758694b07625","js/keyboard-shortcuts.en.js":"408f6158cde9","js/external-editor.en.js":"cb487078c372","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"cb487078c372","js/snippet-javascript.en.js":"8398bcc7e346","js/snippet-javascript-codemirror.en.js":"b22e49c7b20f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    <noscript id="noscript-css">&lt;style type="text/css"&gt;body,.so-header{margin-top:1.9em}&lt;/style&gt;</noscript>
+<script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/post-validation.en.js"></script><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/prettify-full.en.js"></script><script type="text/javascript" src="./Javascript by reference vs. by value - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="./Javascript by reference vs. by value - Stack Overflow_files/adFeedback.css"></head>
+<body class="question-page new-topbar">
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation" role="navigation" aria-label="site navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off" role="search">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">help</a>
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="https://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f6605640%2fjavascript-by-reference-vs-by-value" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="https://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 167 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f6605640%2fjavascript-by-reference-vs-by-value" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 7.0 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+        
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value" class="question-hyperlink">Javascript by reference vs. by value [duplicate]</a></h1>
+
+            
+<div class="aside-cta" role="navigation" aria-label="ask new question">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar" role="main" aria-label="question and answers">
+
+			
+
+<div class="question" data-questionid="6605640" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk474918829",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk474918829"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjM4OTkwLCJkaSI6IjU3Y2FhMWU0OWMyZjRlOGViZGNjMjFlMWNhMzhhOTA3IiwiZG0iOjEsImZjIjoxOTQzNDQ0LCJmbCI6MjE0MjMxMiwiaXAiOiIxMDguNi4xNzEuNDIiLCJrdyI6ImphdmFzY3JpcHQscmVmZXJlbmNlLHBhc3MtYnktcmVmZXJlbmNlLHBhc3MtYnktdmFsdWUiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJzYiI6ImktMDJiMjYxN2EyZWI4ZDc3ZjQiLCJzcCI6ODY4NCwic3QiOjgyNzcsInVrIjoidWUxLTlhZTJhODk5NTkxYTRjODM5NDc2NjgwNWJjYmEzMzYwIiwiem4iOjQzLCJ0cyI6MTQ5MjQ4MjA4NzUxMSwiYmYiOnRydWUsInBuIjoiYWR6ZXJrNDc0OTE4ODI5IiwidXIiOiJodHRwOi8vc3RhY2tvdmVyZmxvdy5jb20vam9icz91dG1fc291cmNlPXdlYnNpdGUmdXRtX21lZGl1bT1iYW5uZXImdXRtX2NvbnRlbnQ9bGVhZGVyYm9hcmRfOSZ1dG1fY2FtcGFpZ249aG91c2VfYWRzX2hvdXNlX2Fkc19ST1NfU08ifQ&amp;s=9AMVBKF7jaWH6Q5Rt9-eJz9IUG4" rel="nofollow" target="_blank" title=""><img src="./Javascript by reference vs. by value - Stack Overflow_files/054331674d33424abacccb7e6fa6956e.png" title="" alt="" border="0" width="728" height="90"></a><img height="0px" width="0px" border="0" style="position:absolute;" src="./Javascript by reference vs. by value - Stack Overflow_files/i.gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="6605640">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">208</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#">favorite</a>
+        <div class="favoritecount"><b>120</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<div class="question-status question-originals-of-duplicate">
+    <p>This question already has an answer here:</p>
+    <ul>
+        <li>
+            <a href="http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language" dir="ltr">Is JavaScript a pass-by-reference or pass-by-value language?</a>
+                <span class="question-originals-answer-count">
+                    27 answers
+                </span>
+        </li>
+    </ul>
+    </div>
+<p>I'm looking for some good comprehensive reading material on when Javascript passes something by value and when by reference and when modifying a passed item affects the value outside a function and when not.  I'm also interested in when assigning to another variable is by reference vs. by value and whether that follows any different rules than passing as a function parameter.</p>
+
+<p>I've done a lot of searching and find lots of specific examples (many of them here on SO) from which I can start to piece together pieces of the real rules, but I haven't yet found a single, well written document that describes it all.</p>
+
+<p>Also, are there ways in the language to control whether something is passed by reference or by value?</p>
+
+<p>Here are some of the types of questions I want to understand.  These are just examples - I'm actually looking to understand the rules the language goes by, not just the answers to specific examples.  But, here are some examples:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">function</span><span class="pln"> f</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln">b</span><span class="pun">,</span><span class="pln">c</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln">
+   b</span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">);</span><span class="pln">
+   c</span><span class="pun">.</span><span class="pln">first </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"eeny"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"miny"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"mo"</span><span class="pun">];</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> z </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">first</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">};</span><span class="pln">
+f</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln">y</span><span class="pun">,</span><span class="pln">z</span><span class="pun">);</span></code></pre>
+
+<p>When are the contents of x, y and z changed outside the scope of f for all the different types?</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">function</span><span class="pln"> f</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"1"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"3"</span><span class="pun">];</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];</span><span class="pln">
+    a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"4"</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// what is the value of b now for all possible data types that the array in "a" might hold?</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> f</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[{</span><span class="pln">yellow</span><span class="pun">:</span><span class="pln"> </span><span class="str">"blue"</span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span><span class="pln">red</span><span class="pun">:</span><span class="pln"> </span><span class="str">"cyan"</span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span><span class="pln">green</span><span class="pun">:</span><span class="pln"> </span><span class="str">"magenta"</span><span class="pun">}];</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];</span><span class="pln">
+    a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">].</span><span class="pln">red </span><span class="pun">=</span><span class="pln"> </span><span class="str">"tan"</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// what is the value of b now and why?</span><span class="pln">
+    b</span><span class="pun">.</span><span class="pln">red </span><span class="pun">=</span><span class="pln"> </span><span class="str">"black"</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// did the value of a[1].red change when I assigned to b.red?</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>If I want to make a fully independent copy of an object (no references whatsoever), what's the best practice way to do that?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag js-gps-track" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/reference" class="post-tag js-gps-track" title="show questions tagged &#39;reference&#39;" rel="tag">reference</a> <a href="http://stackoverflow.com/questions/tagged/pass-by-reference" class="post-tag js-gps-track" title="show questions tagged &#39;pass-by-reference&#39;" rel="tag">pass-by-reference</a> <a href="http://stackoverflow.com/questions/tagged/pass-by-value" class="post-tag js-gps-track" title="show questions tagged &#39;pass-by-value&#39;" rel="tag">pass-by-value</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/6605640" title="short permalink to this question" class="short-link" id="link-post-6605640">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/6605640/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/6605640/revisions" title="show all edits to this post">edited <span title="2011-07-07 04:17:12Z" class="relativetime">Jul 7 '11 at 4:17</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2011-07-07 03:58:59Z" class="relativetime">Jul 7 '11 at 3:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/816620/jfriend00"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/162aa26d42813f31a21ced4bc9195f23" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/816620/jfriend00">jfriend00</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 318,439" dir="ltr">318k</span><span title="33 gold badges"><span class="badge1"></span><span class="badgecount">33</span></span><span title="342 silver badges"><span class="badge2"></span><span class="badgecount">342</span></span><span title="422 bronze badges"><span class="badge3"></span><span class="badgecount">422</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                        <tr>
+            <td class="special-status" colspan="2">
+                <div class="question-status">
+        <h2>                    <b>marked</b> as duplicate by <a href="http://stackoverflow.com/users/811/shog9">Shog9</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2014-11-12 01:30:28Z" class="relativetime">Nov 12 '14 at 1:30</span></span>
+</h2>
+        <p>This question has been asked before and already has an answer. If those answers do not fully address your question, please <a href="http://stackoverflow.com/questions/ask">ask a new question</a>.</p>
+    </div>
+            </td>
+        </tr>
+    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-6605640" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-7795688" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This is a worthwhile read: <a href="http://en.wikipedia.org/wiki/Evaluation_strategy" rel="nofollow noreferrer">Wiki: Evaluation Strategy</a>. I prefer Call By Object Sharing to avoid such confusion and leave Call By Reference to actually mean something else, where it applies. To make a "clone" consider <code>jQuery.extend</code> (shallow clone only!) or similar provided by your choice of framework. (I think ECMA ed. 5 introduces <code>Object.clone</code> ...?). A "deep clone" can be achieved with serializing to JSON and back, where such an operation is preserving (it might not always be). I am sure there are also other functions designed for this :)</span>
+		            –&nbsp;<span class="comment-user">user166390</span>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment7795688_6605640"><span title="2011-07-07 04:21:31Z" class="relativetime-clean">Jul 7 '11 at 4:21</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 5 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-36955380" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I believe jQuery.extend now (1.8.x +) supports deep cloning (using an optional boolean parameter)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/589655/flak-dinenno" title="1,317 reputation" class="comment-user">Flak DiNenno</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment36955380_6605640"><span title="2014-06-01 18:53:09Z" class="relativetime-clean">Jun 1 '14 at 18:53</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-56035193" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">In the years since this question, I've found it is easiest to explain this issue to Javascript newbies (particularly people who know C/C++) by saying just this: "In Javascript, objects are passed by pointer and everything else is passed by value."</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/816620/jfriend00" title="318,439 reputation" class="comment-user owner">jfriend00</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment56035193_6605640"><span title="2015-12-07 21:25:54Z" class="relativetime-clean">Dec 7 '15 at 21:25</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-6605640" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								4 Answers
+                                <span style="display:none;" itemprop="answerCount">4</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="6605700"></a>
+<div id="answer-6605700" class="answer accepted-answer" data-answerid="6605700" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="6605700">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">356</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>My understanding is that this is actually very simple:</p>
+
+<ul>
+<li>Javascript is <em>always</em> pass by value, but when a variable refers to an object (including arrays), the "value" is a reference to the object. </li>
+<li>Changing the value of a variable <em>never</em> changes the underlying primitive or object, it just points the variable to a new primitive or object.</li>
+<li>However, changing a <em>property</em> of an object referenced by a variable does change the underlying object.</li>
+</ul>
+
+<p>So, to work through some of  your examples:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">function</span><span class="pln"> f</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln">b</span><span class="pun">,</span><span class="pln">c</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Argument a is re-assigned to a new value.</span><span class="pln">
+    </span><span class="com">// The object or primitive referenced by the original a is unchanged.</span><span class="pln">
+    a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// Calling b.push changes its properties - it adds</span><span class="pln">
+    </span><span class="com">// a new property b[b.length] with the value "foo".</span><span class="pln">
+    </span><span class="com">// So the object referenced by b has been changed.</span><span class="pln">
+    b</span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">);</span><span class="pln">
+    </span><span class="com">// The "first" property of argument c has been changed.</span><span class="pln">
+    </span><span class="com">// So the object referenced by c has been changed (unless c is a primitive)</span><span class="pln">
+    c</span><span class="pun">.</span><span class="pln">first </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"eeny"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"miny"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"mo"</span><span class="pun">];</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> z </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">first</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">};</span><span class="pln">
+f</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln">y</span><span class="pun">,</span><span class="pln">z</span><span class="pun">);</span><span class="pln">
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">,</span><span class="pln"> z</span><span class="pun">.</span><span class="pln">first</span><span class="pun">);</span><span class="pln"> </span><span class="com">// 4, ["eeny", "miny", "mo", "foo"], false</span></code></pre>
+
+<p>Example 2:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"1"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">foo</span><span class="pun">:</span><span class="str">"bar"</span><span class="pun">}];</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];</span><span class="pln"> </span><span class="com">// b is now "2";</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">2</span><span class="pun">];</span><span class="pln"> </span><span class="com">// c now references {foo:"bar"}</span><span class="pln">
+a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"4"</span><span class="pun">;</span><span class="pln">   </span><span class="com">// a is now ["1", "4", {foo:"bar"}]; b still has the value</span><span class="pln">
+              </span><span class="com">// it had at the time of assignment</span><span class="pln">
+a</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"5"</span><span class="pun">;</span><span class="pln">   </span><span class="com">// a is now ["1", "4", "5"]; c still has the value</span><span class="pln">
+              </span><span class="com">// it had at the time of assignment, i.e. a reference to</span><span class="pln">
+              </span><span class="com">// the object {foo:"bar"}</span><span class="pln">
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">b</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">.</span><span class="pln">foo</span><span class="pun">);</span><span class="pln"> </span><span class="com">// "2" "bar"</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/6605700" title="short permalink to this answer" class="short-link" id="link-post-6605700">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/6605700/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/6605700/revisions" title="show all edits to this post">edited <span title="2011-07-07 04:25:39Z" class="relativetime">Jul 7 '11 at 4:25</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-07-07 04:09:43Z" class="relativetime">Jul 7 '11 at 4:09</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/380487/nrabinowitz"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/053d583a4d4901a7a4a7be170eac482f" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/380487/nrabinowitz">nrabinowitz</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 42,135" dir="ltr">42.1k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="110 silver badges"><span class="badge2"></span><span class="badgecount">110</span></span><span title="138 bronze badges"><span class="badge3"></span><span class="badgecount">138</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-6605700" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-7795672" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="supernova">36</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">While technically true, I prefer to say JavaScript is <a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" rel="nofollow noreferrer">Pass By Object Sharing</a>. It avoids such confusion and moves to a "high level" view.</span>
+		            –&nbsp;<span class="comment-user">user166390</span>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment7795672_6605700"><span title="2011-07-07 04:19:54Z" class="relativetime-clean">Jul 7 '11 at 4:19</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-7795773" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@pst - That makes sense, but note the issues raised in the referenced Wikipedia page - most people don't use the term, and the (large) Java community calls this "pass-by-value". Still, I agree that it's a bit confusing.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/380487/nrabinowitz" title="42,135 reputation" class="comment-user">nrabinowitz</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment7795773_6605700"><span title="2011-07-07 04:30:18Z" class="relativetime-clean">Jul 7 '11 at 4:30</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37733329" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What "confusion" are you referring to? To me "pass-by-value" is perfectly clear.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/268091/memark" title="830 reputation" class="comment-user">MEMark</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment37733329_6605700"><span title="2014-06-24 19:56:59Z" class="relativetime-clean">Jun 24 '14 at 19:56</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-57436089" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">9</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><code>Changing the value of a variable never changes the underlying primitive or object. However, changing a property of an object referenced by a variable does change the underlying object.</code> These two sentences put together remove so many doubts. Thank you!</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1093223/amit-tomar" title="2,721 reputation" class="comment-user">Amit Tomar</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment57436089_6605700"><span title="2016-01-18 05:50:43Z" class="relativetime-clean">Jan 18 '16 at 5:50</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-61347989" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">coming from c, this is stupid and annoying, state state state...</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/4135670/rafael" title="1,998 reputation" class="comment-user">Rafael</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment61347989_6605700"><span title="2016-04-27 13:51:53Z" class="relativetime-clean">Apr 27 '16 at 13:51</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-6605700" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk2048505200",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk2048505200"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjI3NzYxLCJkaSI6IjliZWZkNjM1NGQ5YzQ5ZTQ5NjM5MWEwYTE3NzJkMzQ2IiwiZG0iOjEsImZjIjoxOTI0NDM5LCJmbCI6MjE0MjMxMiwiaXAiOiIxMDguNi4xNzEuNDIiLCJrdyI6ImphdmFzY3JpcHQscmVmZXJlbmNlLHBhc3MtYnktcmVmZXJlbmNlLHBhc3MtYnktdmFsdWUiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJzYiI6ImktMDJiMjYxN2EyZWI4ZDc3ZjQiLCJzcCI6ODY4NCwic3QiOjgyNzcsInVrIjoidWUxLTlhZTJhODk5NTkxYTRjODM5NDc2NjgwNWJjYmEzMzYwIiwiem4iOjQ0LCJ0cyI6MTQ5MjQ4MjA4NzUxMywiYmYiOnRydWUsInBuIjoiYWR6ZXJrMjA0ODUwNTIwMCIsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2pvYnM_dXRtX3NvdXJjZT13ZWJzaXRlJnV0bV9tZWRpdW09YmFubmVyJnV0bV9jb250ZW50PWxlYWRlcmJvYXJkXzEmdXRtX2NhbXBhaWduPWhvdXNlX2Fkc19ob3VzZV9hZHNfUk9TX1NPIn0&amp;s=A8ZRNZ1DfEDA3-a6lIbE2KhZW1Y" rel="nofollow" target="_blank" title=""><img src="./Javascript by reference vs. by value - Stack Overflow_files/b1c783298af4422390cf6cfc84560e82.png" title="" alt="" border="0" width="728" height="90"></a><img height="0px" width="0px" border="0" style="position:absolute;" src="./Javascript by reference vs. by value - Stack Overflow_files/i(1).gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+  
+<a name="6605767"></a>
+<div id="answer-6605767" class="answer" data-answerid="6605767" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="6605767">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">26</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Javascript <em>always</em> passes by value. However, if you pass an object to a function, the "value" is really a reference to that object, so the function can modify that object's properties <em>but not cause the variable outside the function to point to some other object</em>.</p>
+
+<p>An example:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">function</span><span class="pln"> changeParam</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">,</span><span class="pln"> z</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln">
+  y </span><span class="pun">=</span><span class="pln"> </span><span class="str">"new string"</span><span class="pun">;</span><span class="pln">
+  z</span><span class="pun">[</span><span class="str">"key2"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"new"</span><span class="pun">;</span><span class="pln">
+  z</span><span class="pun">[</span><span class="str">"key3"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"newer"</span><span class="pun">;</span><span class="pln">
+
+  z </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">"new"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"object"</span><span class="pun">};</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+    b </span><span class="pun">=</span><span class="pln"> </span><span class="str">"something"</span><span class="pun">,</span><span class="pln">
+    c </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">"key1"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"whatever"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"key2"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"original value"</span><span class="pun">};</span><span class="pln">
+
+changeParam</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">);</span><span class="pln">
+
+</span><span class="com">// at this point a is still 1</span><span class="pln">
+</span><span class="com">// b is still "something"</span><span class="pln">
+</span><span class="com">// c still points to the same object but its properties have been updated</span><span class="pln">
+</span><span class="com">// so it is now {"key1" : "whatever", "key2" : "new", "key3" : "newer"}</span><span class="pln">
+</span><span class="com">// c definitely doesn't point to the new object created as the last line</span><span class="pln">
+</span><span class="com">// of the function with z = ...</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/6605767" title="short permalink to this answer" class="short-link" id="link-post-6605767">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/6605767/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-07-07 04:19:08Z" class="relativetime">Jul 7 '11 at 4:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/615754/nnnnnn"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/SiiYj.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/615754/nnnnnn">nnnnnn</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 102,899" dir="ltr">103k</span><span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span><span title="107 silver badges"><span class="badge2"></span><span class="badgecount">107</span></span><span title="161 bronze badges"><span class="badge3"></span><span class="badgecount">161</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-6605767" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-60782080" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><code>Array</code> is a object so will change also.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2219158/shyammakwana-me" title="2,488 reputation" class="comment-user">shyammakwana.me</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment60782080_6605767"><span title="2016-04-13 08:14:58Z" class="relativetime-clean">Apr 13 '16 at 8:14</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-6605767" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="6605730"></a>
+<div id="answer-6605730" class="answer" data-answerid="6605730" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="6605730">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">18</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Yes, Javascript always passes by value, but in an array or object, the value is a reference to it, so you can 'change' the contents.</p>
+
+<p>But, I think you already read it on SO; <a href="http://snook.ca/archives/javascript/javascript_pass" rel="nofollow noreferrer">here</a> you have the documentation you want:</p>
+
+<p><a href="http://snook.ca/archives/javascript/javascript_pass" rel="nofollow noreferrer">http://snook.ca/archives/javascript/javascript_pass</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/6605730" title="short permalink to this answer" class="short-link" id="link-post-6605730">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/6605730/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/6605730/revisions" title="show all edits to this post">edited <span title="2016-08-09 02:25:13Z" class="relativetime">Aug 9 '16 at 2:25</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3739391/iliketocode"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/Ub5mH.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3739391/iliketocode">iliketocode</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,904</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-07-07 04:13:20Z" class="relativetime">Jul 7 '11 at 4:13</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/722331/edgar-villegas-alvarado"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/de057083353e7435174218bcaa3e191a" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/722331/edgar-villegas-alvarado">Edgar Villegas Alvarado</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,981" dir="ltr">15k</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="49 bronze badges"><span class="badge3"></span><span class="badgecount">49</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-6605730" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-7795676" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">While technically true, I prefer to say JavaScript is <a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" rel="nofollow noreferrer">Pass By Object Sharing</a>. It avoids such confusion and moves to a "high level" view.</span>
+		            –&nbsp;<span class="comment-user">user166390</span>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment7795676_6605730"><span title="2011-07-07 04:20:25Z" class="relativetime-clean">Jul 7 '11 at 4:20</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-36624671" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I made a fiddle to play around with this a bit: <a href="http://jsfiddle.net/tkane2000/7weKS/1/" rel="nofollow noreferrer">jsfiddle.net/tkane2000/7weKS/1</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/623388/tkane2000" title="180 reputation" class="comment-user">tkane2000</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment36624671_6605730"><span title="2014-05-22 13:54:37Z" class="relativetime-clean">May 22 '14 at 13:54</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-6605730" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="26610010"></a>
+<div id="answer-26610010" class="answer" data-answerid="26610010" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="26610010">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<ol>
+<li>Primitive type variable like string,number are always pass as  pass
+by value.</li>
+<li><p>Array and Object is passed as  pass by reference or  pass by value based on these two condition.</p>
+
+<ul>
+<li><p>if you are changing value of that Object or array with new Object or Array then it is pass by Value.</p>
+
+<p><code>object1 = {item: "car"};
+  array1=[1,2,3];</code></p></li>
+</ul>
+
+<p>here you are assigning new object or array to old one.you are not changing the value of property 
+of old object.so it is pass by value.</p>
+
+<ul>
+<li><p>if you are changing a property value of an object or array then it is pass by Reference.</p>
+
+<p><code>object1.item= "car";
+  array1[0]=9;</code></p></li>
+</ul>
+
+<p>here you are changing a property value of old object.you are not assigning new object or array to old one.so it is pass by reference.</p></li>
+</ol>
+
+<p><strong>Code</strong></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">    </span><span class="kwd">function</span><span class="pln"> passVar</span><span class="pun">(</span><span class="pln">object1</span><span class="pun">,</span><span class="pln"> object2</span><span class="pun">,</span><span class="pln"> number1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+        object1</span><span class="pun">.</span><span class="pln">key1</span><span class="pun">=</span><span class="pln"> </span><span class="str">"laptop"</span><span class="pun">;</span><span class="pln">
+        object2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            key2</span><span class="pun">:</span><span class="pln"> </span><span class="str">"computer"</span><span class="pln">
+        </span><span class="pun">};</span><span class="pln">
+        number1 </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> object1 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        key1</span><span class="pun">:</span><span class="pln"> </span><span class="str">"car"</span><span class="pln">
+    </span><span class="pun">};</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> object2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        key2</span><span class="pun">:</span><span class="pln"> </span><span class="str">"bike"</span><span class="pln">
+    </span><span class="pun">};</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> number1 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+
+    passVar</span><span class="pun">(</span><span class="pln">object1</span><span class="pun">,</span><span class="pln"> object2</span><span class="pun">,</span><span class="pln"> number1</span><span class="pun">);</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">object1</span><span class="pun">.</span><span class="pln">key1</span><span class="pun">);</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">object2</span><span class="pun">.</span><span class="pln">key2</span><span class="pun">);</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">number1</span><span class="pun">);</span><span class="pln">
+
+</span><span class="typ">Output</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">
+    laptop
+    bike
+    </span><span class="lit">10</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/26610010" title="short permalink to this answer" class="short-link" id="link-post-26610010">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/26610010/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/26610010/revisions" title="show all edits to this post">edited <span title="2016-08-09 02:25:00Z" class="relativetime">Aug 9 '16 at 2:25</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3739391/iliketocode"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/Ub5mH.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3739391/iliketocode">iliketocode</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,904</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-10-28 13:47:17Z" class="relativetime">Oct 28 '14 at 13:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2799834/mukund-kumar"><div class="gravatar-wrapper-32"><img src="./Javascript by reference vs. by value - Stack Overflow_files/iiN5N.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2799834/mukund-kumar">Mukund Kumar</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,383</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span><span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26610010" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="3" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-41846251" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">8</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">There's a time honored terminology debate about calling what Javascript does "pass by reference".  I prefer to side step that debate and call what JS does for objects and arrays "pass by pointer".  Arrays and Objects are always pass by pointer.  If you modify what was passed in (accessing the pointer), the original is modified.  If you assign a different array or object to the pointer variable, then the original is not modified because your variable now "points" to a different array or object.  Much of this is a "terminology debate", because there is no debate about what actually happens.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/816620/jfriend00" title="318,439 reputation" class="comment-user owner">jfriend00</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment41846251_26610010"><span title="2014-10-28 20:09:35Z" class="relativetime-clean">Oct 28 '14 at 20:09</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-41846443" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@newacct - And for those that like to claim "everything is pass by value", that doesn't help newbies understand the issue in any way no matter how technically correct you might think you are at some level.  Any good explanation has to explain the difference between how objects and primitives are passed such that a newbie understands the difference in practical use since the goal in a question and answer like this is a clear explanation that can be put to use for those who don't understand the finer implementation details or technical meaning of terms.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/816620/jfriend00" title="318,439 reputation" class="comment-user owner">jfriend00</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment41846443_26610010"><span title="2014-10-28 20:16:27Z" class="relativetime-clean">Oct 28 '14 at 20:16</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-41900595" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@jfriend00: The thing is, there is nothing special about "passing". It works the same way as assigning or any other operation. Once you understand that all values are either primitives or pointers to objects, and not talk about "objects" as values themselves, then there is no confusion. Also, the semantics of passing and assigning in JavaScript are identical to those in Java. And "everything is pass by value" is pretty much how Java is generally described on StackOverflow, combined with explanation how all non-primitives are pointers to objects.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/86989/newacct" title="78,174 reputation" class="comment-user">newacct</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment41900595_26610010"><span title="2014-10-30 08:13:56Z" class="relativetime-clean">Oct 30 '14 at 8:13</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-41901059" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@newacct - the point here is to explain to people who aren't sophisticated developers and saying everything is "pass by value" without a lot more explanation just simply isn't enough.  It doesn't explain the difference in how a primitive and an array are passed or assigned.  You can argue it's technically correct, but it's an insufficient explanation for non-sophisticated developers.  Your very comment that "once you understand ..." shows that it isn't sufficient until you understand other things - thus you can't just say "everything is pass by value" to a newbie and be done.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/816620/jfriend00" title="318,439 reputation" class="comment-user owner">jfriend00</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment41901059_26610010"><span title="2014-10-30 08:31:54Z" class="relativetime-clean">Oct 30 '14 at 8:31</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-41901471" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@newacct - OK fine.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/816620/jfriend00" title="318,439 reputation" class="comment-user owner">jfriend00</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#comment41901471_26610010"><span title="2014-10-30 08:45:12Z" class="relativetime-clean">Oct 30 '14 at 8:45</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-26610010" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" onclick="">show <b>3</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/reference" class="post-tag" title="show questions tagged &#39;reference&#39;" rel="tag">reference</a> <a href="http://stackoverflow.com/questions/tagged/pass-by-reference" class="post-tag" title="show questions tagged &#39;pass-by-reference&#39;" rel="tag">pass-by-reference</a> <a href="http://stackoverflow.com/questions/tagged/pass-by-value" class="post-tag" title="show questions tagged &#39;pass-by-value&#39;" rel="tag">pass-by-value</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2011-07-07 03:58:59Z"><b>5 years, 9 months ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>138453 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value?lastactivity" class="lastactivity-link" title="2016-08-09 02:25:13Z">8 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk979945394",[5,17,2221,1129,43]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk979945394"><div id="careersadsdoublehigh" style="display:none;"></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./Javascript by reference vs. by value - Stack Overflow_files/i(2).gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/6605640/javascript-by-reference-vs-by-value#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+            <div id="hireme"></div>
+        <script>
+window.clc_request = 'AiU-gJwBhtQIAAAAAEjLZAACAAAAAgAAAAA2AAAAfGphdmFzY3JpcHR8cmVmZXJlbmNlfHBhc3MtYnktcmVmZXJlbmNlfHBhc3MtYnktdmFsdWV8ACqHUGcgoQREA_o';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=1a6a0d1a9fff","u":"https://clc.stackoverflow.com/markup.js","azw":true,"kt":2000,"tto":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"h":"clc.stackoverflow.com","autoload":true,"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"]});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/518000?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  large">909</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?noredirect=1&amp;lq=1" class="question-hyperlink">Is JavaScript a pass-by-reference or pass-by-value language?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/15043917?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">4</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/15043917/is-javascript-pass-by-reference-or-pass-by-value?noredirect=1&amp;lq=1" class="question-hyperlink">Is JavaScript pass-by-reference or pass-by-value?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/17659392?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/17659392/javascript-function-arguments-store-by-reference?noredirect=1&amp;lq=1" class="question-hyperlink">JavaScript function arguments store by reference</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/31329670?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-3</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/31329670/oo-javascript-copy-of-object?noredirect=1&amp;lq=1" class="question-hyperlink">OO Javascript copy of object</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/26190180?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/26190180/javascript-variable-references-changing?noredirect=1&amp;lq=1" class="question-hyperlink">Javascript - Variable References Changing</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/17372571?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/17372571/why-do-objects-changed-in-function-change-what-they-point-to-in-memory-but-some?noredirect=1&amp;lq=1" class="question-hyperlink">Why do objects changed in function change what they point to in memory, but sometimes create a new memory object?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/34441076?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/34441076/assigning-objects-in-javascript-shallow-or-deep-copy?noredirect=1&amp;lq=1" class="question-hyperlink">Assigning objects in Javascript: shallow or deep copy?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/37904103?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/37904103/why-cannot-change-the-array-but-push-can?noredirect=1&amp;lq=1" class="question-hyperlink">Why = cannot change the array, but push can?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/36976895?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/36976895/why-assigning-an-object-to-another-variable-changing-the-initial-object-as-well?noredirect=1&amp;lq=1" class="question-hyperlink">Why assigning an object to another variable changing the initial object as well in Javascript</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/41478467?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/41478467/function-that-modifies-function-argument-and-persists?noredirect=1&amp;lq=1" class="question-hyperlink">Function that modifies function argument and persists</a>
+</div>					<div class="spacer more">
+				<a href="http://stackoverflow.com/questions/linked/6605640?lq=1">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/40480?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">4171</div></a><a href="http://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value?rq=1" class="question-hyperlink">Is Java “pass-by-reference” or “pass-by-value”?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/111102?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">7409</div></a><a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1" class="question-hyperlink">How do JavaScript closures work?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/134845?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">3170</div></a><a href="http://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0?rq=1" class="question-hyperlink">Which “href” value should I use for JavaScript links, “#” or “javascript:void(0)”?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/373419?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes large">299</div></a><a href="http://stackoverflow.com/questions/373419/whats-the-difference-between-passing-by-reference-vs-passing-by-value?rq=1" class="question-hyperlink">What's the difference between passing by reference vs. passing by value?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/518000?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes large">909</div></a><a href="http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?rq=1" class="question-hyperlink">Is JavaScript a pass-by-reference or pass-by-value language?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/986006?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1636</div></a><a href="http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference?rq=1" class="question-hyperlink">How do I pass a variable by reference?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1844262?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">4</div></a><a href="http://stackoverflow.com/questions/1844262/how-to-copy-the-value-of-a-reference-in-javascript?rq=1" class="question-hyperlink">How to copy the value of a reference in javascript?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2030906?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">143</div></a><a href="http://stackoverflow.com/questions/2030906/are-arrays-in-php-passed-by-value-or-by-reference?rq=1" class="question-hyperlink">Are arrays in PHP passed by value or by reference?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/13104494?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">213</div></a><a href="http://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference?rq=1" class="question-hyperlink">Does Javascript pass by reference?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/38937127?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/38937127/javascript-function-expression-assigned-to-a-variable-pass-by-reference-or-valu?rq=1" class="question-hyperlink">JavaScript function expression assigned to a variable (pass by reference or value?)</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-bricks" title="LEGO® Answers"></div><a href="https://bricks.stackexchange.com/questions/8815/how-do-i-center-a-2x2-plate-on-a-3x3-plate" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:336 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I center a 2x2 plate on a 3x3 plate?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/384812/why-is-nebraska-listed-after-other-states" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is Nebraska listed after other states?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/157364/who-was-it-in-the-black-and-white-photo-on-the-doctors-desk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Who was it in the black and white photo on The Doctor's desk?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2239238/why-does-parenthesis-before-exponents-not-apply-to-squaring-a-binomial" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does parenthesis before exponents not apply to squaring a binomial?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="https://academia.stackexchange.com/questions/88186/when-resubmitting-a-paper-should-i-write-individual-letters-for-each-reviewer-o" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    When resubmitting a paper, should I write individual letters for each reviewer or one common letter?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="https://bicycles.stackexchange.com/questions/46241/how-does-the-surestop-braking-system-work" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does the SureStop braking system work?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="https://serverfault.com/questions/844677/server-wiped-after-yum-remove-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Server wiped after "yum remove python"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="https://codereview.stackexchange.com/questions/160924/check-if-a-number-n-is-a-power-of-k" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Check if a number N is a power of K
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="https://parenting.stackexchange.com/questions/29789/how-to-get-my-child-to-play-alone" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to get my child to play alone?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="https://mechanics.stackexchange.com/questions/43751/how-would-a-car-handle-differently-if-it-had-independent-brake-controls-like-a" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How would a car handle differently if it had independent brake controls, like a pedal bike?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="https://tex.stackexchange.com/questions/365105/typesetting-linguistic-rewrite-rule" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Typesetting linguistic rewrite rule
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/78390/how-can-i-make-medieval-folks-addicted-to-food" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I make medieval folks addicted to food?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/78345/believing-in-non-existent-beings" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Believing in non-existent beings
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="https://aviation.stackexchange.com/questions/37165/why-do-all-commercial-aircraft-have-carpets" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do all commercial aircraft have carpets?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="https://retrocomputing.stackexchange.com/questions/2685/what-is-the-best-choice-for-dos-for-a-1990-80386-pc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:648 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the best choice for DOS for a 1990 80386 PC?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-christianity" title="Christianity Stack Exchange"></div><a href="https://christianity.stackexchange.com/questions/56377/can-a-catholic-priest-adopt-a-child" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:304 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a Catholic priest adopt a child?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="https://electronics.stackexchange.com/questions/300150/antistatic-bag-inside-plastic-bag" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Antistatic bag inside plastic bag?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="https://photo.stackexchange.com/questions/88767/where-does-the-term-say-cheese-come-from" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Where does the term "Say Cheese" come from?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="https://gis.stackexchange.com/questions/237053/getting-intersection-of-multiple-polygons-efficiently-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:79 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Getting intersection of multiple polygons efficiently in Python
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="https://physics.stackexchange.com/questions/327186/why-dont-molecules-of-a-gas-settle" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why don't molecules of a gas settle?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/78323/if-music-was-crucial-at-wars" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If music was crucial at wars?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/384946/word-or-phrase-for-someone-devoid-of-logical-reasoning-employs-irrational-though" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Word or phrase for someone devoid of logical reasoning/employs irrational thought?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="https://superuser.com/questions/1200239/is-there-a-command-which-can-elevate-the-command-prompt-in-place" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a command which can elevate the Command Prompt in place?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/116838/compute-a-complex-power" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Compute a complex power
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+		<script>
+StackExchange.ready(function(){$.get('/posts/6605640/ivc/ebef');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/6605640/ivc/ebef" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div><script async="" src="./Javascript by reference vs. by value - Stack Overflow_files/clc.min.js"></script>
+    <div id="footer" class="categories" role="contentinfo">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="https://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="https://data.stackexchange.com/">data</a>
+                    <a href="https://stackexchange.com/legal">legal</a>
+                    <a href="https://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="https://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.4.17.25700
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('javascript,reference,pass-by-reference,pass-by-value');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|javascript|reference|pass-by-reference|pass-by-value|');
+                ga('pageData.set', 'dimension2', '|javascript|reference|pass-by-reference|pass-by-value|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<img src="./Javascript by reference vs. by value - Stack Overflow_files/timeout.gif" style="display: none;"></body></html>

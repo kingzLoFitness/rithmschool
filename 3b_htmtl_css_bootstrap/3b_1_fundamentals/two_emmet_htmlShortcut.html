@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet - HTML Shorcuts</title>
+</head>
+
+<body>
+    <h1>Emmet Shortcuts</h1>
+    <p>
+        p>div{inner}*2 produces:
+        <pre>
+            &lt;p&gt;
+                &lt;div&gt;inner&lt;/div&gt;
+                &lt;div&gt;inner&lt;/div&gt;
+            &lt;p&gt;
+        </pre>
+    </p>
+
+
+    <p>
+        div+p>span
+    </p>
+
+
+    <p>
+        div[id="hello"]{Hi everybody!}>span{Yo}*3
+    </p>
+
+    <pre>
+        <div id="hello">Hi everybody!
+            <span>Yo</span>
+            <span>Yo</span>
+            <span>Yo</span>
+        </div>
+    </pre>
+
+    <!-- One-line Emmet Command
+        html
+    -->
+    <html></html>
+
+    <!-- One-line Emmet Command
+        div>p>section>h1{Nice!}
+        -->
+    <div>
+        <p>
+        <section>
+            <h1>Nice!</h1>
+        </section>
+        </p>
+    </div>
+
+    <!-- One-line Emmet Command
+        ul{outside}>li{inside}*4
+    -->
+    <ul>outside
+        <li>inside</li>
+        <li>inside</li>
+        <li>inside</li>
+        <li>inside</li>
+    </ul>
+
+    <!-- One-line Emmet Command
+        p{sibling 1}+div{sibling 2}+p{parent}>div{child}>div{grandchild} 
+    -->
+    <p>sibling 1</p>
+    <div>sibling 2</div>
+    <p>parent
+    <div>child
+        <div>gandchild</div>
+    </div>
+    </p>
+
+</body>
+
+</html>

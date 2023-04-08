@@ -1,0 +1,90 @@
+#container {
+	font-size: 16px;
+}
+
+.main_heading {
+	background-color: grey;
+}
+
+.main {
+	background-color: blue;
+}
+
+.main_footer {
+	background-color: green;
+}
+
+.main_heading,
+.main_footer {
+	color: red;
+}
+
+
+/* Other useful selectors */
+
+/* Decendant Selector 
+	- matches all elements that are descendants of a specified element, (read selectors from right to left)
+*/
+footer p {
+	background: red;
+}
+
+
+
+/* Adjacent Selector
+	- finds all elements that are directly adjacent to some other specified element.  
+	- in other words: The selector below will find all the h4 tags that are directly adjacent to an h1
+*/
+h1+h4 {
+	background: blue;
+}
+
+
+/* Direct child selector
+	- confused with descendant selector
+	- matches all elements that are direct children - not just ancestors - fo a specified element
+	- in other words: The selector below will find all li 's which are children of a ul
+*/
+ul > li {
+	background: green;
+}
+
+
+
+
+/* Attribute Selector 
+	- finds elements based on the value of some attribute
+	- example the selector below will find all a tags whose href attribute is set to #
+*/
+a[href="#"] {
+	background: black;
+}
+
+
+/* First / Last Child Selector
+	- find all the elements which are the first(or last, respectively) children of thier parents
+	- example below will find all the li's which are the first children of their parents
+*/
+li:first-child {
+	background: red;
+}
+
+/* n-th child selector
+	- generalization of the selectors above. 
+	- will find all elements which are nth children of their parents, for some specified value of n
+	- example below will find all the li's which are the second children of their prents
+*/
+li:nth-child(2) {
+	background: teal;
+}
+
+
+
+/* Above are some of the more commonly used selectors.  More examples in link below.
+https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors
+*/
+
+
+/*
+The C in CSS, cascading, means that your code is read top to bottom.
+*/

@@ -1,0 +1,197 @@
+So now I’m studying the terminal within:
+Rithm School Terminal and Unix
+To be a successful developer, you must be comfortable in the terminal.
+
+- The basics of navigation through files and folders in the terminal.
+- How to see and set permissions 
+- chain commands using piping 
+- create environment variables 
+
+By the end of the course: 
+- Exposure to more advanced terminal commands 
+- Set up your own remote server through Amazon Web Services
+
+
+1 Terminal Fundamentals 
+- Navigating in Terminal
+Objectives 
+- Define what Terminal is and how it is structured 
+- Navigate through and list files on your machine
+- Define the following terms: shell, terminal, directory, absolute path, relative path
+
+
+What is Terminal?
+- command line interface (CLI)
+- whatever you can do in finder, you can do in the terminal
+- it is much faster to use terminal than to use graphic user interface (GUI), such as finder
+ - practice to speed up in no time
+
+What is a shell?  Bash/ZSH
+- distinguish (recognize) between these two terms (shell and terminal)
+
+shell
+- a program that processes commands and returns output
+- manage foreground and background processes 
+- command history and command line editing
+- these features are standard in bash
+- the most common shell in modern linux systems (we are using zsh)
+
+terminal
+- a wrapper program with runs the shell
+- used to run only by monitor and keyboard
+- the terminal concept extracted into software as better multiprocessing, windows systems and other GUI interfaces evolved
+
+For windows users, use Babun.  Similar to using linux or mac terminal.
+
+
+How Terminal is Structured
+- all files and folders begin at the root directory
+- root directory —> 		/
+- home directory —> 		~
+- example user name on the computer is “kingzLoOSX”.  Then the home directory would be: “/User/kingzLoOSX”
+- a synonym for “/User/kingzLoOSX” path is “~” when logged in as “kingzLoOSX”
+
+
+
+
+Moving Around
+- most common command, change directory —> 	cd 
+- to move up a directory —> 						cd ..
+- to move into a specific directory, we specify the name of the directory we are moving into.  Example, moves into Desktop directory from home directory “cd Desktop”
+
+
+
+Absolute Paths vs. Relative Paths
+- a way to reach a file or folder; an address for the file or folder your trying to reach
+- absolute path starting from the root directory —> / 
+
+Example: if currently in the ~ home directory and would like to change directories into My Desktop folder, do that in 2 of the following ways:
+- relative to where I am currently —> cd Desktop
+- absolute, starting from the root —> cd /Users/kingzLoOSX/Desktop
+
+
+
+Questions to answer
+- What is the difference between / and ~?  What do we call each of these directories?
+- What command do we use to change directories?
+- What is the difference between an absolute and relative path?
+
+
+
+
+
+- Working with Files and Folders
+Objective:
+- Create files and folders in Terminal using “mkdir” and “touch”
+- Move files and folders in Terminal using “mv”
+- Copy files and folders in Terminal using “cp”
+- Remove files and folders in Terminal using “rm” and “rmdir”
+- Explain what a flag is in Terminal
+- Explain what the following commands do: “whoami”, “pwd”, “cat”, “echo”, “less”, “open” 
+
+
+Creating Files and Folders
+
+
+
+Displaying Contents of a File
+
+
+
+Opening up a File
+
+
+
+
+Moving Files and Folders
+
+
+
+Copying Files and Folders
+
+
+
+
+Deleting Files and Folders
+
+
+
+Exercises
+1. Create a file called name.txt
+2. Try renaming the file to rename.txt using the mv command.  What does this tell you about the command?
+3. Using the cp command, make a copy of rename.txt and call it copy.txt
+4. Remove the file copy.txt
+5. Create a folder called questions
+6. Change directories to the questions folder
+7. Create a file called first.txt
+8. Create a file called second.txt
+9. Go back a directory and make a copy of the questions folder and call it questions_copy
+10. When using cp -r what is the -r called?  What does it do?
+11. Delete the original questions folder and the copy
+
+
+- Listing Files and Flags
+
+
+
+-Terminal Basics Exercises
+
+
+
+
+2 Permissions, Redirection and Piping
+- Permissions and Links
+
+
+
+- Redirection 
+
+
+
+- Piping 
+
+
+
+- Permissions, Redirection, and Piping Exercise
+
+
+
+3 Environment, Process and Finding
+- Terminal Environment
+
+
+
+- Processes
+
+
+
+- Finding Files and Folders
+
+
+
+- Intermediate Terminal Exercises
+
+
+
+4 Advanced Terminal Commands
+- SSH
+
+
+
+- Cut, Sed, Awk, and Xargs
+
+
+
+- Shell Scripting and Vim
+
+
+
+- Advanced Terminal Exercises
+
+
+
+
+
+
+
+

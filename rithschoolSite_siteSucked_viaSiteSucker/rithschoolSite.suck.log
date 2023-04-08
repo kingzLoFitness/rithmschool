@@ -1,0 +1,49 @@
+Apr 28, 2017, 3:09:54 PM
+
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.eot",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.woff2",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.eot?",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.ttf",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.svg",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/fonts/glyphicons-halflings-regular.woff",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/assets/fonts/slick.eot?",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/assets/fonts/slick.woff",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/assets/fonts/slick.ttf",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/assets/fonts/slick.eot",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/assets/fonts/slick.svg",
+	referenced from "https://www.rithmschool.com/assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/courses/intermediate-css-bootstrap/css-transform-transition-animation-exercise",
+	referenced from "https://www.rithmschool.com/courses/intermediate-css-bootstrap",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/blog/codewars.com",
+	referenced from "https://www.rithmschool.com/blog/why-do-you-want-to-code",
+	failed with error code -1100 (File does not exist.)
+ERROR: Download of "https://www.rithmschool.com/courses/python-fundamentals-part-1/introduction-to-python",
+	referenced from "https://www.rithmschool.com/courses/python-fundamentals-part-1",
+	failed with error code -1100 (File does not exist.)
+
+Apr 28, 2017, 3:11:45 PM
+
+---------------------
+

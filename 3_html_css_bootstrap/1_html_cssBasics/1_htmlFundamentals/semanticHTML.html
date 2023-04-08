@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Non-semantic to Semantic HTML</title>
+</head>
+<body>
+	<header>
+		<h1>My super cool blog</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li>About Me</li>
+			<li>Contact</li>
+			<li>Search</li>
+			<li>Store</li>
+		</ul>
+	</nav>
+
+	<article>
+		<header>
+			<h2>Important Title</h2>
+		</header>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+
+		<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+
+		<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+	</article>
+
+
+
+	<article>
+		<header>
+			<h2>Super Important Title</h2>
+		</header>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+
+		<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+
+		<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+	</article>
+
+	<article>
+		<header>
+			<h4>Recent Posts</h4>
+		</header>	
+
+		<ul>
+			<li>Post 1</li>
+			<li>Post 2</li>
+			<li>Post 3</li>
+			<li>Post 4</li>
+ 		</ul>
+	</article>
+
+
+	<!-- 
+	Tables and Forms 
+	
+	Building Semantic HTML Tables
+	<table> - entire table and wraps all of your HTML code for a table
+	<tr> - table row element defines a row of cells which can include td and/or th tags
+	<th> - table header defines a cell as the header for group of cells.  traditionally placed inside of a thread tag
+	<td> - table data tag defines a cell of a table that contains some data
+	<thead> - table head tag defines a set of rows which define the columns of a table
+	<tbody> - defines one or more <tr> element data-rows to be the body of it's parent <table> element
+	<tfoot> - table foot tag defines a set of rows summerizing the columns of the table
+	-->
+
+	<h3>This is a table</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>heading</th>
+				<th>heading</th>
+				<th>heading</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>content</td>
+				<td>content</td>
+				<td>content</td>
+			</tr>
+
+			<tr>
+				<td>content</td>
+				<td>content</td>
+				<td>content</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td>content</td>
+				<td>content</td>
+				<td>content</td>
+			</tr>
+		</tfoot>
+
+
+	</table>
+
+	<!-- 
+	Forms will be used quite a bit when using Server-Side Programming
+	Forms are used to transmit data to other pages and servers.
+	user sent data for web server and/or web page
+
+	An HTML Form is made of one or more widgets. Those widgets can be text fields (single line or multi line), select boxes, buttons, check boxes, or radio buttons. Most of the time, those widgets are paired with a label that describes their purpose.
+
+	action attribute - where the form should go when submitted (# means it's not going anywhere right now)
+
+	method - how the form should be submitted (talked about later)
+
+	some of the inputs have names attributes, this input is necessary if we are collecting data form values to be submitted to a server/another page
+	-->
+	<h3>This is a form</h3>
+	<form action="#">
+		<div>
+			<label for="username">Username</label>
+			<input type="text" id="username">
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="password" id="password">
+		</div>
+
+		<div>
+			<label>Favorite Instructor</label>
+
+			<label for="elie">Elie</label>
+			<input type="radio" name="favorite_instructor" id="elie">
+
+			<label for="matt">Matt</label>
+			<input type="radio" name="favorite_instructor" id="matt">
+
+			<label for="tim">Tim</label>
+			<input type="radio" name="favorite_instructor" id="tim">
+		</div>
+
+		<div>
+			<label>Favorite Programming Launguage(s)</label>
+
+			<label for="ruby">Ruby</label>
+			<input type="checkbox" name="favorite_language" value="Ruby" id="ruby">
+
+			<label for="javascript">JavaScript</label>
+			<input type="checkbox" name="favorite_language" value="JavaScript" id="javascript">
+
+			<label for="python">Python</label>
+			<input type="checkbox" name="favorite_language" value="Python" id="python">
+
+			<label for="go">Go</label>
+			<input type="checkbox" name="favorite_language" value="Go" id="go">
+		</div>
+
+		<div>
+			<label>Additional Comments</label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</div>
+
+		<div>
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+
+
+	<!-- *****************************************************
+		HTML5 Media
+		embed audio and video using audio and video tags
+	***************************************************** -->
+	<!-- Audio element
+		- embed sound content in documents
+		- one or more audio sources
+		- represent using the src attribut or the <source> element (the browser will choose the most suitable one)
+		- it can also be the destination for streamed media, using "MediaStream"
+		- more here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+	 -->
+
+	<!-- 
+	Attributes (see definitions here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+	- autoplay
+	- autobuffer
+	- buffered
+	- controls
+	- loop
+	- mozCurrentSampleOffset
+	- muted
+	- played
+	- preloa
+	- src
+	- volume
+
+	EVENTS
+	see here: 
+	https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
+	-->
+
+
+
+	 <!--  
+	Example: Basic usage
+	 -->
+
+	 <!-- Simple audio playback -->
+	<!--  
+	<audio src="http:/developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
+	 	Your browser does not support the <code>audio</code> element.
+	</audio>
+ 	-->
+	 <!-- Audio playback with captions -->
+	 <!-- 
+	 <audio>
+	 	<track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+	 	<track kind="captions" src="foo.sv.vtt" srclang="en" label="Svenska">
+	 </audio>
+ 	-->
+
+
+	<!--  
+	Example: Audio element with source element
+	 -->
+	<audio controls="controls">
+		Your browser does not support the <code>audio</code> element.
+		<source src="http:/developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" type="audio/ogg">
+	</audio>
+
+
+	 
+	<!-- 
+	NOTE: I decided to comment one out of the two (double check by troubleshooting)
+
+	 <audio>
+	 	Your browser does ot support the <code>audio</code> element.
+	 	<source src="foo.wav" type="audio/wav">
+	 </audio>
+	-->
+
+
+
+
+
+
+
+	<!-- 
+	Video element
+	- contains one or more video sources
+	- to specify a video source, use either the src attribute or the <source> element (the browser will choose the most suitable one) 
+	-->
+	<!-- 
+	Attributes details here: 
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+
+	- autoplay
+	- buffered
+	- controls
+	- crossorigin
+		- anonymous
+		- use-credentials
+	- height
+	- loop
+	- muted
+	- played 
+	- preload
+		- none
+		- metadata
+		- auto
+		- the empty string
+	- poster
+	- src
+	- width
+
+	EVENTS
+	see here: https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
+	-->
+
+	<!-- Examples -->
+
+	<!-- Simple video example 
+	- plays a video, starting playback as soon as enough of the video has been received to allow playback without pausing to download more. 
+	- until the video starts playing, the image "posterimage.jpg" is displayed in its place
+	-->
+	<video src="videofile.webm" autoplay poster="posterimage.jpg">
+		Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="videofile.webm">download it</a> and watch it with your favorite video player!
+	</video>
+
+	<!-- Video with subtitles 
+	- allows the user to choose between different subtitles
+	-->
+	<video src="foo.webm">
+		<track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+		<track kind="subtitles" src="foo.sv.vtt" srclang="en" label="Svenska">
+	</video>
+
+
+	<!-- Multiple sources example
+	- this example offers three different sources for the media;
+	- tis allows the video to be watched regardless of whcih video codecs are supported by the browser
+		- first WebM is tried 
+		- if that can't be played, then MP4 is tried
+		- finally, OGG is tried
+	-->
+	<video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webvp8.gif">
+		<source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+		<source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.mp4" type="video/mp4">
+		<source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogg" type="video/ogg">
+	Your browser doesn't support HTML5 video tag.		
+	</video>
+
+	<!-- Server Support here:
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+	-->
+
+
+
+	<!-- 
+		iframe (inline frame) 
+	https://developer.spotify.com/technologies/widgets/spotify-play-button/
+	-->
+	<h3>Sample iframe using Sppotify Play Button</h3>
+	<iframe src="https://open.spotify.com/embed?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai"
+        frameborder="0" allowtransparency="true"></iframe>		<br />
+
+    <iframe src="https://open.spotify.com/embed?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&view=coverart"
+        frameborder="0" allowtransparency="true"></iframe>		<br />
+
+	<iframe src="https://open.spotify.com/embed?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&theme=white"
+        frameborder="0" allowtransparency="true"></iframe>		<br />
+
+	<iframe src="https://open.spotify.com/embed?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&theme=white&view=coverart"
+        frameborder="0" allowtransparency="true"></iframe>
+
+
+
+    <!-- iframe video example here:
+    https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
+    -->
+    <h3>Example with iframe embedding Youtube Video</h3>
+
+    <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"></iframe>
+
+
+
+
+	<footer>
+		<p>Copyright MyAwesomBlog.net.  All Rights Reserved.  Dont steal my stuff!</p>
+	</footer>
+
+
+</body>
+</html>

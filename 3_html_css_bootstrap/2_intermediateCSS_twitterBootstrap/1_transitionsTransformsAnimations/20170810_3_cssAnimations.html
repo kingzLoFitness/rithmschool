@@ -1,0 +1,102 @@
+<!-- 
+CSS Animations
+
+Objectives
+- explain what a keyframe is
+- use the animation property along with @keyframes rules to create more complex CSS animations
+
+Animations
+- a little more complex in comparison to simple animation using CSS transitions
+- a property called animations, used to define custom animations purely using CSS.  
+- create complex animation transitinos from one CSS style configuration to another
+- the following animation:
+
+- 2 things to create animation
+	- an animation property on the relevant HTML element
+	- and a set of keyframes that describe the animation we're trying to build
+		- keyframes literally describe key frames in the animation, around which the animations take place
+
+- example: there are 3 key pints in the animation: when our div is a red circle, when it's a blue squer, and when it's a green (rotated) square
+
+- when creating custom animations using keyframes, you need to give your animation a name before you build it.  
+- in this case since our animation is changing, it's called "shapeshift"
+
+- the "6s" indication how long it should take to complete animation
+- the "infinite" ensures that the animation will play on loop, rather than stoping after one cycle
+
+- there are actually 8 sub-properties that you can set inside of "animation"; here's an article on all of them:
+https://css-tricks.com/almanac/properties/a/animation/
+
+
+- you can learn more about CSS Animations here: 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+- and see some more examples here: 
+http://www.w3schools.com/css/tryit.asp?filename=trycss3_animation2
+
+- and here:
+http://www.w3schools.com/css/css3_animations.asp
+
+NOTE: W3Schools is NOT a good resource for documentation in general, but they do have some helpful examples in this case
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<style>
+		#ball {
+			width: 100px;
+			height: 100px;
+			margin-top: 400px;
+			animation: shapeshift 6s infinite;
+		}
+
+		/* Define what shapeshift should do.  In order to define this animation, we need to use the keyframes at-rule. 
+		- this is the basic syntax for defineing custom animations using keyframes
+		- inside the curly braces, we can define several different keyframes, which describe the state of our div at different points in the animatino
+		- these points are described using percentages
+		- example: we know that at the start and end of our animation, the ball div should be red and round */
+		@keyframes shapeshift {
+			/* here where we define our animation */
+			0%, 100% {
+				transform: translate(0,0);
+				border-radius: 100px;
+				background-color: red;
+			}
+
+			/* 
+			- the keyframes have the same style at the beginning and the end, the'res not really any animation going on
+
+			- define more keyframes to get the effect we're lookng for (below) 
+			- example, one-third of the way through the animation, we want the div to move to the right, move up, and be a smaller blue square (declared below)
+			*/
+			33% {
+				transform: translate(200px, -400px) scale(0.5, 0.5);
+				border-radius: 0px;
+				background-color: blue;
+			}
+
+			/* 
+			- finally, two-thirds of the way through the animation, we want the square to spin, move down and to the right, grow larger, and turn green */
+			66% {
+				transform: translate(400px, 0) rotate(4545deg) scale(2,2);
+				border-radius: 0px;
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="ball"></div>
+</body>
+</html>
+
+
+
+
+
+

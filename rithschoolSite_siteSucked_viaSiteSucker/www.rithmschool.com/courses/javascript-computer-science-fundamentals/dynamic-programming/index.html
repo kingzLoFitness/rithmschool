@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn essential JavaScript Computer Science Fundamentals including data structures and algorithms, time and space complexity, big O notation and recursion">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free JavaScript Computer Science Course | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-898d5e549744bda561b0fe4cf113c8e45cc9ac22adbc510f0abf70f7223a9c65.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-1ee25ca5dae4b7455729ae69f9a574d958400000995d342c0850fdc8d695deb3.css" />
+
+  <script src="../../../assets/application-b300e95eb2f198640c0c0129a9c721fb0fb58d99de8617baa968d96afea7c988.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="zF1+2eNqU4Wo1tJlBBaeft59KMJ3Csan7kyvEVELuDFEo7LG9S13EY4g7NdgMPq9ZS2BmhDbHuqbKeUt5n5PzA==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    <link rel="stylesheet" media="screen" href="../../../assets/sidebar-b92be40c45347064e43abeea74fbfa2becea39916b6315f12eda5d1c9c0e14b4.css" />
+
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">1 Complexity Analysis and Recursion</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      5 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-big-o-notation/index.html">Introduction to Big O Notation</a>
+      </li>
+      <li>
+        <a href="../big-o-notation-exercises/index.html">Big O Exercises</a>
+      </li>
+      <li>
+        <a href="../introduction-to-recursion/index.html">Introduction to Recursion</a>
+      </li>
+      <li>
+        <a href="../recursion-exercises/index.html">Recursion Exercises</a>
+      </li>
+      <li>
+        <a href="index.html">Dynamic Programming</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">2 Search and Sorting Algorithms</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../searching-algorithms/index.html">Searching Algorithms</a>
+      </li>
+      <li>
+        <a href="../basic-sorting-algorithms/index.html">Basic Sorting Algorithms</a>
+      </li>
+      <li>
+        <a href="../intermediate-sorting-algorithms/index.html">Intermediate Sorting Algorithms</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">3 Linked Lists</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      5 sections, 1 - 2 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../arrays-revisited/index.html">Arrays Revisited</a>
+      </li>
+      <li>
+        <a href="../singly-linked-lists/index.html">Singly Linked Lists</a>
+      </li>
+      <li>
+        <a href="../singly-linked-lists-exercises/index.html">Singly Linked Lists Exercises</a>
+      </li>
+      <li>
+        <a href="../doubly-linked-lists/index.html">Doubly Linked Lists</a>
+      </li>
+      <li>
+        <a href="../doubly-linked-lists-exercises/index.html">Doubly Linked Lists Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">4 Stacks and Queues</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-stacks/index.html">Introduction to Stacks</a>
+      </li>
+      <li>
+        <a href="../stacks-exercises/index.html">Stacks Exercises</a>
+      </li>
+      <li>
+        <a href="../introduction-to-queues/index.html">Introduction to Queues</a>
+      </li>
+      <li>
+        <a href="../queues-exercises/index.html">Queues Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">5 Binary Search Trees and Heaps</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      6 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-binary-search-trees/index.html">Introduction to Binary Search Trees</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-traversal/index.html">Binary Search Trees - Traversal</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-removal/index.html">Binary Search Trees - Removal</a>
+      </li>
+      <li>
+        <a href="../binary-search-trees-exercises/index.html">Binary Search Trees Exercises</a>
+      </li>
+      <li>
+        <a href="../binary-heaps-introduction/index.html">Binary Heaps</a>
+      </li>
+      <li>
+        <a href="../binary-heaps-exercises/index.html">Binary Heaps Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">6 Hash Tables</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-hash-tables/index.html">Introduction to Hash Tables</a>
+      </li>
+      <li>
+        <a href="../hash-tables-handling-collisions/index.html">Handling Collisions</a>
+      </li>
+      <li>
+        <a href="../hash-tables-exercises/index.html">Hash Tables Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">7 Graphs</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-graphs/index.html">Introduction to Graphs</a>
+      </li>
+      <li>
+        <a href="../graph-traversal-and-search/index.html">Graph Traversal and Search</a>
+      </li>
+      <li>
+        <a href="../pathfinding-with-graphs/index.html">Pathfinding with Graphs</a>
+      </li>
+      <li>
+        <a href="../graphs-exercises/index.html">Graphs Exercises</a>
+      </li>
+  </ul>
+</div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="nav-links text-center">
+        <a id="next-link" href="../recursion-exercises/index.html">Previous</a> |
+      <a href="../index.html">Table of Contents</a>
+        | <a id="next-link" href="../searching-algorithms/index.html">Next</a>
+    </div>
+    <h1 class="begin-text heading" >{&nbsp;Dynamic Programming.&nbsp;}</h1>
+
+    <button id="show-courses">
+      <i class="fa fa-angle-double-right fa-2x"></i>
+    </button>
+
+    <div data-locked-chapter="false" data-unit="1" id="course-content">
+      <h3>Objectives</h3>
+
+<p>By the end of this chapter you should be able to:</p>
+
+<ul>
+<li>Define dynamic programming</li>
+<li>Solve Fibonacci sequence using dynamic programming</li>
+<li>Solve the largest common subsequence problem</li>
+</ul>
+
+<h3>Dynamic Programming</h3>
+
+<p>Dynamic programming is a useful problem solving technique that often helps to make your programs more efficient.  The basic idea is that you solve smaller problems and <em>remember</em> the result of those smaller problems in case you encounter them again.  By remember solutions to smaller problems, you can more quickly figure out the larger problem.</p>
+
+<p>Let&#39;s take a look at an example.</p>
+
+<h3>Fibonacci</h3>
+
+<p>The fibonacci sequence is a problem commonly taught when learning recursion.  The sequence is defined by the following formulas:</p>
+<div class="CodeRay">
+  <div class="code"><pre>fib(<span class="integer">0</span>) = <span class="integer">0</span>
+fib(<span class="integer">1</span>) = <span class="integer">1</span>
+fib(<span class="integer">2</span>) = <span class="integer">1</span>
+fib(n) = fib(n-<span class="integer">1</span>) + fib(n-<span class="integer">2</span>)
+</pre></div>
+</div>
+
+<p>Therefore the beginning of the sequence would be:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="integer">0</span>  <span class="integer">1</span>  <span class="integer">1</span>  <span class="integer">2</span>  <span class="integer">3</span>  <span class="integer">5</span>  <span class="integer">8</span>  <span class="integer">13</span>  <span class="integer">21</span>  <span class="integer">34</span>  <span class="integer">55</span>  <span class="integer">89</span>...
+</pre></div>
+</div>
+
+<p>After <code>fib(2)</code>, you can see that any number is simply the addition of the previous two numbers in the sequence.</p>
+
+<p>To solve this problem, we can use recursion.  The base cases are <code>fib(0)</code>, <code>fib(1)</code>, and <code>fib(2)</code>.  Otherwise, return <code>fib(n-1) + fib(n-2)</code></p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">fib</span>(n) {
+    <span class="keyword">if</span> (n &lt;= <span class="integer">0</span>) { <span class="keyword">return</span> <span class="integer">0</span>; }
+    <span class="keyword">if</span> (n &lt;= <span class="integer">2</span>) { <span class="keyword">return</span> <span class="integer">1</span>; }
+
+    <span class="keyword">return</span> fib(n - <span class="integer">1</span>) + fib(n - <span class="integer">2</span>); 
+  }
+</pre></div>
+</div>
+
+<p>This implementation is easy to understand, but let&#39;s look at all of the stack frames that get created when you make a call to <code>fib(5)</code>. If you are using the sources tab with the Chrome Dev Tools, you can set a break point inside the function and examine the call stack on the right hand side. </p>
+
+<p>In this case, the stack will be growing downward and each line is a stack frame.  We are taking a look at the stack after the first base case is returned.</p>
+<div class="CodeRay">
+  <div class="code"><pre>fib(5), n = 5, line number 6 waiting on fib(n-1)
+fib(4), n = 4, line number 6 waiting on fib(n-1)
+fib(3), n = 3, line number 6 waiting on fib(n-1)
+fib(2), n = 2, line number 3, RETURN 1
+</pre></div>
+</div>
+
+<p>So far, <code>fib(3)</code> is waiting on <code>fib(2)</code> and it will get its result, which is 1.  Now, <code>fib(3)</code> will get the result for <code>fib(1)</code> which is also, 1.  Here is our new stack snapshot:</p>
+<div class="CodeRay">
+  <div class="code"><pre>fib(5), n = 5, line number 6 waiting on fib(n-1)
+fib(4), n = 4, line number 6 waiting on fib(n-1)
+fib(3), n = 3, line number 6, RETURNING 1 + 1
+</pre></div>
+</div>
+
+<p>Now we can see, that the <code>fib(4)</code> stack frame will be getting 2 for its invocation of <code>fib(3)</code>, and the next step is to ask for <code>fib(2)</code>.  But wait! We already computed <code>fib(2)</code>!  Here is our next snapshot:</p>
+<div class="CodeRay">
+  <div class="code"><pre>fib(5), n = 5, line number 6 waiting on fib(n-1)
+fib(4), n = 4, line number 6, RETURNING 2 + 1
+</pre></div>
+</div>
+
+<p>Now <code>fib(5)</code> will get back the result 3 for the invocation of <code>fib(4)</code>, but next, it will compute <code>fib(3)</code>, which we already did!</p>
+
+<p>If you continue to look at the stack for larger values of n, the computations are very redundant and the program becomes extremely slow.  </p>
+
+<p>If you try to compute <code>fib(50)</code>, it may already be too much for your computer to handle in a reasonable amount of time!</p>
+
+<h3>Memoization vs. Tabulation</h3>
+
+<p>We mentioned earlier that dynamic programming is a technique for solving problems by breaking them down into smaller subsets of the same problem (using recursion). To solve problems using dynamic programming, there are two approaches that we can use, <code>memoization</code> and <code>tabulation</code></p>
+
+<p>The idea of &#39;storing&#39; the result of an expensive function (fib) is known as <code>memoization</code>. Memoization is implemented by maintaining a lookup table of previous solved sub-problems. This approach is also known as &quot;top down&quot; since you solve the solve the &quot;top&quot; problem first (which typically recurses down to solve the sub-problems).</p>
+
+<p>When you solve a dynamic programming problem using <code>tabulation</code> you solve the  by solving all related sub-problems first. This means that you must decide in which order to solve your sub-problems first, which adds another step, but gives you more flexibility than <code>memoization</code>. This approach is traditionally known as a &quot;bottom up&quot; approach since the sub-problems are calculated first. You can read more about the differences <a target="_blank" href="http://stackoverflow.com/questions/6164629/dynamic-programming-and-memoization-bottom-up-vs-top-down-approaches">here</a></p>
+
+<p>So which one should you use? As with most of these questions, the answer is &quot;it depends&quot; - you can read more about when to use which one <a target="_blank" href="http://stackoverflow.com/questions/12042356/memoization-or-tabulation-approach-for-dynamic-programming">here</a> or <a target="_blank" href="https://awjin.me/algos-js/dp/tab-memo.html">here</a>.</p>
+
+<h3>Fibonacci With Dynamic Programming</h3>
+
+<p><strong>Problem</strong>: The naive Fibonacci implementation recomputes two values of Fibonacci that we have already computed.</p>
+
+<p><strong>Solution</strong>: Use dynamic programming along with memoization to save values in a hash in order to not have to recompute values that have already been computed.</p>
+
+<p>Below is the dynamic programming solution that uses <code>memoization</code> (done with an object) to store the values of <code>fib(n)</code>.  If the values are needed again, they can be looked up using <code>savedFib</code> without having to recompute them.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">fib</span>(n, savedFib={}) {
+   <span class="comment">// base case</span>
+   <span class="keyword">if</span> (n &lt;= <span class="integer">0</span>) { <span class="keyword">return</span> <span class="integer">0</span>; }
+   <span class="keyword">if</span> (n &lt;= <span class="integer">2</span>) { <span class="keyword">return</span> <span class="integer">1</span>; }
+
+   <span class="comment">// memoize</span>
+   <span class="keyword">if</span> (savedFib[n - <span class="integer">1</span>] === <span class="predefined-constant">undefined</span>) {
+        savedFib[n - <span class="integer">1</span>] = fib(n - <span class="integer">1</span>, savedFib);
+   }
+
+   <span class="comment">// memoize</span>
+   <span class="keyword">if</span> (savedFib[n - <span class="integer">2</span>] === <span class="predefined-constant">undefined</span>) {
+        savedFib[n - <span class="integer">2</span>] = fib(n - <span class="integer">2</span>, savedFib);
+   }
+
+   <span class="keyword">return</span> savedFib[n - <span class="integer">1</span>] + savedFib[n - <span class="integer">2</span>];
+}
+</pre></div>
+</div>
+
+<p>Here is a solution to the same Fibonnaci problem using <code>tabulation</code>.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">fib</span>(n){
+    <span class="comment">// array declaration - notice that we figure out how many elements will be here before the calculations begin. This is the 'tabulation' approach so let's make a new array and fill it with 0s</span>
+    <span class="keyword">var</span> arr = <span class="keyword">new</span> Array(n+<span class="integer">1</span>).fill(<span class="integer">0</span>)
+    <span class="comment">// base case assignment</span>
+    arr[<span class="integer">1</span>] = <span class="integer">1</span>;
+    <span class="comment">// calculating the fibonacci and storing the values</span>
+    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="integer">2</span>; i &lt;= n; i++){
+      arr[i] = arr[i-<span class="integer">1</span>] + arr[i-<span class="integer">2</span>]
+    }
+    <span class="keyword">return</span> arr[n]
+}
+</pre></div>
+</div>
+
+<p>It&#39;s important to understand that both of these options can be used to solve dynamic programming problems so they are not mutually exclusive.</p>
+
+<h3>Other Dynamic Programming Problems</h3>
+
+<p>Dynamic programming can be used to solve more difficult problems as well with better time complexities. Here are some problems that can be solved with dynamic programming (first try a brute force solution and then move on to dynamic programming when solving these):</p>
+
+<ul>
+<li><a target="_blank" href="https://en.wikipedia.org/wiki/Knapsack_problem">Knapsack problem</a> </li>
+<li><a target="_blank" href="https://en.wikipedia.org/wiki/Change-making_problem">Change Making Problem</a></li>
+<li><a target="_blank" href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Longest Common Subsequence</a></li>
+</ul>
+
+<p>Here are some excellent resources for learning more about Dynamic Programming:</p>
+
+<ul>
+<li><p><a target="_blank" href="https://www.youtube.com/watch?v=W2ote4jCuYw">Dynamic Programming Introduction</a></p></li>
+<li><p><a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/dynamic-programming-from-novice-to-advanced/">Top Coder&#39;s Dynamic Programming Introduction</a></p></li>
+<li><p><a target="_blank" href="https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLfMspJ0TLR5HRFu2kLh3U4mvStMO8QURm">Dynamic Programming In More Detail</a></p></li>
+<li><p><a target="_blank" href="https://www.youtube.com/watch?v=_zE5z-KZGRw">Learning more about Optimal Substructure</a></p></li>
+<li><p><a target="_blank" href="https://www.youtube.com/watch?v=rdI94aW6IWw">Change Making Problem Videos</a></p></li>
+<li><p><a target="_blank" href="https://www.youtube.com/watch?v=8LusJS5-AGo&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr">Knapsack Problem Video</a></p></li>
+</ul>
+
+    </div>
+
+    <p>
+        When you're ready, move on to <a id="next-link" href="../searching-algorithms/index.html">Searching Algorithms</a>
+
+    </p>
+
+    <p class="text-center">
+    <a class="apply-now" href="../searching-algorithms/index.html">Continue</a>
+</p>
+  </div>
+</div>
+<script src="../../../assets/online_course_chapter-f3311881902b6b595dc86c6e981f2010c8ee4df14b9389b5bbb945badae6f42b.js"></script>
+<script src="../../../assets/online_course-d9a4889bd8a88fe2cbd56af4193f8f10873f1228aeaa35e863920564c4706528.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#a4cdcac2cbe4d6cdd0ccc9d7c7cccbcbc88ac7cbc9"><span class="__cf_email__" data-cfemail="61080f070e21130815090c1202090e0e0d4f020e0c">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="wKBk4ku8k6v/fbfaMSeWz4sO+DLJZpxz85DoWt1ESlBIXqj9Xfu3P9mLiWhVAfIMMF5Raq63RD6G9aJmajG9rQ==" />  <div id="modal-email-known" style="display:none;">
+    <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
+    <div class="email-errors text-center"></div>
+    <hr class="modal--bar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="form-group">
+          <input class="form-control" placeholder="Email" type="email" id="confirm-email-input">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <button id="confirm-email" type="submit" class="btn btn-xl">Sign In</button>
+    <div class="text-center">
+      <a href="javascript:void(0)" style="margin-top:-20px; display:block;" class="modal-go-back">Go Back</a>
+    </div>
+  </div>
+  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+          <a class="text-center email-known" href="javascript:void(0)">Already signed up?</a>
+    </div>
+  </div>
+    <div id="modal-second-part" style="display:none;">
+      <h1 class="text-center">Tell us more about yourself</h1>
+        <div class="col-sm-offset-2 col-sm-8">
+          <hr class="modal--bar">
+          <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+          <div class="errors text-center"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            How would you define your skill as a developer?
+            <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+            <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+            <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            Would you like to learn more about Rithm School's in-person courses and how to apply?
+            <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+            <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script> -->
+
+<!-- Google Code for Free Content Leads Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858935159;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "LdkJCOzLlXAQ957JmQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/858935159/?label=LdkJCOzLlXAQ957JmQM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

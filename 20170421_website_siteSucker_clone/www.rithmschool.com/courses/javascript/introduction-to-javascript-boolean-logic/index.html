@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Familiarize yourself with the basic syntax and structure of JavaScript. This popular programming language is great for beginners looking to dive into coding.">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free JavaScript Fundamentals Course | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-311b580d4f39aec53c868044c9c4ddd3dcb9f6b785075ced94beae423f2fe997.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-73b12655e06c0656e106350abb90762bd63ab97cd8134948e3ed89f65216b009.css" />
+
+  <script src="../../../assets/application-cc8be59eb7a71132791fe5ed500b55b1df74021b49c9df6547756bc21c564bf2.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TLIbIscSW3/+r+F6KnY640XLkwXsWr3J6wxcP9gjwH6yHPsxmgNlH/vKKirxF7cBYc0JO85h2G8tf3OmItlO2w==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- start Mixpanel -->
+
+  <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("5080e5eebdaa906ad44bebec9a917acb");</script>
+
+
+<!-- end Mixpanel --><!-- end Mixpanel -->
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right" id="mixpanelNav">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="#apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+<h1 class="begin-text heading" >{&nbsp;Boolean Logic.&nbsp;}</h1>
+
+<div data-locked-chapter="false" data-unit="1" id="course-content">
+  <h3>Objectives:</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Write conditional logic using boolean operators</li>
+<li>List all of the falsey values in JavaScript</li>
+<li>Use if/else and switch statements to include conditional logic in your JavaScript code</li>
+<li>Explain the difference between <code>==</code> and <code>===</code> in JavaScript</li>
+<li>Convert between data types explicitly in JavaScript</li>
+</ul>
+
+<h3>Boolean Logic</h3>
+
+<p>An essential part of writing programs is being able to execute code that depends on certain conditions. There are many different examples when you&#39;d want to conditionally execute code. Here are just a few:</p>
+
+<ul>
+<li>You want the navigation bar on your website to look different based on whether or not someone is logged in</li>
+<li>If someone enters their password incorrectly, you want to let them know; otherwise, you want to log them in</li>
+<li>You&#39;re building a tic-tac-toe game, and want to know whether it&#39;s X&#39;s turn or O&#39;s turn</li>
+<li>You&#39;re building a social network and want to keep person A from seeing person B&#39;s profile unless the two of them are friends</li>
+</ul>
+
+<p>And so on, and so on. It&#39;s very hard to write any kind of interesting software without making use of conditionals and boolean logic.</p>
+
+<p>So let&#39;s talk about how to write conditional logic in JavaScript. To do so, we&#39;ll make use of booleans (<code>true</code> and <code>false</code>), along with <code>if</code> statements and <code>switch</code> statements.</p>
+
+<p>An <code>if</code> statement looks something like this:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> instructor = <span class="string"><span class="delimiter">&quot;</span><span class="content">Elie</span><span class="delimiter">&quot;</span></span>;
+
+<span class="comment">// we begin with an &quot;if&quot; statement followed by a condition in () and a block of code inside of {}</span>
+<span class="keyword">if</span>(instructor === <span class="string"><span class="delimiter">&quot;</span><span class="content">Elie</span><span class="delimiter">&quot;</span></span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Yes!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">No</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<p>Notice that we used a <code>===</code> instead of <code>=</code>. Anytime that we use more than one equals operator (we can either use <code>==</code> or <code>===</code>) we are doing what is called <strong>comparison</strong> (comparing values). When we use a single equals operator <code>=</code>, we are doing what is called <strong>assignment</strong> (setting a variable equal to some value).</p>
+
+<p>This first example might appear a little strange, because the condition inside of the <code>if</code> statement (<code>instructor === &quot;Elie&quot;</code>) will always return true! Here&#39;s another example for you to consider. Run this code a couple of times and try to get both messages to log to the console based on what you enter into the prompt:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> favoriteFood = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">What's your favorite food?</span><span class="delimiter">&quot;</span></span>);
+
+<span class="keyword">if</span>(favoriteFood === <span class="string"><span class="delimiter">&quot;</span><span class="content">pizza</span><span class="delimiter">&quot;</span></span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Woah! My favorite food is pizza too!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">That's cool. My favorite food is pizza.</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<p>(If you&#39;re having trouble getting the first message to log, it may help to know that strings are <em>case-sensitive</em>: &quot;pizza&quot; and &quot;PIZZA&quot; are different strings.)</p>
+
+<p>Now, what&#39;s the difference between <code>==</code> and <code>===</code>, you ask? Great question! We&#39;ll get to that down below. For now, though, it might be helpful to play around with these operators in the Chrome console, and see if you can come up with a guess as to how these operators behave differently.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> number = <span class="integer">55</span>;
+
+<span class="comment">// we begin with an &quot;if&quot; statement followed by a condition in () and a block of code inside of {}</span>
+<span class="keyword">if</span>(number == <span class="string"><span class="delimiter">&quot;</span><span class="content">55</span><span class="delimiter">&quot;</span></span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Yes!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">No</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<h3>Difference between <code>==</code> and <code>===</code></h3>
+
+<p>In JavaScript we have two different operators for comparison: the double and triple equals. Both operators check whether the two things being compared have the same value, but there&#39;s one important difference. <code>==</code> allows for type coercion of the values, while <code>===</code> does not. So to understand the difference between these operators, we first need to understand what is meant by type coercion.</p>
+
+<p>Consider the following examples:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment">// 1.</span>
+<span class="integer">5</span> + <span class="string"><span class="delimiter">&quot;</span><span class="content">hi</span><span class="delimiter">&quot;</span></span>; <span class="comment">// &quot;5hi&quot;</span>
+
+<span class="comment">// 2.</span>
+<span class="keyword">if</span> (<span class="string"><span class="delimiter">&quot;</span><span class="content">foo</span><span class="delimiter">&quot;</span></span>) {
+  console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">this will show up!</span><span class="delimiter">&quot;</span></span>);
+}
+
+<span class="comment">// 3.</span>
+<span class="keyword">if</span> (<span class="predefined-constant">null</span>) {
+  console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">this won't show up!</span><span class="delimiter">&quot;</span></span>);
+}
+
+<span class="comment">// 4.</span>
++<span class="string"><span class="delimiter">&quot;</span><span class="content">304</span><span class="delimiter">&quot;</span></span>; <span class="comment">// 304</span>
+</pre></div>
+</div>
+
+<p>Let&#39;s figure out what&#39;s happening in each of these examples. In the first one, you&#39;ve asked JavaScript to add a number and a string. In a lot of programming languages, this would throw an error, but JavaScript is more accomodating! It evaluates the expression 5 + &quot;hi&quot; by first <em>coercing</em> 5 into a string, and then interpreting the &quot;+&quot; operator as string concatenation. So it combines the string &quot;5&quot; with the string &quot;hi&quot; into the string &quot;5hi&quot;.</p>
+
+<p>The next two examples show a similar sort of <em>coercion</em>. JavaScript expects the values inside of parentheses that come after the keyword <code>if</code> to be booleans. If you pass in a value which is not a boolean, JavaScript will <em>coerce</em> the value to a boolean according to the rules for truthy/falsey values defined below. Since &quot;foo&quot; is not a falsey value, it will be coerced to <code>true</code>, which is why the second example logs something to the console. <code>null</code>, however, is a falsey value, so it gets coerced to false and nothing shows up in the third example.</p>
+
+<p>The last example shows a very common way to coerce a stringified number back into a number. By prefacing the string with the plus sign, JavaScript will perform a <em>coercion</em> on the value and convert it from a string value to a number value.</p>
+
+<p>In essence, then, coercion is just the process of converting a value from one type to another. JavaScript uses coercion pretty liberally among programming languages, so if you don&#39;t understand how coercion in JavaScript works, it can be easy to introduce bugs into your code.</p>
+
+<p>But what does all of this have to do with <code>==</code> and <code>===</code>? Let&#39;s look at some examples:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="integer">5</span> == <span class="string"><span class="delimiter">&quot;</span><span class="content">5</span><span class="delimiter">&quot;</span></span>; <span class="comment">// true</span>
+<span class="integer">5</span> === <span class="string"><span class="delimiter">&quot;</span><span class="content">5</span><span class="delimiter">&quot;</span></span>; <span class="comment">// false</span>
+<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> === <span class="predefined-constant">true</span>; <span class="comment">// false</span>
+<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> == <span class="predefined-constant">true</span>; <span class="comment">// false</span>
+<span class="predefined-constant">true</span> == <span class="integer">1</span>; <span class="comment">// true</span>
+<span class="predefined-constant">true</span> === <span class="integer">1</span>; <span class="comment">// false</span>
+<span class="predefined-constant">undefined</span> === <span class="predefined-constant">null</span>; <span class="comment">// false</span>
+<span class="predefined-constant">undefined</span> == <span class="predefined-constant">null</span>; <span class="comment">// true</span>
+</pre></div>
+</div>
+
+<p>What&#39;s going on here? Let&#39;s deal with the expressions involving <code>===</code> first. As you can see, the expressions <code>5 === &quot;5&quot;</code>, <code>&quot;true&quot; === true</code>, <code>true === 1</code>, and <code>undefined === null</code> all evaluate to <code>false</code>. In some sense, perhaps this shouldn&#39;t be so surprising: none of the values being compared are the same! One way to think about this is to recall the types of the primitives being compared. In the first case, we&#39;re comparing a number to a string; in the second case, a boolean and a string; in the third case, a boolean and a number; and in the last case, <code>undefined</code> and <code>null</code>. How can these values be the same when the primitives involved aren&#39;t even of the same type??</p>
+
+<p>From the above examples, you can see that the <code>==</code> operator is a little less strict (in fact, <code>===</code> is sometimes referred to as the &quot;strict&quot; equality operator, while <code>==</code> is sometimes referred to as the &quot;loose&quot; equality operator). The reason that comparisons like <code>5 == &quot;5&quot;</code> evaluate to true is because <code>==</code> allows for type coercion!</p>
+
+<p>But what gets coerced? Does <code>5</code> become <code>&quot;5&quot;</code> or does <code>&quot;5&quot;</code> become <code>5</code>? In this case, according to the specification the string gets coerced into a number, not the other way around. This might seem like an unimportant detail, but there are a couple of gotchas in the way coercion works that can be confusing when you first encounter them.</p>
+
+<p>For example, it might seem like <code>&quot;true&quot; == true</code> should evaluate to <code>true</code>, since <code>&quot;true&quot;</code> is a truthy value! But in fact, what actually happens is that the boolean <code>true</code> gets coerced to a number (1), and then <code>&quot;true&quot;</code> is compared to <code>1</code>, which returns false. (This is also why <code>true == 1</code> evaluates to <code>true</code>.)</p>
+
+<p>It&#39;s less important to memorize these rules for how coercion works with <code>==</code> than to recognize that <code>==</code> allows for coercion while <code>===</code> doesn&#39;t. If you don&#39;t want to have to think about coercion in your comparisons, stick to <code>===</code>.</p>
+
+<h3>If / else statements with other comparators</h3>
+
+<p>We previously saw what an <code>if</code> statement looks like. Let&#39;s examine this a bit more:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> x = <span class="integer">4</span>;
+<span class="keyword">if</span>(x &lt;= <span class="integer">5</span>){
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">x is less than or equal to five!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">x is not less than or equal to five!</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<p>We saw before that we can use <code>==</code> or <code>===</code> to compare values. We can also check for inequality, using</p>
+
+<p><code>&lt;</code> - less than,</p>
+
+<p><code>&lt;=</code> - less than or equal to,</p>
+
+<p><code>&gt;</code> - greater than,</p>
+
+<p><code>&gt;=</code> - greater than or equal to,</p>
+
+<p><code>!=</code> - not equal (loose), and</p>
+
+<p><code>!==</code> - not equal (strict).</p>
+
+<h3>Falsey Values</h3>
+
+<p>As we&#39;ve alluded to already, another essential concept to understand in JavaScript is that some values (aside from <code>false</code>) are actually false as well, when they&#39;re used in a context where JavaScript expects a boolean value! Even if they do not have a &quot;value&quot; of false, these values will be translated (or &quot;coerced&quot;) to false when evaluated in a boolean expression.</p>
+
+<p>In JavaScript there are 6 falsey values:</p>
+
+<ul>
+<li><code>0</code></li>
+<li><code>&quot;&quot;</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+<li><code>false</code></li>
+<li><code>NaN</code> (short for not a number)</li>
+</ul>
+
+<p>If you ever want to determine if a value is truthy or falsey, you can prefix it with <code>!!</code>. <code>!!</code> explicitly coerces a value into its boolean form.</p>
+
+<p>What do these values return?</p>
+
+<p><code>!!false</code><br>
+<code>!!-1</code><br>
+<code>!!-0</code><br>
+<code>!![]</code><br>
+<code>!!{}</code><br>
+<code>!!&quot;&quot;</code><br>
+<code>!!null</code></p>
+
+<p>You can read more about these <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">here</a></p>
+
+<h3>!, || and &amp;&amp;</h3>
+
+<p>In our conditions (and assignments) we can use certain logical operators to write more complex statements. Here are some other useful operators:</p>
+
+<p><code>!</code> - the <strong>not</strong> operator, which flips the boolean value (<code>!true === false</code>). <code>!!</code> simply applies this operator twice, so <code>!!true === true</code>, and <code>!!false === false</code>.</p>
+
+<p><code>||</code> - the <strong>or</strong> operator, which in a boolean context returns true if either condition is true</p>
+
+<p><code>&amp;&amp;</code> - the <strong>and</strong> operator, which in a boolean context returns true if both conditions are true</p>
+
+<p>You can read more about logical operators <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">here</a>.</p>
+
+<h3>Ternary Operators</h3>
+
+<p>Another common pattern you&#39;ll see in JavaScript is the use of <em>ternary operators</em>. A ternary operator is another way to write an if / else statement. For example, consider the following code:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> guess = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">Guess what number I'm thinking of!</span><span class="delimiter">&quot;</span></span>);
+
+<span class="keyword">if</span> (guess === <span class="string"><span class="delimiter">&quot;</span><span class="content">7</span><span class="delimiter">&quot;</span></span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Correct!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Incorrect!</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<p>This code asks the user to guess a number. It logs &quot;Correct!&quot; if the user guesses 7, and &quot;Incorrect!&quot; otherwise.</p>
+
+<p>If you wanted to, you could refactor this code using a ternary operator:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> guess = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">Guess what number I'm thinking of!</span><span class="delimiter">&quot;</span></span>);
+
+<span class="comment">// here's our first ternary</span>
+guess === <span class="string"><span class="delimiter">&quot;</span><span class="content">7</span><span class="delimiter">&quot;</span></span> ? console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Correct!</span><span class="delimiter">&quot;</span></span>) : console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Incorrect!</span><span class="delimiter">&quot;</span></span>);
+</pre></div>
+</div>
+
+<p>In general, a ternary operator has the form:</p>
+<div class="CodeRay">
+  <div class="code"><pre>expression ? pathIfTrue : pathIfFalse
+</pre></div>
+</div>
+
+<p>This is equivalent to:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span> (expression) {
+    pathIfTrue
+} <span class="keyword">else</span> {
+    pathIfFalse
+}
+</pre></div>
+</div>
+
+<p>You can also store the value of a ternary in a variable:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> num = <span class="integer">3</span>;
+<span class="keyword">var</span> comparison = num &gt; <span class="integer">0</span> ? <span class="string"><span class="delimiter">&quot;</span><span class="content">Greater than 0</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">Less than or equal to 0</span><span class="delimiter">&quot;</span></span>;
+comparison; <span class="comment">// this will equal &quot;Greater than 0&quot;, since 3 &gt; 0.</span>
+</pre></div>
+</div>
+
+<p>Ternary operators can help you write less code, but be careful using them, as they also tend to make your code more difficult to read and reason about.</p>
+
+<h3>If / else if / else</h3>
+
+<p>Sometimes you may have more than two conditions to check. In this case, you can chain together multiple conditions using <code>else if</code>. Here&#39;s an example:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> number = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">What's your favorite number?</span><span class="delimiter">&quot;</span></span>);
+
+<span class="keyword">if</span> (number &gt;= <span class="integer">1000</span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Woah, that's a big number!</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> <span class="keyword">if</span> (number &gt;= <span class="integer">0</span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">That's a cool number.</span><span class="delimiter">&quot;</span></span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Negative numbers?! That's just bananas.</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<p>Try this out with a few different numbers and see what happens!</p>
+
+<h3>Switch statements</h3>
+
+<p>Another way to write conditional logic is to use a <code>switch</code> statement. While these are used less frequently, they can be quite useful when there are multiple conditions that can be met. Notice that each <code>case</code> clause needs to end with a <code>break</code> so that we exit the <code>switch</code> statement. Here is an example:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> feeling = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">How are you feeling today?</span><span class="delimiter">&quot;</span></span>).toLowerCase();
+<span class="comment">// what do you think the .toLowerCase does at the end?</span>
+
+<span class="keyword">switch</span>(feeling){
+    <span class="keyword">case</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">happy</span><span class="delimiter">&quot;</span></span>:
+        console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Awesome, I'm feeling happy too!</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">sad</span><span class="delimiter">&quot;</span></span>:
+        console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">That's too bad, I hope you feel better soon.</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">hungry</span><span class="delimiter">&quot;</span></span>:
+        console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Me too, let's go eat some pizza!</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">I see. Thanks for sharing!</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+<h3>Modulus Operator</h3>
+
+<p>Another very useful operator to use is the modulus operator which returns the remainder of a number when dividing by another number. The operator we use is <code>%</code>.</p>
+
+<p>You&#39;ll often see this operator used when checking to see if a number is even or odd.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="integer">5</span> % <span class="integer">3</span> === <span class="integer">2</span> <span class="comment">// true (the remainder when five is divided by 3 is 2)</span>
+
+<span class="keyword">var</span> num = prompt(<span class="string"><span class="delimiter">&quot;</span><span class="content">Please enter a whole number</span><span class="delimiter">&quot;</span></span>);
+<span class="keyword">if</span> ( num % <span class="integer">2</span> === <span class="integer">0</span> ) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">the num variable is even!</span><span class="delimiter">&quot;</span></span>)
+} <span class="keyword">else</span> <span class="keyword">if</span> ( num % <span class="integer">2</span> === <span class="integer">1</span>) {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">the num variable is odd!</span><span class="delimiter">&quot;</span></span>)
+} <span class="keyword">else</span> {
+    console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hey! I asked for a whole number!</span><span class="delimiter">&quot;</span></span>);
+}
+</pre></div>
+</div>
+
+</div>
+
+<p>
+    When you're ready, move on to <a id="next-link" href="../introduction-to-javascript-boolean-exercises/index.html">Boolean Logic Exercises</a>
+
+</p>
+
+<p class="text-center">
+    <a class="apply-now" href="../introduction-to-javascript-boolean-exercises/index.html">Continue</a>
+</p>
+<script src="../../../assets/online_course_chapter-7184317fdfc1eadd48d978323e8253c1efbfd066fe264614c17f90cb37de011c.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#b6dfd8d0d9f6c4dfc2dedbc5d5ded9d9da98d5d9db"><span class="__cf_email__" data-cfemail="2a43444c456a58435e424759494245454604494547">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="7M3s6o0/e96h42vEy0s21xyZ2lVD2I4HS/j18qGHIT4SYwz50C5FvqSGoJQQKrs1OJ9Aa2Hj66GNi9prW32vmw==" />  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+    </div>
+  </div>
+      <div id="modal-second-part" style="display:none;">
+        <h1 class="text-center">Tell us more about yourself</h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+            <div class="errors text-center"></div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              How would you define your skill as a developer?
+              <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+              <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+              <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              Would you like to learn more about Rithm School's in-person courses and how to apply?
+              <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+              <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script>
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

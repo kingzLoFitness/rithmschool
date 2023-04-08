@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how to use the popular React.js library to create powerful views. Learn Webpack, Babel, JSX, Props, State and much more.">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free React Fundamentals Course | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-898d5e549744bda561b0fe4cf113c8e45cc9ac22adbc510f0abf70f7223a9c65.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-1ee25ca5dae4b7455729ae69f9a574d958400000995d342c0850fdc8d695deb3.css" />
+
+  <script src="../../../assets/application-b300e95eb2f198640c0c0129a9c721fb0fb58d99de8617baa968d96afea7c988.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="BSl+3pk3xHr4FZhe+dZx4LqePKNDT55IKPAPoX3XH+WN17LBj3Dg7t7jpuyd8BUjAc6V+ySeRgVdlUWdyqLoGA==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    <link rel="stylesheet" media="screen" href="../../../assets/sidebar-b92be40c45347064e43abeea74fbfa2becea39916b6315f12eda5d1c9c0e14b4.css" />
+
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">1 Introduction to React</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="index.html">Introduction to React</a>
+      </li>
+      <li>
+        <a href="../jsx-and-babel/index.html">JSX and Babel</a>
+      </li>
+      <li>
+        <a href="../webpack/index.html">Webpack</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">2 Props, State, and Component Architecture</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../props-and-state/index.html">Props and State</a>
+      </li>
+      <li>
+        <a href="../react-component-architecture/index.html">React Component Architecture</a>
+      </li>
+      <li>
+        <a href="../components-exercise/index.html">React Components Exercise</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">3 Events, Forms, Refs, and Life Cycle</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 1 - 2 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../react-events/index.html">Events in React</a>
+      </li>
+      <li>
+        <a href="../forms-and-refs/index.html">Forms and Refs</a>
+      </li>
+      <li>
+        <a href="../component-life-cycle/index.html">Component Life Cycle</a>
+      </li>
+      <li>
+        <a href="../react-events-exercise/index.html">React Events Exercise</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit locked">
+  <h4>
+    <span class="unit-title">4 Final Project</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      1 section, 6 - 10 hours
+    </small>
+      <i class="fa fa-2x fa-lock"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../react-final-project/index.html">Final Project</a>
+      </li>
+  </ul>
+</div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="nav-links text-center">
+      <a href="../index.html">Table of Contents</a>
+        | <a id="next-link" href="../jsx-and-babel/index.html">Next</a>
+    </div>
+    <h1 class="begin-text heading" >{&nbsp;Introduction to React.&nbsp;}</h1>
+
+    <button id="show-courses">
+      <i class="fa fa-angle-double-right fa-2x"></i>
+    </button>
+
+    <div data-locked-chapter="false" data-unit="1" id="course-content">
+      <h3>Objectives</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Describe what a React component is</li>
+<li>Make a simple React component with JavaScript and HTML</li>
+<li>Use props to customize React components</li>
+</ul>
+
+<h3>Introduction to React</h3>
+
+<p>React is a lightweight JavaScript library that is primarily responsible for the views that you create on your website.  It is a front-end library, which means that it is (typically) run in the client&#39;s browser, rather than on the server side.</p>
+
+<p>One of the key concepts in React is the use of <em>components</em>.  A component is a reusable element that can be displayed on the web page, or a higher level component that controls view components.  When you use React, you are ultimately creating components that are modular enough to be reused many times and potentially in many places in your application.</p>
+
+<h3>Building an Application Using Components</h3>
+
+<p>To solidify the idea of components, let&#39;s think about how we could design a to-do list application using react components. We want to make a to-do list app that works like our example below.</p>
+
+<p><img src="../../../content/react_fundamentals/react-todo-app.gif" alt="Todo List Application Gif"></p>
+
+<p>The app has a an HTML <code>li</code> element for each item in our to-do list plus a form in which users can enter new to-do items by providing a title and a description.  If we were to break this app down, we might make the following components:</p>
+
+<ol>
+<li>A <code>TodoListItem</code> component that can be reused for each to-do item in the list</li>
+<li>A <code>TodoListForm</code> component that allows the user to type and submit new to-do items.</li>
+<li>A <code>TodoListApp</code> component that <em>uses</em> the <code>TodoListItem</code>s and the <code>TodoListForm</code> to create the entire to-do list application.</li>
+</ol>
+
+<p>Even in this small example, you may have noticed that we are using smaller components to build a larger component.  Specifically, we are using the <code>TodoListItem</code> and the <code>TodoListForm</code> to create the <code>TodoListApp</code>.  This concept is called <em>composition</em> and it is frequently used in React.</p>
+
+<p>We will see more concrete component examples as we go, but it&#39;s useful to get a preview of these concepts before we get started.</p>
+
+<h3>Getting Started With React</h3>
+
+<p>Let&#39;s jump in and write our first React code! To get started, let&#39;s make sure we have the two scripts necessary for rendering a component in the DOM. The first is the React library and the second is the ReactDOM library, which is used for rendering to the DOM. These libraries are isolated as there are environments where we can use React and not have access to a DOM (like mobile development, game development, or even command line scripts).</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">en</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute-name">charset</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">UTF-8</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="0b24247e657b606c2568646624796e6a687f4b3a3e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="bc9393c9d2ccd7db92dfd3d193ced9dddfc891d8d3d1fc8d89">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react-dom.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script&gt;</span>
+<span class="inline">        <span class="comment">// React is a global from the React library</span>
+        <span class="keyword">var</span> div = React.DOM.div; <span class="comment">// let's create a div!</span>
+        <span class="keyword">var</span> h1 = React.DOM.h1; <span class="comment">// let's create an h1!</span>
+
+        <span class="keyword">var</span> App = div(<span class="predefined-constant">null</span>,
+                      h1({<span class="key">id</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">page-title</span><span class="delimiter">&quot;</span></span>}, <span class="string"><span class="delimiter">'</span><span class="content">Hello World!</span><span class="delimiter">'</span></span>));
+
+        <span class="comment">// lets put this on the DOM</span>
+        ReactDOM.render(App, document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span>));</span>
+    <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>If we open this in the browser we should see &quot;Hello World!&quot;. This may look quite strange, so let&#39;s talk more about what we did. <code>div</code> and <code>h1</code> are actually functions provided to us by React.  </p>
+
+<p>The first parameter to each function is an object of attributes for the DOM element that we are creating.  The names of most attributes are unchanged from what you would write in plain HTML. The one exception is the <code>class</code> attribute: since <code>class</code> is a reserved keyword in JavaScript, if you want to set the class of an element using the attribute object in React, you should use the <code>className</code> key. In this example, the <code>div</code> has no attributes, so we pass in <code>null</code> as the first argument. On the other hand, <code>h1</code> has an <code>id</code> attribute.  </p>
+
+<p>The second argument to each function is the inner HTML of the element that we are creating.  In this example, the div has an <code>h1</code> tag inside of it, and the <code>h1</code> tag has the text <em>Hello World!</em> inside of it.</p>
+
+<p>Now we said that React is all about &quot;components,&quot; but so far we have just been using existing HTML elements. Let&#39;s change things up by writing our first bona-fide React component.</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">en</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute-name">charset</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">UTF-8</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="d7f8f8a2b9a7bcb0f9b4b8baf8a5b2b6b4a397e6e2">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="d9f6f6acb7a9b2bef7bab6b4f6abbcb8baadf4bdb6b499e8ec">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react-dom.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script&gt;</span>
+<span class="inline">
+        <span class="comment">// React is a global from the React library</span>
+        <span class="keyword">var</span> div = React.DOM.div; <span class="comment">// let's create a div!</span>
+        <span class="keyword">var</span> h1 = React.DOM.h1; <span class="comment">// let's create an h1!</span>
+
+        <span class="reserved">class</span> MyComponent <span class="reserved">extends</span> React.Component {
+            render() {
+               <span class="keyword">return</span> div(
+                        <span class="predefined-constant">null</span>,
+                        h1(<span class="predefined-constant">null</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">My very first component!</span><span class="delimiter">&quot;</span></span>)
+                    );
+            }
+        }
+
+        <span class="keyword">var</span> App = (
+            div(<span class="predefined-constant">null</span>,
+                h1({<span class="key">id</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">page-title</span><span class="delimiter">&quot;</span></span>}, <span class="string"><span class="delimiter">'</span><span class="content">Hello World!</span><span class="delimiter">'</span></span>),
+                <span class="comment">// now lets add our component!</span>
+                React.createElement(MyComponent, <span class="predefined-constant">null</span>)
+            )
+        );
+
+        <span class="comment">// lets put this on the DOM</span>
+        ReactDOM.render(App, document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span>))</span>
+    <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>Now let&#39;s see what that looks like! We just made up our own component and we can start using it anywhere!</p>
+
+<p>Note that when we created <code>MyComponent</code>, we did it using ES2015 <code>class</code> syntax. (If you need a refresher on this syntax, check out our <a target="_blank" href="../../advanced-javascript-part-2/javascript-es2015-class-syntax/index.html">materials</a>.) It used to be possible to create components without ES2015 using a method called <code>React.createClass</code>, but as of version 15 of React this method is deprecated and slated for removal in version 16. We&#39;ll add more ES2015 syntax to our React code over time, but if you&#39;re curious about using React without ES2015, you can head over to the <a target="_blank" href="https://facebook.github.io/react/docs/react-without-es6.html">docs</a> to learn more. </p>
+
+<p>It&#39;s cool that we&#39;ve built our first custom component in React, but <code>MyComponent</code> is still fairly rigid. It will have the same structure and content no matter where we put it. It would be better if we could add some flexibility to it; for instance, it might be nice if we could modify the text inside of the component when it renders.</p>
+
+<p>To achieve this goal, let&#39;s introduce a concept called <code>props</code>. We can think of these as &quot;properties&quot; for our components. Here&#39;s an example of what they look like:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">en</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute-name">charset</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">UTF-8</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="bb9494ced5cbd0dc95d8d4d694c9dedad8cffb8a8e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https:<a class="__cf_email__" href="../../../cdn-cgi/l/email-protection/index.html" data-cfemail="022d2d776c7269652c616d6f2d70676361762f666d6f423337">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>/dist/react-dom.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+    <span class="tag">&lt;script&gt;</span>
+<span class="inline">
+        <span class="comment">// React is a global from the React library</span>
+        <span class="keyword">var</span> div = React.DOM.div; <span class="comment">// let's create a div!</span>
+        <span class="keyword">var</span> h1 = React.DOM.h1; <span class="comment">// let's create an h1!</span>
+
+        <span class="reserved">class</span> MyComponent <span class="reserved">extends</span> React.Component {
+            render() {
+               <span class="keyword">return</span> div(
+                        <span class="predefined-constant">null</span>,
+                        h1(<span class="predefined-constant">null</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">My very first component!</span><span class="delimiter">&quot;</span></span>),
+                        h1(<span class="predefined-constant">null</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">Hello </span><span class="delimiter">&quot;</span></span> + <span class="local-variable">this</span>.props.name)
+                    );
+            }
+        }
+
+        <span class="keyword">var</span> App = (
+            div(<span class="predefined-constant">null</span>,
+                h1(<span class="predefined-constant">null</span>, <span class="string"><span class="delimiter">'</span><span class="content">Hello World!</span><span class="delimiter">'</span></span>),
+                <span class="comment">// now lets add our component!</span>
+                React.createElement(MyComponent, <span class="predefined-constant">null</span>),
+                React.createElement(MyComponent, {<span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Elie</span><span class="delimiter">&quot;</span></span>}),
+                React.createElement(MyComponent, {<span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Tim</span><span class="delimiter">&quot;</span></span>}),
+                React.createElement(MyComponent, {<span class="key">name</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Matt</span><span class="delimiter">&quot;</span></span>})
+            )
+        );
+
+        <span class="comment">// lets put this on the DOM</span>
+        ReactDOM.render(App, document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">app</span><span class="delimiter">&quot;</span></span>));</span>
+    <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</pre></div>
+</div>
+
+<p>We&#39;ve done some pretty cool stuff here, but you might be thinking that this syntax is a bit strange. Fortunately, there is another way of using JavaScript to write HTML with a language called <code>JSX</code>. <code>JSX</code> might be a bit tricky to get used to at first, but it&#39;s the standard when writing React and can do some pretty incredible things once you get used to it. We&#39;ll dig into <code>JSX</code> in the next chapter.</p>
+
+<h3>Exercise</h3>
+
+<p>Complete the <a target="_blank" href="https://github.com/rithmschool/react_exercises/tree/master/01-intro">intro to React</a> exercise.</p>
+
+    </div>
+
+    <p>
+        When you're ready, move on to <a id="next-link" href="../jsx-and-babel/index.html">JSX and Babel</a>
+
+    </p>
+
+    <p class="text-center">
+    <a class="apply-now" href="../jsx-and-babel/index.html">Continue</a>
+</p>
+  </div>
+</div>
+<script src="../../../assets/online_course_chapter-f3311881902b6b595dc86c6e981f2010c8ee4df14b9389b5bbb945badae6f42b.js"></script>
+<script src="../../../assets/online_course-d9a4889bd8a88fe2cbd56af4193f8f10873f1228aeaa35e863920564c4706528.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#f29b9c949db2809b869a9f81919a9d9d9edc919d9f"><span class="__cf_email__" data-cfemail="741d1a121b34061d001c1907171c1b1b185a171b19">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="BNbkT3uUbwiRI/Kz3DHeXMoc4xDyIK89sDi+XM3pkJuMKChQbdNLnLfVzAG4F7qfcUxKSJXxd3DFXfRgepxnZg==" />  <div id="modal-email-known" style="display:none;">
+    <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
+    <div class="email-errors text-center"></div>
+    <hr class="modal--bar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="form-group">
+          <input class="form-control" placeholder="Email" type="email" id="confirm-email-input">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <button id="confirm-email" type="submit" class="btn btn-xl">Sign In</button>
+    <div class="text-center">
+      <a href="javascript:void(0)" style="margin-top:-20px; display:block;" class="modal-go-back">Go Back</a>
+    </div>
+  </div>
+  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+          <a class="text-center email-known" href="javascript:void(0)">Already signed up?</a>
+    </div>
+  </div>
+    <div id="modal-second-part" style="display:none;">
+      <h1 class="text-center">Tell us more about yourself</h1>
+        <div class="col-sm-offset-2 col-sm-8">
+          <hr class="modal--bar">
+          <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+          <div class="errors text-center"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            How would you define your skill as a developer?
+            <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+            <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+            <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            Would you like to learn more about Rithm School's in-person courses and how to apply?
+            <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+            <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script> -->
+
+<!-- Google Code for Free Content Leads Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858935159;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "LdkJCOzLlXAQ957JmQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/858935159/?label=LdkJCOzLlXAQ957JmQM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->

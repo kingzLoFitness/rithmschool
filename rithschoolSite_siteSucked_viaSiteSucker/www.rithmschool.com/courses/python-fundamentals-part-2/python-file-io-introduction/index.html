@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+  <meta property="og:image" content="https://www.rithmschool.com/assets/logos/300logo-e647a12a86a37452242b8a21b69d9d1dc4062424c1aba75e17ca49ba66787120.jpg"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Familiarize yourself with the more advanced concepts in Python. This popular programming language is great for beginners looking to dive into programming and data science.">
+  <meta name="author" content="Rithm School">
+
+
+  <title>Free Python Fundamentals Course Part 2 | Rithm School</title>
+
+
+
+  <link rel="stylesheet" media="all" href="../../../assets/application-d7dcbdaf43dd221b077a8cf82d4ae2e314969993450100a73fd94aa9c90caf80.css" />
+
+  <!-- Add a stylesheet tag for the name of the action -->
+  <link rel="stylesheet" media="screen" href="../../../assets/main-898d5e549744bda561b0fe4cf113c8e45cc9ac22adbc510f0abf70f7223a9c65.css" />
+  <link rel="stylesheet" media="screen" href="../../../assets/online_courses-1ee25ca5dae4b7455729ae69f9a574d958400000995d342c0850fdc8d695deb3.css" />
+
+  <script src="../../../assets/application-b300e95eb2f198640c0c0129a9c721fb0fb58d99de8617baa968d96afea7c988.js"></script>
+  <script src="../../../assets/modernizr-43ece90ce3662a6bd3b00d7acdddd63c4a965f96d0b7e2b9738988f559971b3f.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ZmWETXuFg16CQ1MBHYfH+U5AbE6d4hauWBPUTpBc517um0hSbcKnyqS1bbN5oaM69RDFFvozzuMtdp5yJykQow==" />
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81714915-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '214663358944902');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=214663358944902&ev=PageView"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<a id="banner-alert" target="_blank" href="https://part-time.rithmschool.com">
+  <div class="container">
+    <p type="button" class="close" >&times;</p>
+    Our next Part-Time JavaScript Course starts in June. Save $200 if you register before May 10! <u>Click here for details.</u>
+  </div>
+</a><div class="container">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom ">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span><i class="fa fa-2x fa-bars"></i>
+              </button>
+              <a style="padding:0;" class="navbar-brand page-scroll" href="../../../index.html">
+                  <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        Learn Full Time&nbsp;<span class="caret"></span>
+</a>                      <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a id="#details-tuition" href="../../../program/index.html">Details &amp; Tuition</a>
+                        <li><a id="#curriculum" href="../../../curriculum/index.html">Curriculum</a></li>
+                        <li><a id="#outcomes" href="../../../outcomes/index.html">Job Support</a></li>
+                        <li><a id="#faq" href="../../../faq/index.html">FAQ</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a target="_blank" id="#workshops" href="http://www.eventbrite.com/o/rithm-school-11279356650">Coding Workshops</a>
+                  </li>
+                  <li>
+                    <a id="#online-courses" href="../../index.html">Free Online Courses</a>
+                  </li>
+                  <li>
+                    <a id="#partnerships" href="../../../partnerships/index.html">Partnerships</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)">
+                        About&nbsp;<span class="caret"></span>
+</a>                      <ul class="bottom-dropdown dropdown-menu dropdown-menu-left">
+                        <li>
+                          <a id="#blog" href="../../../blog/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="#team" href="../../../team/index.html">Our Team</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="apply-now" id="apply" href="../../../apply/index.html">Apply Now</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+    <link rel="stylesheet" media="screen" href="../../../assets/sidebar-b92be40c45347064e43abeea74fbfa2becea39916b6315f12eda5d1c9c0e14b4.css" />
+
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                  <div class="course-unit ">
+  <h4>
+    <span class="unit-title">1 Object Oriented Programming with Python</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../introduction-to-object-oriented-programming/index.html">Introduction to Object Oriented Programming in Python</a>
+      </li>
+      <li>
+        <a href="../python-inheritance-and-mro/index.html">Inheritance and MRO</a>
+      </li>
+      <li>
+        <a href="../python-special-methods-and-polymorphism/index.html">Special Methods and Polymorphism</a>
+      </li>
+      <li>
+        <a href="../python-object-oriented-programming-exercises/index.html">Object Oriented Programming in Python Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit ">
+  <h4>
+    <span class="unit-title">2 File IO</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="index.html">File I/O Introduction</a>
+      </li>
+      <li>
+        <a href="../python-file-io-csv/index.html">File I/O with CSVs</a>
+      </li>
+      <li>
+        <a href="../python-file-io-exercise/index.html">File I/O Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit ">
+  <h4>
+    <span class="unit-title">3 Generators, Iterators and Decorators</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      4 sections, 1 - 2 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../python-generators-and-iterators/index.html">Generators and Iterators</a>
+      </li>
+      <li>
+        <a href="../python-decorators/index.html">Decorators</a>
+      </li>
+      <li>
+        <a href="../python-lambdas-and-dates/index.html">Lambdas and Dates</a>
+      </li>
+      <li>
+        <a href="../python-generators-iterators-and-decorators-exercises/index.html">Generators, Iterators and Decorators Exercises</a>
+      </li>
+  </ul>
+</div>
+                  <div class="course-unit ">
+  <h4>
+    <span class="unit-title">4 Web Scraping and Server Side Requests</span>
+    <small>
+      <i class="fa fa-clock-o"></i>
+      3 sections, 2 - 3 hours
+    </small>
+      <i class="fa fa-2x fa-angle-right"></i>
+  </h4>
+  <ul>
+      <li>
+        <a href="../python-web-scraping-basics/index.html">Web Scraping</a>
+      </li>
+      <li>
+        <a href="../python-server-side-requests/index.html">Server Side HTTP Requests</a>
+      </li>
+      <li>
+        <a href="../python-web-scraping-exercises/index.html">Web Scraping Exercises</a>
+      </li>
+  </ul>
+</div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="nav-links text-center">
+        <a id="next-link" href="../python-object-oriented-programming-exercises/index.html">Previous</a> |
+      <a href="../index.html">Table of Contents</a>
+        | <a id="next-link" href="../python-file-io-csv/index.html">Next</a>
+    </div>
+    <h1 class="begin-text heading" >{&nbsp;File I/O Introduction.&nbsp;}</h1>
+
+    <button id="show-courses">
+      <i class="fa fa-angle-double-right fa-2x"></i>
+    </button>
+
+    <div data-locked-chapter="true" data-unit="2" id="course-content">
+      <h3>Objectives:</h3>
+
+<p>By the end of this chapter, you should be able to:</p>
+
+<ul>
+<li>Read and write to text files</li>
+<li>Explain the purpose of a <code>with</code> statement</li>
+<li>Explain the different ways to open a file depending on whether you want to read, write, or append</li>
+</ul>
+
+<h3>Definitions</h3>
+
+<p>Python has a lot of functionality to help you manipulate text files. In this chapter we&#39;ll explore some of this functionality. Before we do so, here are three terms you should know, as we&#39;ll be using them frequently when discussing file IO (input/output).</p>
+
+<p><strong>Reading</strong> - Getting data from a file.  The data can be stored and manipulated in your program.</p>
+
+<p><strong>Writing</strong> - Saving new data to a file.</p>
+
+<p><strong>Cursor</strong> - When you read a file, a cursor gets created (just like a cursor when you are typing). You can&#39;t see this cursor, but this is how you can tell a file where to start reading from. Once the cursor is at the end of a file, you can not read it anymore unless you explicitly go back to the beginning</p>
+
+<h3>Reading</h3>
+
+<p>Let&#39;s start by creating a text file called <code>first.txt</code> and placing the following text inside of it:</p>
+<div class="CodeRay">
+  <div class="code"><pre>This is a very simple text file!
+</pre></div>
+</div>
+
+<p>Now let&#39;s make a file called <code>read.py</code> and add the following.</p>
+<div class="CodeRay">
+  <div class="code"><pre>file = <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r</span><span class="delimiter">'</span></span>)
+print(<span class="predefined">file</span>.read())
+</pre></div>
+</div>
+
+<p>We just opened a file called <code>first.txt</code> for reading (that&#39;s what the second argument of <code>&#39;r&#39;</code> indicates). After opening the file and storing it in a variable called <code>file</code>, we call the <code>read</code> function on it, which allows us to move our cursor from the beginning to the end. Finally, we&#39;re not just reading the file; we&#39;re printing out the results of that read operation. If you run <code>python3 read.py</code> in Terminal (from the directory where <code>read.py</code> lives), you should see the text of the file in the terminal!</p>
+
+<p>If we try to make invoke <code>file.read()</code> a second time, we just get an empty string back. This is because the cursor is at the end of the file and there is no more to read. In order to read the file again, we&#39;ll need to go back to the beginning of the file using <code>seek</code>. Hop into the Python REPL by typing <code>python3</code> in the terminal, then execute the following code:</p>
+<div class="CodeRay">
+  <div class="code"><pre>file = <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r</span><span class="delimiter">'</span></span>)
+
+<span class="comment"># type in the following commands</span>
+
+<span class="predefined">file</span>.read() <span class="comment"># we see all our test</span>
+<span class="predefined">file</span>.read() <span class="comment"># nothing now!</span>
+
+<span class="predefined">file</span>.seek(<span class="integer">0</span>) <span class="comment"># move the cursor back to the beginning</span>
+<span class="predefined">file</span>.read() <span class="comment"># there it is!</span>
+</pre></div>
+</div>
+
+<p>But we&#39;re not done yet, if we look at <code>file.closed</code> we will see the value is <code>False</code>. So we opened our file, but we never closed it! Let&#39;s always make sure we close the file!</p>
+<div class="CodeRay">
+  <div class="code"><pre>file = <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r</span><span class="delimiter">'</span></span>)
+
+<span class="comment"># type in the following commands</span>
+
+<span class="predefined">file</span>.read() <span class="comment"># we see all our test</span>
+<span class="predefined">file</span>.read() <span class="comment"># nothing now!</span>
+
+<span class="predefined">file</span>.seek(<span class="integer">0</span>) <span class="comment"># move the cursor back to the beginning</span>
+<span class="predefined">file</span>.read() <span class="comment"># there it is!</span>
+
+<span class="predefined">file</span>.closed <span class="comment"># False</span>
+<span class="predefined">file</span>.close()
+<span class="predefined">file</span>.closed <span class="comment"># True</span>
+
+<span class="predefined">file</span>.read() <span class="comment"># ValueError: I/O operation on closed file</span>
+</pre></div>
+</div>
+
+<p>Note: for multiline files, you can read one line at a time using the <code>readline</code> method.</p>
+
+<h3>keyword <code>with</code></h3>
+
+<p>Instead of worrying about closing the file each time, we can use a <code>with</code> block, which will automatically close the file after the operation. Let&#39;s see what that looks like:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    data = <span class="predefined">file</span>.read()
+    print(data)
+
+<span class="predefined">file</span>.closed <span class="comment"># True</span>
+</pre></div>
+</div>
+
+<h3>Writing</h3>
+
+<p>In the previous examples, we&#39;ve seen that the <code>open</code> function takes two parameters. The first is the path to the text file. But what&#39;s the second? Here is where we tell Python what we intend to do with the file. Here are the options for what we can pass in:</p>
+
+<ul>
+<li><code>r</code> use this when you only want to read the file.</li>
+<li><code>r+</code> use this when you want to read and write to the file. In this case, if you write to the file, you&#39;ll overwrite any existing characters while you&#39;re writing based on the location of the cursor, but once you&#39;ve finished writing, other characters will be unaffected.</li>
+<li><code>a</code> use this when you want to <em>append</em> to the file (text that&#39;s already in the file won&#39;t be affected)</li>
+<li><code>a+</code> use this when you want to read the file and append to it.</li>
+<li><code>w</code> use this when you want to <em>write</em> to the file. In this case, the file is completely emptied before it&#39;s written to, so the original text data will be lost.</li>
+<li><code>w+</code> use this when you want to write and read to the file.</li>
+</ul>
+
+<p>If you don&#39;t pass anything in to the second argument to <code>open</code>, <code>r</code> will be assumed.</p>
+
+<p>Take a look at these examples to see how these options behave differently:</p>
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">w</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    <span class="predefined">file</span>.write(<span class="string"><span class="delimiter">'</span><span class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos molestias ea sit veniam, rerum, totam quis eaque excepturi aut, nostrum reiciendis. At, harum quos adipisci magni nesciunt aliquid beatae sit!</span><span class="delimiter">'</span></span>)
+
+<span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    print(<span class="predefined">file</span>.read())
+
+<span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">r+</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    <span class="predefined">file</span>.write(<span class="string"><span class="delimiter">&quot;</span><span class="char">\n</span><span class="content">I'm at the beginning</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>)
+    <span class="predefined">file</span>.seek(<span class="integer">100</span>)
+    <span class="predefined">file</span>.write(<span class="string"><span class="delimiter">&quot;</span><span class="char">\n</span><span class="content">I'm in the middle</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>)
+    <span class="predefined">file</span>.seek(<span class="integer">0</span>)
+    print(<span class="predefined">file</span>.read())
+
+<span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">a+</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    <span class="predefined">file</span>.write(<span class="string"><span class="delimiter">&quot;</span><span class="char">\n</span><span class="content">I'm at the end</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>)
+    <span class="predefined">file</span>.seek(<span class="integer">0</span>)
+    print(<span class="predefined">file</span>.read())
+
+<span class="keyword">with</span> <span class="predefined">open</span>(<span class="string"><span class="delimiter">'</span><span class="content">first.txt</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">w+</span><span class="delimiter">'</span></span>) <span class="keyword">as</span> <span class="predefined">file</span>:
+    <span class="predefined">file</span>.write(<span class="string"><span class="delimiter">&quot;</span><span class="content">Now everything is overwritten :(</span><span class="delimiter">&quot;</span></span>)
+    <span class="predefined">file</span>.seek(<span class="integer">0</span>)
+    print(<span class="predefined">file</span>.read())
+</pre></div>
+</div>
+
+    </div>
+
+    <p>
+        To see all of the content on this page, please sign up on our <a id="mailing-list-link" role="button" href="javascript:void(0)">mailing list</a>. Once you have been verified, refresh the page.
+    </p>
+
+    <p class="text-center">
+    <a class="apply-now" href="../python-file-io-csv/index.html">Continue</a>
+</p>
+  </div>
+</div>
+<script src="../../../assets/online_course_chapter-f3311881902b6b595dc86c6e981f2010c8ee4df14b9389b5bbb945badae6f42b.js"></script>
+<script src="../../../assets/online_course-d9a4889bd8a88fe2cbd56af4193f8f10873f1228aeaa35e863920564c4706528.js"></script>
+
+</div>
+<!-- Chatra {literal} -->
+<script>
+    ChatraID = 'B32ypJxDbLRq5RhQ2';
+    ChatraGroupID = 'eXDapncP5vKAcBDr5';
+    (function(d, w, c) {
+        var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+<script>
+window.ChatraSetup = {
+    colors: {
+        buttonText: '#ffffff', // chat button text color
+        buttonBg: '#F86161'    // chat button background color
+    }
+};
+
+// // REMOVED when parallax was added
+// We only want to delay the chat on the homepage
+// so the animation has time to load.
+// if (window.location.pathname === '/') {
+//   Chatra("hide");
+//   setTimeout(function() {
+//     Chatra("show");
+//   }, 2600);
+// }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 text-center">
+            <a style="padding:0;" class="footer-logo" href="../../../index.html">
+              <img class="logo" height="58" alt="rithm school company logo" title="Rithm School Logo" src="../../../assets/logos/rithm-school-company-logo-eaabae929e57627848ee756658b028718af7d06d7e7534af22f899dfadfa8aa7.png" />
+</a>            <span><a class="text-muted faq-url" href="../../../cdn-cgi/l/email-protection/index.html#c5acaba3aa85b7acb1ada8b6a6adaaaaa9eba6aaa8"><span class="__cf_email__" data-cfemail="96fff8f0f9d6e4ffe2fefbe5f5fef9f9fab8f5f9fb">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="text-center email_signup_heading">
+            <p class="lead">Interested in meetups, courses and free content?</p>
+              <button name="button" type="submit" class="btn" id="mailing-list">Join mailing list</button>
+          </div>
+          <p class="lead text-center thank_you"></p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-center">
+          <ul class="list-inline social-buttons">
+              <li><a target="_blank" href="https://www.twitter.com/rithmschool"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.facebook.com/rithmschool"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/rithm-school"><i class="fa fa-linkedin"></i></a>
+              </li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12  text-center">
+          <a class="text-muted" href="../../../privacy/index.html">Privacy Policy</a> |
+          <a class="text-muted" href="../../../terms/index.html">Terms of Service</a>
+          <span class="copyright">&copy; Rithm Inc. 3338 17th Street Suite 100 San Francisco, CA 94110. All rights reserved. </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- link that opens popup -->
+<a style="display:none;" class="popup-with-form" href="#unlock-form">Open form</a>
+
+<!-- form itself -->
+<div class="thank_you"></div>
+<div class="container">
+  <form id="unlock-form" class="card mfp-hide white-popup-block" >
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="bxbXTcWG+oRM8HAPpkzvOkunPhKA1c0vDPkBo8nrk7Tn6BtS08HeEGoGTr3Caov58PeXSucEFWJ5nEuffp5kSQ==" />  <div id="modal-email-known" style="display:none;">
+    <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
+    <div class="email-errors text-center"></div>
+    <hr class="modal--bar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="form-group">
+          <input class="form-control" placeholder="Email" type="email" id="confirm-email-input">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <button id="confirm-email" type="submit" class="btn btn-xl">Sign In</button>
+    <div class="text-center">
+      <a href="javascript:void(0)" style="margin-top:-20px; display:block;" class="modal-go-back">Go Back</a>
+    </div>
+  </div>
+  <div id="modal-first-part" class="row">
+    <h1 class="text-center">Get 200+ hours of free content, tutorials, and screencasts</h1>
+      <div class="col-sm-offset-2 col-sm-8">
+        <hr class="modal--bar">
+          <h5 class="text-center">Share your email, and we'll give you a confirmation code to unlock all of our materials. No spam, we promise.</h5>
+          <div class="errors text-center"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input autofocus="autofocus" required="required" class="form-control" placeholder="First Name" type="text" name="first" id="first">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input required="required" class="form-control" placeholder="Last Name" type="last" name="last" id="last">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email Address" required="required" type="email" name="email" id="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="next-button btn btn-xl">Next</button>
+          <a class="text-center email-known" href="javascript:void(0)">Already signed up?</a>
+    </div>
+  </div>
+    <div id="modal-second-part" style="display:none;">
+      <h1 class="text-center">Tell us more about yourself</h1>
+        <div class="col-sm-offset-2 col-sm-8">
+          <hr class="modal--bar">
+          <h5 class="text-center">Please answer these two questions to help us build the perfect Rithm experience for you.</h5>
+          <div class="errors text-center"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            How would you define your skill as a developer?
+            <label for="Beginner"><input type="radio" class="radio" name="skill" id="Beginner" value='Beginner' required checked/> Beginner</label>
+            <label for="Intermediate"><input type="radio" class="radio" name="skill" id="Intermediate" value='Intermediate'/>Intermediate </label>
+            <label for="Advanced"><input type="radio" class="radio" name="skill" id="Advanced" value='Advanced'>Advanced </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            Would you like to learn more about Rithm School's in-person courses and how to apply?
+            <label for="yes"><input type="radio" class="radio" name="learn" id="yes" value="Yes" required checked/> Yes</label>
+            <label for="no"><input type="radio" class="radio" name="learn" id="no" value="No" > No</label>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-xl">Get Content</button>
+    </div>
+  </div>
+      <div id="modal-third-part" style="display:none;">
+        <h1 class="text-center"></h1>
+          <div class="col-sm-offset-2 col-sm-8">
+            <hr class="modal--bar">
+            <h5 class="text-center"></h5>
+          </div>
+      </div>
+  </form>
+  </div>
+
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589bc2762de6c342"></script> -->
+
+<!-- Google Code for Free Content Leads Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858935159;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "LdkJCOzLlXAQ957JmQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/858935159/?label=LdkJCOzLlXAQ957JmQM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Localized -->
