@@ -38,7 +38,7 @@ boolean
 - = is called an assignment (setting a variable equal to some value)
 */
 
-var instructor = "Elie";
+let instructor = "Elie";
 
 // outputs the else for Elie is not equal to Ellie
 if(instructor === "Ellie") {
@@ -49,8 +49,8 @@ if(instructor === "Ellie") {
 
 console.log("\n\n");		
 
-// var favoriteFood = prompt("What is your favorite food?");
-var favoriteFood = "pizza";
+// let favoriteFood = prompt("What is your favorite food?");
+let favoriteFood = "pizza";
 
 if(favoriteFood === "pizza") {
 	console.log("Pizza is my favorite food as well.");
@@ -71,8 +71,8 @@ console.log("\n\n\n\n");
 
 console.log("-------------------- if / else if / else --------------------");
 
-// var number = prompt("What is your favorite number?");
-var number = 777;
+// let number = prompt("What is your favorite number?");
+let number = 777;
 
 if (number >= 1000) {
 	console.log("Whoa, " + number + " is a big number!");
@@ -94,18 +94,18 @@ console.log(" ");
 
 /*
 // I had to comment this out for console.log view
-var guess = prompt("Guess what number I'm thinking of!");
+let guess = prompt("Guess what number I'm thinking of!");
 
 */
 
-var guess = 7;
+let guess = 7;
 
 guess === "7" ? console.log("Correct!") : console.log("Incorrect!  String and number 7 is not strictly equal.");
 
 
 
-var number = 3;
-var comparison = number > 0 ? "Greater than 0" : "Less than or equal to 0";
+let number1 = 3;
+let comparison = number > 0 ? "Greater than 0" : "Less than or equal to 0";
 console.log(comparison);
 console.log(" ");		
 
@@ -122,10 +122,10 @@ console.log(" ");
 /*
 // I had to comment this out for console.log purpose
 // .toLowerCase() is a function that make the first letter (maybe other letters witihn as well) into lowercase letters (strings)
-var feeling = prompt("How are you feeling today?").toLowerCase();
+let feeling = prompt("How are you feeling today?").toLowerCase();
 */
 
-var feeling = "awesome";
+let feeling = "awesome";
 
 /*
 // 
@@ -163,9 +163,9 @@ console.log(" ");
 
 5 % 3 === 2; // true
 /*
-var num = prompt("Please enter a whole number");
+let num = prompt("Please enter a whole number");
 */
-var num = 4;  // an even number
+let num = 4;  // an even number
 
 // if number divided by 2 is zero, or no remainder, it is even, otherwise it is odd
 if(num % 2 === 0) {

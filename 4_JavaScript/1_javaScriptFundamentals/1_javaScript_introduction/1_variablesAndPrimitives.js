@@ -14,7 +14,7 @@ Objectives:
 Variables
 - like in math class often use letters like x or y to represent numbers
 - used to read and change
-- initialize using var (using this keyword is not neccessary, but in practice it should always be there)
+- initialize using let (using this keyword is not neccessary, but in practice it should always be there)
 - storage (the value) within variable
 */
 
@@ -46,12 +46,12 @@ Prompt function
 - in example below, you can use to store what the user types into a variable 
 */
 
-// var firstName = prompt("What is your first name?");
+// let firstName = prompt("What is your first name?");
 
 
 // this is a variable (camel cased) with my name in it
-var firstName = "Kingsley";
-var lastName = "Cross";
+let firstName = "Kingsley";
+let lastName = "Cross";
 
 
 /*
@@ -88,20 +88,20 @@ console.log(" ");
 */
 
 // string 
-var greeting = "hello";
+let greeting = "hello";
 
 // number 
-var favoriteNum = 777;
+let favoriteNum = 777;
 
 // boolean
-var isAwesome = true;
+let isAwesome = true;
 
 // undefined
-var foo; 		// undefined
-var setToUndefined = undefined;
+let foo; 		// undefined
+let setToUndefined = undefined;
 
 // null
-var empty = null;
+let empty = null;
 
 
 
@@ -111,10 +111,10 @@ console.log("-------------------- Strings --------------------");	// separator
 console.log(" ");		//  SPACER  SPACER  SPACER  SPACER  SPACER  SPACER  
 
 // this is a variable defined with a string of words.
-var greeting = "Hello World!";
+let greeting1 = "Hello World!";
 
 // another variable with a string of words
-var phrase = 'Kingsley said, "I haven\'t been to Jamaica for a while, can\'t even say since the other day."';
+let phrase = 'Kingsley said, "I haven\'t been to Jamaica for a while, can\'t even say since the other day."';
 
 
 // the use of 2 variables defined and the string of words are concatenated together
@@ -133,34 +133,34 @@ console.log(" ");
 
 // variables defined as numbers
 // variables with numbers in it
-var num = 5;		// positive numbers
-var num2 = -25;  	// negative numbers
+let num = 5;		// positive numbers
+let num1 = -25;  	// negative numbers
 
 // not a fixed constant, but this is a variable with a number that could be constant (if it was only set to 3.14 without the remaining numbers behind it)
-var piApproximation = 3.14159265;	// decimal numbers
+let piApproximation = 3.14159265;	// decimal numbers
 
 
 // these are variables with numbers in them
-var x = 1 + 3;
-var a = 4.5;
-var b = 5.9;
+let x = 1 + 3;
+let a = 4.5;
+let b = 5.9;
 
 // negative numbers
-var num = -25;
+let num2 = -25;
 
 // decimal number
-var piApproximation = 3.14159265;
+let piApproximation1 = 3.14159265;
 
 // this is a variable with the 2 above varables calculated within 
 // Math.sqrt() function - returns the square root of a number
-var c = Math.sqrt(a * a + b * b);
+let c = Math.sqrt(a * a + b * b);
 console.log("This is square root of a * a + b * b set to C: " + c);
 
 
 console.log("Math.sqrt(25): " + Math.sqrt(25));
 
-console.log("var a = " + a);
-console.log("var b = " + b);
+console.log("let a = " + a);
+console.log("let b = " + b);
 console.log(Math.sqrt(a));
 console.log(Math.sqrt(b));
 console.log("Math.sqrt(a) + Math.sqrt(b) = " + (Math.sqrt(a) + Math.sqrt(b)));
@@ -169,7 +169,7 @@ console.log("*******");
 console.log("The square root of a and b is " + c);
 
 
-var studentTeacherRatio = 4 / 1;
+let studentTeacherRatio = 4 / 1;
 console.log("Student teacher ratio, 4 / 1: " + studentTeacherRatio);
 
 console.log("\n\n\n\n");		
@@ -181,9 +181,9 @@ console.log("---------- Boolean, true / false -----");
 // boolean - used for controlling the program
 
 console.log(" ");		  
-var pizzaIsGood = true;
+let pizzaIsGood = true;
 
-var pizzaIsBad = false;
+let pizzaIsBad = false;
 
 
 
@@ -203,7 +203,7 @@ console.log("------------------ Undefined --------------------");
 
 // undefined - any variable that is created (declared) in JavaScript that is not assigned a value
 
-var noValue; 	// the value here will be undefined
+let noValue; 	// the value here will be undefined
 
 console.log("The variable \"noValue\" is delcared without a definition is: " + noValue);
 
@@ -213,12 +213,12 @@ console.log("\n\n");
 
 
 // you can explicitly set a variable to undefined:
-var favoriteFood = "fruit smoothy";
+let favoriteFood = "fruit smoothy";
 
 console.log("My favorite type of food was " + favoriteFood);
 
 // changed your mind
-var favoriteFood = undefined;
+let favoriteFood1 = undefined;
 
 console.log("Just for programming purposes, it's now " + favoriteFood);
 
@@ -231,7 +231,7 @@ console.log("\n\n");
 console.log("------------------ Null --------------------");	
 // null - not the same as undefined.  It signifies (represents) an intentional absense of data (value).
 
-var secondEmailAddress = null;
+let secondEmailAddress = null;
 
 console.log("");
 
@@ -240,13 +240,13 @@ https://www.quora.com/What-is-the-rationale-for-JavaScript-supporting-both-null-
 */
 
 // here is example given
-var myVar = {
+let myVar = {
 	"x": null,
 	"y": "Why"
 }
 console.log(">>>>>>>>>USING null as an example");
 console.log(
-"var myVar = { \n" + 
+"let myVar = { \n" + 
 "	\"x\": " + myVar.x + ", \n" +
 "	\"y\": \"" + myVar.y + "\" \n" + "}");
 
@@ -320,8 +320,8 @@ console.log("Converting value to a string.");
 // toString() - converting any value which is not undefined or null into a string
 console.log(" ");		
 
-var num = 5;
-var bool = true;
+let num3 = 5;
+let bool = true;
 
 console.log("This value 5 is a value (typeof): " + typeof num);
 
@@ -428,11 +428,11 @@ console.log("-------------- Converting to a boolean !! --------------");
 
 console.log(" ");		//  SPACER  SPACER  SPACER  SPACER  SPACER  SPACER  
 
-var greeting = "hi";
-var nothing = 0; 
+let greeting2 = "hi";
+let nothing = 0; 
 
 // outputs true for the variable has something in it
-console.log("Converting hi (string) in greeting variable with !!gretting: " + !!greeting);
+console.log("Converting hi (string) in greeting variable with !!gretting: " + !!greeting2);
 
 // outputs false for 0 is false and 1 is true.  
 // ! is opposite, !! is the same
@@ -449,8 +449,8 @@ console.log("-------------------- Exercises --------------------");	// separator
 console.log(" ");		
 
 // 1. create variables
-var name = "Kingsley";
-var dayOfBirth = "25";
+let name = "Kingsley";
+let dayOfBirth = "25";
 
 console.log("My name is " + name + ".  And my 2 digit birth month is " + dayOfBirth);
 
@@ -461,16 +461,16 @@ console.log("My alternate name is " + name);
 
 
 // 3. prompts the user for thier fav color, with friendly message waiting afterwards... commented out to console.log it instead for testing purposes
-// var favColor = prompt("What is your favorite color?");
+// let favColor = prompt("What is your favorite color?");
 
 // variable set to a string
 // at first I was like what happend, why did I get an error...  the string was not set with "".
-var favColor = "green";
+let favColor = "green";
 console.log("Ah, I see your favorite color as " + favColor + ".  Great choice.");
 
 
 // 4. a string that contains both single and double quotes
-var stringQuotes = "This is a string that contains \"double\" and 'single' quotes.";
+let stringQuotes = "This is a string that contains \"double\" and 'single' quotes.";
 
 // calling the variable's input to output within console
 console.log(stringQuotes);
@@ -484,7 +484,7 @@ console.log(stringQuotes);
 - NaN is when trying to find out if a string that does not start with a number
 - typeof NaN is --> "number"
 
-7. You can delcare a variable by typing var thing;.  What is the value of thing?
+7. You can delcare a variable by typing let thing;.  What is the value of thing?
 The value is undefined
 */
 
@@ -495,7 +495,9 @@ console.log(typeof NaN);
 
 
 // 7.
-var thing;
+let thing;
 
 console.log(thing);
+
+
 
