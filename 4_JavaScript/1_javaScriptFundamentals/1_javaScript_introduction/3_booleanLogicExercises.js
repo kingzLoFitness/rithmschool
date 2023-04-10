@@ -19,7 +19,7 @@ console.log(10 % 3);
 // true
 console.log(10 % 3 === 1);
 
-var taf = true && false;
+let taf = true && false;
 // false
 console.log("True and false  = " + (true && false));
 console.log("True and false  = " + taf);
@@ -38,7 +38,7 @@ console.log(" ");
 
 
 console.log("----- // part 2 ------");
-var isLearning = true; 
+let isLearning = true; 
 if(isLearning) {
 	console.log("Keep it up!");
 } else {
@@ -52,10 +52,10 @@ if(isLearning) {
 console.log("############## Look over below and above ###################");
 console.log("Finding out if firstVariable true, if not check other's.");
 
-var firstVariable;
-var secondVariable = "";
-var thirdVariable = 1;
-var secretMessage = "Shh1";
+let firstVariable;
+let secondVariable = "";
+let thirdVariable = 1;
+let secretMessage = "Shh1";
 
 if(firstVariable) {
 	console.log("first");
@@ -98,7 +98,7 @@ function getRandom() {
 
 
 // calling function
-var ranNum = getRandom();
+let ranNum = getRandom();
 
 // as the function calls from the variable, it has has an extension of .toFixed() method to 2 numbers after the decimal
 console.log("Math.random() --> " + ranNum.toFixed(2));
@@ -121,7 +121,7 @@ function getRandomArbitrary(min, max) {
 - another variable calling another function. 
 - this function that is being called has 2 arguments 
 */
-var ranNum1 = getRandomArbitrary(0, 1);
+let ranNum1 = getRandomArbitrary(0, 1);
 
 // and is called by the console
 console.log("Random number is " + ranNum1);
@@ -140,7 +140,7 @@ function getRandomArbitrary1(min, max) {
 
 
 // another variable calling another function with 2 agruments
-var ranNum2 = getRandomArbitrary1(1, 5);
+let ranNum2 = getRandomArbitrary1(1, 5);
 
 // and is called by the console
 console.log("Random number is " + ranNum2);
@@ -172,7 +172,7 @@ function getRandomInt(min,max) {
 }
 
 
-var ranNum3 = getRandomInt(1.3, 1.4);
+let ranNum3 = getRandomInt(1.3, 1.4);
 console.log(ranNum3);
 
 

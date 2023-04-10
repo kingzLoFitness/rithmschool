@@ -1,5 +1,12 @@
 
 console.log("------- Array Basics --------");	// separator
+
+/* THESE ARE SNIPPETS 
+- (files within a file thats Samples of code)
+- Practical Reference
+- can be reused
+*/
+
 console.log(" ");
 /*
 Objectives
@@ -18,23 +25,23 @@ Sometimes, however, you need a more complex data structure when building your ap
 
 
 /*
-var firstPrime = 2;
-var secondPrime = 3;
-var thirdPrime = 5;
-var fourthPrime = 7;
-var fifthPrime = 11;
+let firstPrime = 2;
+let secondPrime = 3;
+let thirdPrime = 5;
+let fourthPrime = 7;
+let fifthPrime = 11;
 
 Thankfully, JavaScript provides you with a data type to help in these situations: the array. You can think of an array as simply a list of values.
 */
 
 // variable is now working as an array
-var prime = [2, 3, 5, 7, 11];
+let prime = [2, 3, 5, 7, 11];
 console.log(prime);
 console.log("Here are the numbers in primes's array: " + prime);
 console.log("");
 
 
-var names = ["Alice", "Bob", "Charlie"];
+let names = ["Alice", "Bob", "Charlie"];
 
 // calling the variables via console
 console.log(names);
@@ -44,11 +51,11 @@ console.log("That shorty " + names[0] + " go with that dude " + names[1] + " and
 console.log("");
 
 
-var booleans = [true, false, false, true];
+let booleans = [true, false, false, true];
 console.log("The various boolean within it's arrays " + booleans);
 
 
-var mixedTypes = [1, "sweet", true, null, NaN, "bye!"];
+let mixedTypes = [1, "sweet", true, null, NaN, "bye!"];
 console.log("the various mixedTypes of it's array " + mixedTypes);
 
 console.log();
@@ -56,7 +63,7 @@ console.log();
 
 console.log("TESTING...\n" + 
 	"TESTING...");
-var woahhh = ["What's up with this? -->", ["Woah", "carzy!"]];
+let woahhh = ["What's up with this? -->", ["Woah", "carzy!"]];
 console.log(woahhh);
 console.log("" + woahhh);
 // additional code
@@ -68,11 +75,11 @@ console.log(woahhh[1]);
 // This is an ecsample via Mozilla on dimensional arrays
 console.log("TESTING... \nTESTING... \nArray in Rows...");
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
-var row0 = [[0,0],[0,1],[0,2],[0,3],[0,4]];
+let row0 = [[0,0],[0,1],[0,2],[0,3],[0,4]];
 
-var row1 = [[1,0],[1,1],[1,2],[1,3],[1,4]];
-var row2 = [[2,0],[2,1],[2,2],[2,3],[2,4]];
-var row3 = [[3,0],[3,1],[3,2],[3,3],[3,4]];
+let row1 = [[1,0],[1,1],[1,2],[1,3],[1,4]];
+let row2 = [[2,0],[2,1],[2,2],[2,3],[2,4]];
+let row3 = [[3,0],[3,1],[3,2],[3,3],[3,4]];
 
 console.log(row0[0]);
 console.log(row0[1]);
@@ -97,7 +104,7 @@ So the question is...  Did I crack the code???
 
 console.log();
 
-var emptyArray = [];
+let emptyArray = [];
 console.log("seeing this empty array" + emptyArray + "There should be an empty space.");
 console.log("But there is not so the array being empty is literally empty, nothing; a blank space.");
 
@@ -118,7 +125,7 @@ console.log("------- Accessing and updating array values --------");
 console.log(" ");		
 
 
-var arr = [5, 3, 10];
+let arr = [5, 3, 10];
 console.log(arr);
 
 console.log("First array, arr[0]: " + arr[0]);
@@ -136,8 +143,8 @@ console.log(" ");
 
 
 
-var arr = [5,3,10];
-console.log("var arr = [" + arr + "]");
+let arr1 = [5,3,10];
+console.log("let arr = [" + arr + "]");
 console.log("");
 
 console.log("*****************************\n*****************************\nArray Change\n*****************************\n*****************************\n");
@@ -162,7 +169,7 @@ console.log("\n\n\n");
 console.log("------- Adding to arrays --------");	
 console.log(" ");		
 
-var arr = [1,2,3];
+let arr2 = [1,2,3];
 console.log("Here is what is in the array currently: [" + arr + "]");
 
 arr[3] = 4;
@@ -172,7 +179,7 @@ console.log("Another addition to the array now it's: [" + arr + "]");
 console.log(" ");		
 
 // elements added to index, and elements that don't have values
-var arr =[1,2,3];
+let arr3 =[1,2,3];
 console.log("Array before changes: [" + arr + "]");
 
 arr[5] = "whoa";
@@ -183,7 +190,7 @@ console.log(arr);
 console.log("");
 
 // push - add to the end of the array
-var arr = [3,4,5];
+let arr4 = [3,4,5];
 console.log("ORIGINAL array values: [" + arr + "]");
 
 arr.push(7);
@@ -192,14 +199,14 @@ console.log("With the use of push: [" + arr + "]");
 console.log("");
 
 // unshift - add to the beginning of the array
-var arr = [1,2,3];
+let arr5 = [1,2,3];
 console.log("***** Original array of numbers [" + arr + "]");
 
 arr.unshift(0);
 console.log("With the use of unshift [" + arr + "]");
 console.log("");
 
-var arr = [1,2,3];
+let arr6 = [1,2,3];
 console.log("***** Original array again: [" + arr + "]");
 
 
@@ -223,14 +230,14 @@ console.log(" ");
 
 
 // pop - removes from the END of the array
-var arr = [1,2,3];
+let arr7 = [1,2,3];
 console.log(arr);
 
 arr.pop();
 console.log("After the use of arr.pop() end of array, the results: [" + arr + "]");
 
 // shift - also removes element, from the FIRST of the array
-var arr = [1,2,3];
+let arr8 = [1,2,3];
 console.log("RESET: Removes the element from the front, with the use of arr.shift(): " + arr.shift());
 arr;
 console.log("After the removal of array from front: [" + arr + "]");
@@ -242,7 +249,7 @@ console.log("");
 It is more common to see this word used with objects, more on that in the next unit
 */
 
-var arr = [5,4,3,2];
+let arr9 = [5,4,3,2];
 console.log(arr);
 console.log("Here is the original value for arr: [" + arr + "]");
 
@@ -284,7 +291,7 @@ one of the more powerful array methods is splice, which allows you to either add
 --- Here are some examples:
 */
 
-var arr = [1,2,3,4];
+let arr10 = [1,2,3,4];
 console.log(arr);
 
 console.log("");
@@ -296,7 +303,7 @@ console.log("Splicing 0,1 values from 1,2,3,4 gives you: \n[" + arr + "]");
 console.log("");
 
 
-var arr = [1,2,3,4];
+let arr11 = [1,2,3,4];
 
 console.log(arr);
 // splicing like the top, and adding 5 in the front
@@ -306,7 +313,7 @@ console.log("Splicing 0,1, (and adding 5 in the front) values from 1,2,3,4 gives
 console.log("");
 
 // take out from index1 2 items and add in 3 additional items
-var arr = ["a", "b", "c", "d"];
+let arr12 = ["a", "b", "c", "d"];
 console.log(arr);
 arr.splice(1,2,"x","y","z");
 console.log("arr.splice(1,2,\"x\",\"y\",\"z\");");
@@ -329,7 +336,7 @@ console.log(" ");
 // create array with 3 elements
 console.log("favoriteFoods");
 
-var favoriteFoods = ["fruits", "vegetables", "peanut butter & jelly"];
+let favoriteFoods = ["fruits", "vegetables", "peanut butter & jelly"];
 console.log(favoriteFoods);
 console.log("");
 
@@ -349,7 +356,7 @@ console.log("\n\n");
 // remove the first element and store it in a variable called formerFavoriteFood
 console.log(favoriteFoods);
 console.log("// remove the first element and store it in a variable called formerFavoriteFood, using shift()");
-var formerFavoriteFood = favoriteFoods.shift();
+let formerFavoriteFood = favoriteFoods.shift();
 
 console.log(formerFavoriteFood);
 console.log(favoriteFoods);
@@ -375,7 +382,7 @@ console.log();
 
 // what happens when you try to pop from an empty array?
 console.log("// what happens when you try to pop from an empty array?");
-var emptyArray = [];
+let emptyArray1 = [];
 emptyArray.pop();
 console.log(emptyArray.pop());
 
@@ -388,7 +395,7 @@ examples below, use splice to convert the first array to the second array:
 */
 
 // [2,3,4,5] -> [2,4,5]
-var numbers = [2,3,4,5];
+let numbers = [2,3,4,5];
 console.log(numbers);
 numbers.splice(1,1);
 console.log(numbers);
@@ -396,14 +403,14 @@ console.log(numbers);
 console.log("");
 
 // ["alpha", "gamma", "delta"] -> ["alpha", "beta", "gamma", "delta"]
-var words = ["alpha", "gamma", "delta"];
+let words = ["alpha", "gamma", "delta"];
 console.log(words);
 words.splice(1,0,"beta");
 console.log(words);
 console.log("");
 
 // [10,-10,-5,-3,2,1] -> [10,9,8,7,6,5,4,3,2,1]
-var num = [10,-10,-5,-3,2,1];
+let num = [10,-10,-5,-3,2,1];
 console.log(num);
 num.splice(1,3,9,8,7,6,5,4,3);
 console.log(num);
