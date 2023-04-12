@@ -1,14 +1,14 @@
 console.log("----- Object Iteration -----");
 /*
 Objectives:
-- undstand how to iterate through an object using a for...in loop
-- determin if a key exists in an object using an if...in statement
+- understand how to iterate through an object using a for...in loop
+- determine if a key exists in an object using an if...in statement
 */
 
 console.log("----- Looping over Objects -----");
 // iteration (looping)
 // individual printing of all values in an object, one per line
-console.log("");
+console.log(""); 
 
 let obj = {
 	firstName: "Kingsley",
@@ -70,7 +70,6 @@ if ("nothing" in obj2) {
 	console.log("The nothing key exists!");
 } else {
 	console.log("The nothing key actually doesn't exists!");
-
 }
 
 console.log("\n\n\n\n\n");
@@ -99,16 +98,19 @@ for (let singleKey in namesAndHobbies) {
 	console.log(namesAndHobbies[singleKey] + " => " + singleKey);
 }
 
-console.log("");
+console.log("*************************************");
+
 
 // 2. Add a key for your name, and a value for your favorite hobby to the namesAndHobbies object
-namesAndHobbies.kingsley = "bodyBuilding";
+namesAndHobbies.kingsley = "gymnasticStrengthTraining";
 
 console.log(namesAndHobbies);
+console.log("*************************************");
 
 console.log("");
 
-// 3. Write an if statement that console.logs your name and hobby to the console if the key of your name is contained in the object
+// 3. Write an if statement that console.logs your name and hobby to the console 
+// 		- if the key of your name is contained in the object
 if ("kingsley" in namesAndHobbies) {
 	
 	// received information to access key, fourth answer down, here: http://stackoverflow.com/questions/6268679/best-way-to-get-the-key-of-a-key-value-javascript-object

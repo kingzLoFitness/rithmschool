@@ -1,6 +1,6 @@
 console.log("----- Object Exercises -----");
 
-var programming = {
+let programming = {
 	languages: ["JavaScript", "Python", "Ruby"],
 	isChallenging: true,
 	isRewarding: true,
@@ -41,15 +41,18 @@ for (i = 0; i < programming.languages.length; i++) {
 console.log("");
 
 // 6. Using a loop, console.log all of the keys in the programming object.
-for (var key in programming) {
+for (let key in programming) {
 	console.log(key);
 }
 
 console.log("");
 
 // 7. Using a loop, console.log all of the values in the programming object.
-for (var key in programming) {
+for (let key in programming) {
 	console.log(programming[key]);
 }
+
+
+
 
 console.log(940 / 960);
