@@ -13,7 +13,7 @@ Objectives:
 
 
 // length of the array
-var arr = [1,2,3,4];
+let arr = [1,2,3,4];
 console.log(arr);
 
 arr.length;
@@ -43,30 +43,30 @@ slice
 
 */
 console.log("Slice");
-var arr =[1,2,3,4];
+let arr1 =[1,2,3,4];
 
 console.log("// invoke a slice with no arguments, a copy of the whole array is created");
-var copy = arr.slice();
+let copy = arr1.slice();
 console.log(copy);
 console.log();
 
 
-var arr = [7,6,5,4,3,2];
-console.log(arr);
-arr.slice(1,2); // 6
-console.log(arr.slice(1,2));
+let arr2 = [7,6,5,4,3,2];
+console.log(arr2);
+arr2.slice(1,2); // 6
+console.log(arr2.slice(1,2));
 
-arr.slice(2,5);	// 5,4,3
-console.log(arr.slice(2,5));
+arr2.slice(2,5);	// 5,4,3
+console.log(arr2.slice(2,5));
 
-arr.slice(1,5);	// 6,5,4,3
-console.log(arr.slice(1,5));
+arr2.slice(1,5);	// 6,5,4,3
+console.log(arr2.slice(1,5));
 
-arr.slice(0,3);	// 7,6,5
-console.log(arr.slice(0,3));
+arr2.slice(0,3);	// 7,6,5
+console.log(arr2.slice(0,3));
 
-arr.slice(2,1);	// 0 (even if it was slice(3,1) etc)
-console.log(arr.slice(2,1));
+arr2.slice(2,1);	// 0 (even if it was slice(3,1) etc)
+console.log(arr2.slice(2,1));
 
 console.log();
 console.log();
@@ -79,65 +79,65 @@ console.log();
 
 // concat joins two arrays together
 console.log("*****************************\n*****************************\nJoining 2 Arrays Together\n*****************************\n*****************************\n");
-var arr1 = [1,2,3];
-var arr2 = [4,5,6];
+let arr3 = [1,2,3];
+let arr4 = [4,5,6];
 
-console.log(arr1);
-console.log(arr2);
-var combined = arr1.concat(arr2);
+console.log(arr3);
+console.log(arr4);
+let combined = arr3.concat(arr4);
 console.log(combined);
 console.log();
 
 // you can pass multiple arrays into concat and it will still return a single array to you
-var arr1 = ["a","b","c"];
-var arr2 = ["d","e","f"];
-var arr3 = ["g","h","i"];
+let arr5 = ["a","b","c"];
+let arr6 = ["d","e","f"];
+let arr7 = ["g","h","i"];
 
-console.log(arr1);
-console.log(arr2);
-console.log(arr3);
-var combined = arr1.concat(arr2,arr3);
-combined;
-console.log("\nCombination of arrays via .concat(): \n" + combined);
+console.log(arr5);
+console.log(arr6);
+console.log(arr7);
+let combined1 = arr5.concat(arr6,arr7);
+combined1;
+console.log("\nCombination of arrays via .concat(): \n" + combined1);
 console.log();
 
 // you don't even ned to pass an array into concat.  Any comma-separated list of values can be concateneated with the oringinal array
-var openingWords = ["It", "was", "a"];
-var moreOpinionWords = openingWords.concat("dark", "and", "stormy", "night");
+let openingWords = ["It", "was", "a"];
+let moreOpinionWords = openingWords.concat("dark", "and", "stormy", "night");
 console.log(moreOpinionWords);
 console.log();
 
 
 
 // join elements of an array into a string separated by whatever you pass in as an argument to join.  Referred to as delimiter.
-var arr = ["Hello", "World"];
-console.log(arr.join(" "));
+let arr8 = ["Hello", "World"];
+console.log(arr8.join(" "));
 
-var arr2 = ["I", "have", "a", "big", "announcement"];
-console.log(arr2.join("! ") + "!");
+let arr9 = ["I", "have", "a", "big", "announcement"];
+console.log(arr9.join("! ") + "!");
 console.log();
 
 
 // indexOf finds the first index of the element passed in (starting from the left).  If the elements is not found, it returns -1.  Examples:
-var arr = [1,2,3,4,5,4,4];
-console.log(arr.indexOf(2));	// 1
-console.log(arr.indexOf(3));	// 2
-console.log(arr.indexOf(1));	// 0
-console.log(arr.indexOf(4));	// 3
-console.log(arr.indexOf(10));	// -1
+let arr10 = [1,2,3,4,5,4,4];
+console.log(arr10.indexOf(2));	// 1
+console.log(arr10.indexOf(3));	// 2
+console.log(arr10.indexOf(1));	// 0
+console.log(arr10.indexOf(4));	// 3
+console.log(arr10.indexOf(10));	// -1
 console.log();
 
 
 // you'll see this function very commonly used to check if an element is an array or not.
-var moviesIKnow = [
+let moviesIKnow = [
 	"Wayne's World",
 	"The Matrix",
 	"Anchorman",
 	"Bridesmaids"
 ];
 
-// var yourFavoriteMovie = prompt("What's your favorite movie?");
-var yourFavoriteMovie = "Anchorman";
+// let yourFavoriteMovie = prompt("What's your favorite movie?");
+let yourFavoriteMovie = "Anchorman";
 if (moviesIKnow.indexOf(yourFavoriteMovie) > -1) {
 	console.log("Oh, cool, I've heard of " + yourFavoriteMovie + "!");
 } else {
@@ -146,10 +146,10 @@ if (moviesIKnow.indexOf(yourFavoriteMovie) > -1) {
 
 
 // lastIndexOf works just like indexOf, but starts searching from the end of the array rather than the beginning
-var arr = [1,2,3,4,5,4,4];
-console.log(arr.indexOf(4));		// 3
-console.log(arr.lastIndexOf(4));	// 6 (starts at the end)
-console.log(arr.lastIndexOf(10));	// -1
+let arr11 = [1,2,3,4,5,4,4];
+console.log(arr11.indexOf(4));		// 3
+console.log(arr11.lastIndexOf(4));	// 6 (starts at the end)
+console.log(arr11.lastIndexOf(10));	// -1
 
 console.log(" ");		//  SPACER  SPACER  SPACER  SPACER  SPACER  SPACER
 
@@ -173,8 +173,8 @@ Value types
 */
 console.log("--> VALUE type ");		
 
-var instructor = "Ellie";
-var anotherInstructor = instructor;
+let instructor = "Ellie";
+let anotherInstructor = instructor;
 console.log("anotherInstructor is the same name as instructor, being: " + anotherInstructor);
 
 // Let's assign a new value to anotherInstructor:
@@ -196,10 +196,10 @@ this may seem confusing until we compare this with what happens when dealing wit
 console.log("--> REFERENCE type ");		
 
 
-var instructors = ["Elie", "Kingsley"];
+let instructors = ["Elie", "Kingsley"];
 console.log("These are the instructors: " + instructors);
 
-var instructorsCopy = instructors;
+let instructorsCopy = instructors;
 console.log("This is the reference instuctors to instructorsCopy: " + instructorsCopy);
 
 instructorsCopy.push("Tim");
@@ -214,76 +214,76 @@ console.log(" ");
 // EXERCISES
 // PART 1
 // create empty array
-var arr = [];
+let arr12 = [];
 
 // add your first name to the variable
-arr.unshift("Kingsley");
-console.log(arr);
+arr12.unshift("Kingsley");
+console.log(arr12);
 
 // add your last name to the end of the arr variable
-arr.push("Cross");
-console.log(arr);
+arr12.push("Cross");
+console.log(arr12);
 
 
 // add your favorite color to the beginning of the variable
-arr.unshift("green");
-console.log(arr);
+arr12.unshift("green");
+console.log(arr12);
 
-// remove yoru favorite color from the arr variable
-arr.shift("green");
-console.log(arr);
+// remove your favorite color from the arr variable
+arr12.shift("green");
+console.log(arr12);
 
 console.log();
 
 
 // create another array
-var arr2 = [];
-console.log(arr2);
+let arr13 = [];
+console.log(arr13);
 
 // add your favorite number
-arr2.unshift(777);
-console.log(arr2);
+arr13.unshift(777);
+console.log(arr13);
 
 // add string "JavaScript" to the end of the array
-arr2.push("JavaScript");
-console.log(arr2);
+arr13.push("JavaScript");
+console.log(arr13);
 
 
 
 // see if value 42 exists in the array.  Do this using the indexOf method.  What does indexOf return to you if the value passed to it can not be found in the array?
-arr.indexOf(42);
-console.log(arr.indexOf(42));		// -1 is returned
-console.log(arr2);
+arr13.indexOf(42);
+console.log(arr13.indexOf(42));		// -1 is returned
+console.log(arr13);
 
-// create new variable which is the result of your arr and arr2 variables combined into one array
-var combinedArr = arr.concat(arr2);
+// create new variable which is the result of your arr and arr13 variables combined into one array
+let combinedArr = arr.concat(arr13);
 console.log(combinedArr);
 
 console.log();
 
 
 // PART 2
-var arr = ["JavaScript", "Python", "Ruby", "Java"];
-console.log(arr);
+let arr14 = ["JavaScript", "Python", "Ruby", "Java"];
+console.log(arr14);
 
 // return Python and Ruby
-arr.shift();
-arr.pop();
-console.log(arr);
+arr14.shift();
+arr14.pop();
+console.log(arr14);
 
 // combine the array with the array Haskell and Clojure
-var arr3 = ["Haskell", "Clojure"];
+let arr15 = ["Haskell", "Clojure"];
 
-var combo = arr.concat(arr3);
+let combo = arr.concat(arr15);
 console.log(combo);
 
 
 
 // return the string "JavaScript, Python, Ruby, Java"
-console.log(arr);
-arr.unshift("JavaScript");
-arr.push("Java");
-console.log(arr);
+console.log(arr15);
+arr15.unshift("JavaScript");
+arr15.push("Java");
+console.log(arr15);
 
 
 

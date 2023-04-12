@@ -144,21 +144,21 @@ console.log(" ");
 
 
 let arr1 = [5,3,10];
-console.log("let arr = [" + arr + "]");
+console.log("let arr = [" + arr1 + "]");
 console.log("");
 
 console.log("*****************************\n*****************************\nArray Change\n*****************************\n*****************************\n");
 
-arr[0] = -1000;
-console.log("First array,0, has chaged to " + arr[0]);
-console.log(arr);
+arr1[0] = -1000;
+console.log("First array,0, has chaged to " + arr1[0]);
+console.log(arr1);
 console.log("");
 
 
 // changed the 3rd array to dope 
-arr[2] = "dope";
-console.log("Array 2 has changed to " + arr[2]);
-console.log(arr);
+arr1[2] = "dope";
+console.log("Array 2 has changed to " + arr1[2]);
+console.log(arr1);
 
 console.log("\n\n\n");		
 
@@ -170,44 +170,44 @@ console.log("------- Adding to arrays --------");
 console.log(" ");		
 
 let arr2 = [1,2,3];
-console.log("Here is what is in the array currently: [" + arr + "]");
+console.log("Here is what is in the array currently: [" + arr2 + "]");
 
-arr[3] = 4;
-console.log("Another addition to the array now it's: [" + arr + "]");
+arr2[3] = 4;
+console.log("Another addition to the array now it's: [" + arr2 + "]");
 
 
 console.log(" ");		
 
 // elements added to index, and elements that don't have values
 let arr3 =[1,2,3];
-console.log("Array before changes: [" + arr + "]");
+console.log("Array before changes: [" + arr3 + "]");
 
-arr[5] = "whoa";
-console.log("Output of array with no values [" + arr + "]");
-console.log(arr);
+arr3[5] = "whoa";
+console.log("Output of array with no values [" + arr3 + "]");
+console.log(arr3);
 
 
 console.log("");
 
 // push - add to the end of the array
 let arr4 = [3,4,5];
-console.log("ORIGINAL array values: [" + arr + "]");
+console.log("ORIGINAL array values: [" + arr4 + "]");
 
-arr.push(7);
-console.log("With the use of push: [" + arr + "]");
+arr4.push(7);
+console.log("With the use of push: [" + arr4 + "]");
 
 console.log("");
 
 // unshift - add to the beginning of the array
 let arr5 = [1,2,3];
-console.log("***** Original array of numbers [" + arr + "]");
+console.log("***** Original array of numbers [" + arr5 + "]");
 
-arr.unshift(0);
-console.log("With the use of unshift [" + arr + "]");
+arr5.unshift(0);
+console.log("With the use of unshift [" + arr5 + "]");
 console.log("");
 
 let arr6 = [1,2,3];
-console.log("***** Original array again: [" + arr + "]");
+console.log("***** Original array again: [" + arr6 + "]");
 
 
 
@@ -231,16 +231,16 @@ console.log(" ");
 
 // pop - removes from the END of the array
 let arr7 = [1,2,3];
-console.log(arr);
+console.log(arr7);
 
-arr.pop();
-console.log("After the use of arr.pop() end of array, the results: [" + arr + "]");
+arr7.pop();
+console.log("After the use of arr.pop() end of array, the results: [" + arr7 + "]");
 
 // shift - also removes element, from the FIRST of the array
 let arr8 = [1,2,3];
-console.log("RESET: Removes the element from the front, with the use of arr.shift(): " + arr.shift());
-arr;
-console.log("After the removal of array from front: [" + arr + "]");
+console.log("RESET: Removes the element from the front, with the use of arr.shift(): " + arr8.shift());
+arr8;
+console.log("After the removal of array from front: [" + arr8 + "]");
 
 console.log("");
 
@@ -250,11 +250,11 @@ It is more common to see this word used with objects, more on that in the next u
 */
 
 let arr9 = [5,4,3,2];
-console.log(arr);
-console.log("Here is the original value for arr: [" + arr + "]");
+console.log(arr9);
+console.log("Here is the original value for arr: [" + arr9 + "]");
 
-delete arr[1];
-console.log("Here is the new value after \"delete arr[1]\": [" + arr + "]");
+delete arr9[1];
+console.log("Here is the new value after \"delete arr[1]\": [" + arr9 + "]");
 
 
 console.log("\n\n\n");		
@@ -292,32 +292,32 @@ one of the more powerful array methods is splice, which allows you to either add
 */
 
 let arr10 = [1,2,3,4];
-console.log(arr);
+console.log(arr10);
 
 console.log("");
 
 // Removes the first array from the start and only one deleted
-arr.splice(0,1);
+arr10.splice(0,1);
 console.log("arr.splice(0,1);");
-console.log("Splicing 0,1 values from 1,2,3,4 gives you: \n[" + arr + "]");
+console.log("Splicing 0,1 values from 1,2,3,4 gives you: \n[" + arr10 + "]");
 console.log("");
 
 
 let arr11 = [1,2,3,4];
 
-console.log(arr);
+console.log(arr11);
 // splicing like the top, and adding 5 in the front
-arr.splice(0,1,5);
+arr11.splice(0,1,5);
 console.log("arr.splice(0,1,5);");
-console.log("Splicing 0,1, (and adding 5 in the front) values from 1,2,3,4 gives you: \n[" + arr + "]");
+console.log("Splicing 0,1, (and adding 5 in the front) values from 1,2,3,4 gives you: \n[" + arr11 + "]");
 console.log("");
 
 // take out from index1 2 items and add in 3 additional items
 let arr12 = ["a", "b", "c", "d"];
-console.log(arr);
-arr.splice(1,2,"x","y","z");
+console.log(arr12);
+arr12.splice(1,2,"x","y","z");
 console.log("arr.splice(1,2,\"x\",\"y\",\"z\");");
-console.log("Splicing 1,2, (and adding x,y,z after index1) values from 'a','b','c','d' gives you: \n[" + arr + "]");
+console.log("Splicing 1,2, (and adding x,y,z after index1) values from 'a','b','c','d' gives you: \n[" + arr12 + "]");
 
 
 
@@ -383,8 +383,8 @@ console.log();
 // what happens when you try to pop from an empty array?
 console.log("// what happens when you try to pop from an empty array?");
 let emptyArray1 = [];
-emptyArray.pop();
-console.log(emptyArray.pop());
+emptyArray1.pop();
+console.log(emptyArray1.pop());
 
 /*
 examples below, use splice to convert the first array to the second array:

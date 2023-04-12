@@ -20,10 +20,10 @@ console.log("*************\nThis is a test for the Objects being created");
 
 
 // example declaring an object
-var firstObj = {
+let firstObj = {
 	firstName: "Kingsley", 
 	lastName: "Cross",
-	aka: "kingzlo",
+	aka: "kingzLoFitness",
 	isInstructor: true
 };
 
@@ -32,7 +32,7 @@ console.log("");
 
 
 
-var secondObj = {
+let secondObj = {
 	firstName: "Seriah",
 	lastName: "Cross", 
 	aka: "riah",
@@ -105,7 +105,7 @@ console.log(firstObj["keyDoesntExist"]);
 // NOTE: We will learn the difference between these two later
 console.log("");
 // objects are one of the built-in types in JavaScript and consists of unordered key-value pairs
-var kingsley = {
+let kingsley = {
 	name: "Kingsley",
 	dogOwner: false, 
 	carOwner: false
@@ -124,7 +124,7 @@ console.log("------ Bracket Notation vs. Dot Notation ----------");
 - best practice is to use the dot notation if you can use it
 - there are cases in which you'll need to use bracket notation
 */
-var child = {
+let child = {
 	firstName: "Seriah",
 	lastName: "Cross",
 	favoriteColor: "purple",
@@ -155,8 +155,8 @@ console.log("");
 cases in which you'll need to use bracket notation.  Examples below
 
 */
-var obj = {};
-var person = "Tom";			// person and "Tom" can now be used as an object key
+let obj = {};
+let person = "Tom";			// person and "Tom" can now be used as an object key
 obj[person] = "This is a person";
 obj[1+1+1] = "Three";
 
@@ -203,7 +203,7 @@ t is important to note that the type of a key in JavaScript is always a string.
 
 - Every key in a JavaScript object is a string, automatically converting number into string
 */
-var idToName = {
+let idToName = {
 	754: "Tim",
 	843: "Matt",
 	921: "Janey",
@@ -256,17 +256,17 @@ console.log("----- Adding to Objects -----");
 /*
 To add properties or functions(which are sometimes called methods) to our objects, we can use the . or [] operator (as before, the dot notation is preferred, but not always possible.)
 */
-var obj = {
+let obj2 = {
 	name: "Jon Snow",
 	watchMember: true
 };
-console.log(obj);
+console.log(obj2);
 
 console.log("");
 
 
-obj.gameOfThrones = "awesome";
-console.log(obj);
+obj2.gameOfThrones = "awesome";
+console.log(obj2);
 
 console.log("");
 
@@ -280,15 +280,15 @@ console.log("");
 
 console.log("----- Removing from Objects -----");
 // using delete keyword
-var obj = {
+let obj3 = {
 	name: "Elie",
 	job: "Instructor"
 };
-console.log(obj);
+console.log(obj3);
 
-delete obj.job;		// returns true
+delete obj3.job;		// returns true
 
-console.log(obj);
+console.log(obj3);
 
 
 console.log("");
@@ -305,7 +305,7 @@ console.log("");
 
 console.log("----- Exercises -----");
 // 1. Create an object that has your firstName, lastName, and occupation as keys.
-var myInfo = {
+let myInfo = {
 	firstName: "Kingsley",
 	lastName: "Cross",
 	occupation: "JavaScript Developer"

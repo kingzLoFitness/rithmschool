@@ -18,7 +18,7 @@ examples:
 */
 
 // an array of numbers that you want to round to the nearest while number:
-var decimals = [1.1, 1.6, 2.8, 0.4, 3.5, 1.6];
+let decimals = [1.1, 1.6, 2.8, 0.4, 3.5, 1.6];
 
 console.log(decimals);
 /* 
@@ -57,24 +57,24 @@ for (initializer, condition, counter) {}
 
 - counter - change the variables initialized (increasing or decreasing them)
 */
-for(var i=0; i<5; i++) {
+for(let i=0; i<5; i++) {
 	console.log(i);
 }
 
 console.log("");
 
-for(var j=0; j<10; j+=3) {
+for(let j=0; j<10; j+=3) {
 	console.log(j);
 }
 
 console.log("\n\n\n");
 
-var decimals = [1.1, 1.6, 2.8, 0.4, 3.5, 1.6];
+let decimals1 = [1.1, 1.6, 2.8, 0.4, 3.5, 1.6];
 
-for (var i = 0; i < decimals.length; i++) {
-	console.log("Original decimals: " + decimals[i]);
-	decimals[i] = Math.round(decimals[i]);
-	console.log("Using Math.round to get: " + decimals[i] + "\n");
+for (let i3 = 0; Int32Array < decimals1.length; i3++) {
+	console.log("Original decimals: " + decimals1[i3]);
+	decimals1[i3] = Math.round(decimals1[i3]);
+	console.log("Using Math.round to get: " + decimals1[i3] + "\n");
 }
 
 
@@ -88,22 +88,22 @@ console.log(" ");		//  SPACER  SPACER  SPACER  SPACER  SPACER  SPACER
 - while loops only take a condition.  This means that you need to handle initializatin before the loop, and incrementing/decrementing inside of the loop.
 - if you forget to increment/decrement inside the loop, the loop will never terminate; infinite loop
 */
-var i = 0;
-while(i < 5) {
-	console.log(i);
-	i++;
+let i4 = 0;
+while(i4 < 5) {
+	console.log(i4);
+	i4++;
 }
 
 
 // rewrite of rounding example to use a while loop:
-var decimals = [1.1,1.6,2.8,0.4,3.5,1.6];
-var i = 0;
+let decimals2 = [1.1,1.6,2.8,0.4,3.5,1.6];
+let i5 = 0;
 
-while(i < decimals.length) {
-	console.log("Original decimal: " + decimals[i]);
-	decimals[i] = Math.round(decimals[i]);
-	console.log("Decimal rounded out: " + decimals[i] + "\n");
-	i++;
+while(i5 < decimals2.length) {
+	console.log("Original decimal: " + decimals2[i5]);
+	decimals2[i5] = Math.round(decimals2[i5]);
+	console.log("Decimal rounded out: " + decimals2[i5] + "\n");
+	i5++;
 }
 
 	console.log(" ");
@@ -115,26 +115,26 @@ while(i < decimals.length) {
 /* 
 - similar to while loops; this specify our condition at the end
 */
-var i = 0;
+let i6 = 0;
 do {
-	console.log(i);
-	i++;
-} while(i < 5);
+	console.log(i6);
+	i6++;
+} while(i6 < 5);
 
 
 console.log(" ");
 
 // - main difference is the do...while loop is guaraneed to execute at least once... examples:
-var i = 0; 
-while(i < 0) {
-	console.log(i);
-	i++;
+let i7 = 0; 
+while(i7 < 0) {
+	console.log(i7);
+	i7++;
 }
 
 console.log("The while loop cannot execute if it is not true");
 
 // the code inside the block runs once, before the while condition is checked
-var j = 0;
+let j = 0;
 do {
 	console.log("This do...while is executed at least once (see code in .js)");
 	console.log(j);
@@ -146,38 +146,38 @@ do {
 console.log();
 
 // how we could rewrite our rounding example to use do...while loop:
-var decimals = [1.1,1.6,2.8,0.4,3.5,1.6];
-var i = 0;
+let decimals3 = [1.1,1.6,2.8,0.4,3.5,1.6];
+let i = 0;
 
 do {
-	console.log("Original: " + decimals[i]);
-	decimals[i] = Math.round(decimals[i]);
-	console.log("Rounded: " + decimals[i] + "\n");
+	console.log("Original: " + decimals3[i]);
+	decimals3[i] = Math.round(decimals3[i]);
+	console.log("Rounded: " + decimals3[i] + "\n");
 	i++;
-} while(i < decimals.length);
+} while(i < decimals3.length);
 
 console.log("");
 
 // Exiting out of loops
 // sometimes we want to "exit a loop before it has finished".  To do that, use the word "break"
-for(var i = 0; i < 5; i++) {
+for(let i8 = 0; i8 < 5; i++) {
 	if(Math.random() > 0.5) {
-		console.log("Breaking out of the loop when i is " + i);
+		console.log("Breaking out of the loop when i is " + i8);
 		break;
 	} else {
-		console.log("Within loop: " + i);
+		console.log("Within loop: " + i8);
 	}
 }
 
 console.log();
 
 // we can also skip the current iteration and "continue the loop at the next step in the iteration" by using the word continue
-for(var i = 0; i < 5; i++) {
+for(let i2 = 0; i2 < 5; i2++) {
 	if(Math.random() > 0.5) {
-		console.log("skipping the console.log when i is " + i);
+		console.log("skipping the console.log when i is " + i2);
 		continue;
 	} else {
-		console.log("Within loop: " + i);
+		console.log("Within loop: " + i2);
 	}
 }
 
@@ -194,10 +194,10 @@ arrays and strings, compare/contrast theses two data types.  They have some simi
 /*
 just like we can iterate over arrays(and objects), we can also iterate over strings!  Since strings have a length property, we always know at what point to stop looping, just like with arrays.  Example:
 */
-var name = "elie";
+let name = "elie";
 
-for(var i=0; i < name.length; i++) {
-	console.log(name[i]);
+for(let i9 =0; i9 < name.length; i9++) {
+	console.log(name[i9]);
 }
 
 console.log("");
@@ -208,31 +208,31 @@ console.log("");
 /*
 many times you will need to manipulate a string and turn it into an array.  To split a string into an array you can use the split method and pass in a delimiter value.
 */
-var string = "hello world";
+let string = "hello world";
 console.log(string.split(""));
 console.log(string.split(" "));
 
 console.log("\n\n\n");
 // if you pass a delimiter into the split method, the delimiter values will be removed from the array:
-var dashedString = "lots-of-dashes-here";
-var removedDashes = dashedString.split("-");
+let dashedString = "lots-of-dashes-here";
+let removedDashes = dashedString.split("-");
 console.log(removedDashes);
 
 
 console.log("");
 
 // we can then join the array using the join method to bring it back to a string.  You can think of the split as doing the opposite of what join does.
-var dashedString = "lots-of-dashes-here";
-console.log(dashedString);
+let dashedString2 = "lots-of-dashes-here";
+console.log(dashedString2);
 
-var removedDashes = dashedString.split("-").join(" ");
-console.log(removedDashes); 
+let removedDashes1 = dashedString2.split("-").join(" ");
+console.log(removedDashes1); 
 
 console.log("");
 
 // Mutability
 // we've seen how you can update array values by simply accessing an array element and assigning it to a new value:
-var arr = ["hi", "bye"];
+let arr = ["hi", "bye"];
 arr[0] = "hello";
 console.log(arr);
 
@@ -240,13 +240,13 @@ console.log(arr);
 console.log("");
 
 // you can also access characters in strings using bracket notation:
-var name = "Matt";
-console.log(name[0]);
+let name0 = "Matt";
+console.log(name0[0]);
 
 // however, unlike with arrays, you can't reassign the value of a character in a string.  if you try JavaScript will simply ignore you:
-var name = "Kingsley";
-name[0] = "k";
-console.log(name[0]);
+let name1 = "Kingsley";
+name1[0] = "k";
+console.log(name1[0]);
 
 /* 
 This distinction between arrays adn strings highlights a concept called mutability.  

@@ -10,7 +10,7 @@ console.log("----- Looping over Objects -----");
 // individual printing of all values in an object, one per line
 console.log("");
 
-var obj = {
+let obj = {
 	firstName: "Kingsley",
 	lastName: "Cross",
 	favoriteColor: "green",
@@ -33,7 +33,7 @@ console.log("----- Looping over the keys in an object -----");
 console.log("----- for in loop -----");
 console.log("");
 
-var instructor = {
+let instructor = {
 	name: "Matt",
 	mathWizard: true,
 	dogOwner: true
@@ -45,7 +45,7 @@ var instructor = {
 - to access the key's value, we must use the bracket notation
 - NOTE: Seems like we can use any variable name
 */
-for(var singleKey in instructor) {
+for(let singleKey in instructor) {
 	console.log(instructor[singleKey]);
 }
 
@@ -58,15 +58,15 @@ console.log("----- if in loop -----");
 // sometimes we just want to check and see if a certain key exists in an object
 console.log("");
 
-var obj = {
+let obj2 = {
 	favoriteNumber: 33,
 	favoriteColor: 'blue'
 };
 
-if ("favoriteNumber" in obj) {
+if ("favoriteNumber" in obj2) {
 	console.log("The favoriteNumber key exists!");
 }
-if ("nothing" in obj) {
+if ("nothing" in obj2) {
 	console.log("The nothing key exists!");
 } else {
 	console.log("The nothing key actually doesn't exists!");
@@ -79,7 +79,7 @@ console.log("\n\n\n\n\n");
 console.log("----- Exercises -----");
 console.log("");
 
-var namesAndHobbies = {
+let namesAndHobbies = {
 	elie: "JavaScript",
 	matt: "jogging",
 	janey: "table building",
@@ -95,7 +95,7 @@ table building => janey
 sailing => tim
 */
 // so the created variable singleKey, or any named variable within the for in, is assigned to each key...
-for (var singleKey in namesAndHobbies) {
+for (let singleKey in namesAndHobbies) {
 	console.log(namesAndHobbies[singleKey] + " => " + singleKey);
 }
 
