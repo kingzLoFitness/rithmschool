@@ -19,11 +19,11 @@ What is a Function?
 -- functions we saw in action: "push and pop" that are functions that operate on an array
 */
 
-var arr = [5,4,3,2,1];
+let arr = [5,4,3,2,1];
 console.log(arr);
 console.log();
 
-var poppedVAlue = arr.pop();
+let poppedVAlue = arr.pop();
 console.log(arr);
 console.log(poppedVAlue);
 
@@ -31,7 +31,7 @@ console.log(poppedVAlue);
 console.log("");
 
 
-// there are multiple ways towrite functions in JavaScript
+// there are multiple ways to write functions in JavaScript
 console.log("--------- Declaring Functions -----");
 console.log("");
 
@@ -94,8 +94,8 @@ console.log(firstFunction());
 console.log("\n\n");
 
 // another way is to use a variable
-var returnValue = firstFunction();
-console.log("With use of var to equal a function, you can call the variable: ", returnValue);
+let returnValue = firstFunction();
+console.log("With use of let to equal a function, you can call the variable: ", returnValue);
 
 
 console.log("");
@@ -116,15 +116,32 @@ console.log("");
 console.log("------ Conditional Logic with Return Statements -----");
 console.log("");
 
+
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+console.log("$$$$$$$$$$$$$$$$$$ GET BACK TO THIS $$$$$$$$$$$$$$$$$$$");
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 // with boolean logic (if a random number)
 function isOverPointFive() {
 	if (Math.random() > .5) {
+		// get info of Math.random()
+		let randNumber = Math.random();
+		console.log(randNumber);
 		return true;
 	} else {
+		// get info of Math.random()
+		let randNumber = Math.random();
+		console.log(randNumber);
 		return false;
 	}
 }
+
+console.log(Math.random());
 console.log(isOverPointFive());
+
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
 
 
 /* 
@@ -174,7 +191,7 @@ console.log("");
 
 // write a function called myName that logs your full name.  Save your full name to a variable inside of the function body, then use console.log to print your name to the console.
 function myName() {
-	var fullName = "Kingsley Cross";
+	let fullName = "Kingsley Cross";
 	return fullName;
 }
 
@@ -185,8 +202,8 @@ console.log();
 
 
 // Create an array called favoriteFoods which contains the strings "pizza" and "icecream"
-var favoriteFoods = ["pizza", "icecream"];
-console.log("These are my favorite foods: " + favoriteFoods);
+let favoriteFoods = ["pizza", "icecream"];
+console.log("These are my favorite foods: ", favoriteFoods);
 console.log(favoriteFoods);
 
 // write a function called randomFood.  The function should use Math.random to randomly choose a favorite food in your favoriteFoods array to return.  For example, your function will return either pizza or ice cream, depending on what you get back from Math.random
@@ -203,7 +220,7 @@ console.log();
 
 
 // create a variable called numbers which is an array that contains the numbers 1 - 10
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 console.log(numbers);
 console.log();
 
@@ -215,6 +232,18 @@ function displayOddNumbers() {
 		console.log(numbers[i]);
 	}
 }
+
+
+console.log("###################################");
+console.log("############### THIS IS only a test ####################");
+console.log("###################################");
+
+console.log(0 % 2);		// 0
+console.log(1 % 2);		// 1
+console.log(2 % 2);		// 0
+console.log(3 % 2);		// 1
+
+console.log("###################################");
 
 displayOddNumbers();
 console.log("");
@@ -295,22 +324,22 @@ Solutions
 myName
 
 function myName(){
-    var myName = 'Elie Schoppik';
+    let myName = 'Elie Schoppik';
     console.log(myName);
 }
 randomFood
 
-var favoriteFoods = ['pizza', 'ice cream'];
+let favoriteFoods = ['pizza', 'ice cream'];
 function randomFood(){
     // lets find a random number between 0 and 1 and multiply it by the length of the array. This will give us a number between 0 and 2. If we always round down, we will get either 0 or 1, so we can use Math.floor to round down.
-    var randomIndex = Math.floor(Math.random() * favoriteFoods.length);
+    let randomIndex = Math.floor(Math.random() * favoriteFoods.length);
     console.log(favoriteFoods[randomIndex]);
 }
 displayOddNumbers
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function displayOddNumbers(){
-    for(var i = 0; i < numbers.length; i++){
+    for(let i = 0; i < numbers.length; i++){
         // if the value we are at in the array is not divisible by 2 (it's an odd number)
         if(numbers[i] % 2 !== 0){
             // print out that value!
@@ -320,9 +349,9 @@ function displayOddNumbers(){
 }
 displayEvenNumbers
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function displayEvenNumbers(){
-    for(var i = 0; i < numbers.length; i++){
+    for(let i = 0; i < numbers.length; i++){
         // if the value we are at in the array is divisible by 2 (it's an even number)
         if(numbers[i] % 2 === 0){
             // print out that value!
@@ -332,9 +361,9 @@ function displayEvenNumbers(){
 }
 returnFirstOddNumber
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function returnFirstOddNumber(){
-    for(var i = 0; i < numbers.length; i++){
+    for(let i = 0; i < numbers.length; i++){
         if(numbers[i] % 2 !== 0){
             // print out that value, using return gets us out of the function!
             return numbers[i];
@@ -343,9 +372,9 @@ function returnFirstOddNumber(){
 }
 returnFirstEvenNumber
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function returnFirstEvenNumber(){
-    for(var i = 0; i < numbers.length; i++){
+    for(let i = 0; i < numbers.length; i++){
         if(numbers[i] % 2 === 0){
             // print out that value!
             return numbers[i];
@@ -354,13 +383,13 @@ function returnFirstEvenNumber(){
 }
 returnFirstHalf
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function returnFirstHalf(){
     return numbers.slice(0,numbers.length/2);
 }
 returnSecondHalf
 
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 function returnSecondHalf(){
     return numbers.slice(numbers.length/2);
 }

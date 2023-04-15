@@ -2,15 +2,15 @@ console.log("------ Function Parameters and Scope -----");
 console.log("");
 /*
 Objectives
-- define what a parameter is and why they are essential when writing funcitons
+- define what a parameter is and why they are essential when writing functions
 - compare and contrast global and function scope
-- understand what happens when variables are declared without the var keyword
+- understand what happens when variables are declared without the let keyword
 */
 
 console.log("----- Function Parameters -----");
 // input in our functions
 // calculate the sum of two numbers
-console.log(5+5);
+console.log(5 + 5);
 console.log();
 
 
@@ -22,7 +22,7 @@ console.log();
 
 // function with parameters within parenthesis.  returns the parameters that are executed within the function
 function add(number1, number2) {
-    return number1 + number2;
+	return number1 + number2;
 }
 
 // this is the function that is being called.  Let's say the end user adds this in.  so there must be a way to call within HTML and or CSS.??????????????
@@ -30,8 +30,8 @@ console.log(add(1, 5));
 console.log();
 
 // similar to above function created.  It is a function recieving information from the function call
-function add(a,b) {
-    return a + b;
+function add(a, b) {
+	return a + b;
 }
 
 /*
@@ -45,8 +45,8 @@ console.log();
 
 // invoking the add function with paramters.  A parameter can be a literal number like we have above or we could even use variables
 
-var num1 = 5;
-var num2 = 8;
+let num1 = 5;
+let num2 = 8;
 console.log("Adding 2 variables that has numbers in it: \n" + add(num1, num2));
 console.log();
 
@@ -64,19 +64,19 @@ scope - the context in which values and expressions are 'visible', or can be ref
 - global and function
 
 important takeaways:
-1. all variables that are defined outside of functions (and inside of function without the var keyword) are declared in the global scope, and 
+1. all variables that are defined outside of functions (and inside of function without the let keyword) are declared in the global scope, and 
 2. all variables defined inside of functions can only be accessed by these functions (and any inner functions)
 */
 
 
 // Example: a regular variable  
-var globalVariable = "I live in the global scope";
+let globalVariable = "I live in the global scope";
 
 // variable within a function
 function makeNewScope() {
 	// speaks for itself
-    var functionScopeVariable = "I live in the scope of the makeNewScope function";
-    return functionScopeVariable;
+	let functionScopeVariable = "I live in the scope of the makeNewScope function";
+	return functionScopeVariable;
 }
 
 
@@ -107,14 +107,14 @@ This is defined, but within the function makeNewScope(), giving the error "Refer
 
 
 /* Since this variable declaration is in the global scope, it will
-be a global variable with or without the var keyword.  It is a best
-practice to always use the var keyword though. */
+be a global variable with or without the let keyword.  It is a best
+practice to always use the let keyword though. */
 globalVariable = "I live in the global scope";
 
 function makeNewScope2() {
 	/* You do not want to do this in practice.  You should
-    always defined your variables with the var keyword. */	
-    functionScopeVariable = "What happens now?";
+	always defined your variables with the let keyword. */
+	functionScopeVariable = "What happens now?";
 	return functionScopeVariable;
 }
 
@@ -124,35 +124,35 @@ globalVariable;
 console.log("Global variable (outside of function), being called: " + globalVariable);
 
 makeNewScope2();
-console.log("Calling function with local variable (without var keyword)within function: " + makeNewScope2());
+console.log("Calling function with local variable (without let keyword)within function: " + makeNewScope2());
 
 
 // this code is used within the console of the browser
 functionScopeVariable;
 
 // this code is used within the Sublime Text Console
-console.log("Calling the local variable (without var keyword) within the same function: " + functionScopeVariable);
+console.log("Calling the local variable (without let keyword) within the same function: " + functionScopeVariable);
 
 
 
 
 
-/* If we omit the var keyword inside of a function, we actually declare that variable in the global scope. While this may seem like the way to go, this is not best practice. 
+/* If we omit the let keyword inside of a function, we actually declare that variable in the global scope. While this may seem like the way to go, this is not best practice. 
 
 If we need to change some variable in a function, we should at least declare it in the global scope and assign it in a function so that our code is more readable. */
 
-var globalVariable = "I live in the global scope";
+let globalVariable1 = "I live in the global scope";
 
 // we declare the variable now, it's value is undefined
-var globalVariableToBeChanged;
+let globalVariableToBeChanged;
 
 function makeNewScope3() {
 	globalVariableToBeChanged = "Undefined no more";
 	// return globalVariableToBeChanged;
-} 
+}
 
 console.log("\n\nThird function scope example");
-console.log(globalVariable);
+console.log(globalVariable1);
 console.log(makeNewScope3());	// now this will assign a new value to the globalVariableToBeChanged!
 console.log(globalVariableToBeChanged);
 
@@ -176,30 +176,30 @@ console.log("----- Exercises -----");
 
 // make a function for add / subtract / multiply / divide
 function add(a, b) {
-	return a + b; 
+	return a + b;
 }
 
-console.log(add(2,2)); // 4
+console.log(add(2, 2)); // 4
 
 
 function subtract(a, b) {
 	return a - b;
 }
 
-console.log(subtract(2,2)); // 0
+console.log(subtract(2, 2)); // 0
 
 
 function multiply(a, b) {
 	return a * b;
 }
 
-console.log(multiply(2,2)); // 4
+console.log(multiply(2, 2)); // 4
 
 function divide(a, b) {
 	return a / b;
 }
 
-console.log(divide(2,2)); // 1
+console.log(divide(2, 2)); // 1
 
 console.log("\n\n\n");
 
@@ -220,7 +220,7 @@ console.log("\n\n\n");
 - if the parameter passed to the function is your first name, it should return "Hello Boss", 
 - but if the parameter passed to the function is any other name, it should return the string "Hello" and the name parameter
 */
-var firstName = "Tim";
+let firstName = "Kingsley";
 
 function sayHello(name) {
 	if (name === firstName) {
@@ -231,8 +231,8 @@ function sayHello(name) {
 }
 
 
-// for this example, my first name is Tim
-sayHello("Tim"); // "Hello Boss"
+// for this example, my first name is Kingsley
+sayHello("Kingsley"); // "Hello Boss"
 sayHello("Janey"); // "Hello Janey"
 sayHello("Elie"); // "Hello Elie"
 
@@ -251,15 +251,15 @@ console.log("\n\n\n");
 
 /*
 - Write a function called average which accepts an array as a parameter
-- the function should return the average of all of the numbers in the array (you can assume that the array passed to the funciton will contain only numbers)
+- the function should return the average of all of the numbers in the array (you can assume that the array passed to the function will contain only numbers)
 */
 
 function average(arr) {
-/*	avgNum = (a + b + c + d + e + f) / 2;
-	console.log(avgNum);
-	return avgNum; 
-*/
-	var total = 0;
+	/*	avgNum = (a + b + c + d + e + f) / 2;
+		console.log(avgNum);
+		return avgNum; 
+	*/
+	let total = 0;
 
 	for (i = 0; i < arr.length; i++) {
 		total += arr[i];
@@ -268,10 +268,10 @@ function average(arr) {
 	return total / arr.length;
 }
 
-
-average([1,2,3,4,5]); // 3
-average([1,2,3,4,5,6]); // 3.5
-average([10,20]); // 15
+console.log("function average(aar)");
+average([1, 2, 3, 4, 5]); // 3
+average([1, 2, 3, 4, 5, 6]); // 3.5
+average([10, 20]); // 15
 
 
 
@@ -294,7 +294,7 @@ Write a function called createStudent, which accepts two parameters both of whic
 */
 
 // my version
-var myName = {};
+let myName = {};
 
 function createStudent(firstName, lastName) {
 	myName.firstName = firstName;
@@ -321,14 +321,14 @@ function createStudent1(firstName, lastName) {
 	return {
 		firstName: firstName,
 		lastName: lastName
-	}  
+	}
 }
 
 console.log(createStudent1("Seriah", "Cross"));
 console.log("\n\n\n");
 
 // also can create it like this, as done in next instruction of code
-var seriah = createStudent1("Seriah", "Cross");
+let seriah = createStudent1("Seriah", "Cross");
 
 
 
@@ -337,15 +337,15 @@ var seriah = createStudent1("Seriah", "Cross");
 your students array should contain three objects each with the keys of firstName and lastName. If they do not - make sure you correctly implement the createStudent function from above!
 */
 
-var tim = createStudent1("Tim", "Garcia");
-var matt = createStudent1("Matt", "Lane");
-var elie = createStudent1("Elie", "Schoppik");
+let tim = createStudent1("Tim", "Garcia");
+let matt = createStudent1("Matt", "Lane");
+let elie = createStudent1("Elie", "Schoppik");
 
-var students = [seriah, tim, matt, elie];
+let students = [seriah, tim, matt, elie];
 
 console.log(students);
 
-console.log("\n\ntesting the students array\n" , students);
+console.log("\n\ntesting the students array\n", students);
 
 
 
@@ -376,7 +376,7 @@ this is where I left off and have to dive deep into it.  Even to look back on ar
 
 - I'm guessing I am to use ignoreCase
 - example in MDN
-	var regex = new RegExp('foo', 'i');
+	let regex = new RegExp('foo', 'i');
 
 	console.log(regex.ignoreCase); 	// true
 
@@ -386,15 +386,15 @@ this is where I left off and have to dive deep into it.  Even to look back on ar
 // NOTE: double check on functions with parameters again
 
 function findStudentByFirstName(name) {
-	// var searchStudent = new RegExp('students[i]', 'i');
+	// let searchStudent = new RegExp('students[i]', 'i');
 	/*
 	another way to write this "RegExp" as shown in MDN here:
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 	*/
 
-	for (var i = 0; i <= students.length-1; i++) {
-		
-		var searchStudent = /students[i]/i;
+	for (let i = 0; i <= students.length - 1; i++) {
+
+		let searchStudent = /students[i]/i;
 
 		if (searchStudent.ignoreCase == students) {
 			console.log(name + " is a student here");
@@ -479,15 +479,15 @@ Write a function called countEvensAndOdds which accepts an array as a parameter.
 countEvensAndOdds([1,2,3,4]);
 /* 
  {
-    oddCount:2,
-    evenCount:2
+	oddCount:2,
+	evenCount:2
  }
 */
 /* countEvensAndOdds([1,2,3,4,5,6,7]); */
 /* 
  {
-    oddCount:4,
-    evenCount:3
+	oddCount:4,
+	evenCount:3
  }
 */
 
@@ -513,19 +513,19 @@ In the following example, what will be printed in the console? Make sure you fir
 
 
 CODE:
-var myVar = "Hello from global";
+let myVar = "Hello from global";
 
 function scopePractice() {
-   var myVar = "Hello from function scope";
+   let myVar = "Hello from function scope";
 }
 
 scopePractice();
 console.log(myVar);
 
-var tricky = "Hello from global";
+let tricky = "Hello from global";
 
 function trickyScopePractice() {
-    tricky = "Hello from function scope";
+	tricky = "Hello from function scope";
 }
 
 console.log(tricky);

@@ -105,7 +105,7 @@ guess === "7" ? console.log("Correct!") : console.log("Incorrect!  String and nu
 
 
 let number1 = 3;
-let comparison = number > 0 ? "Greater than 0" : "Less than or equal to 0";
+let comparison = number1 > 0 ? "Greater than 0" : "Less than or equal to 0";
 console.log(comparison);
 console.log(" ");		
 
@@ -150,7 +150,7 @@ switch(feeling) {
 		console.log("Me too, let's go eat some pizza!");
 		break;
 	default:
-		console.log("I see.  Thanks for sharing!");
+		console.log("I see.  Thanks for sharing nothing!");
 }
 
 console.log("\n\n\n\n");		
