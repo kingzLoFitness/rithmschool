@@ -256,3 +256,20 @@ This distinction between arrays adn strings highlights a concept called mutabili
 -- any operation which changes characters in a string acutally produces a new string, rather than mutating the original string.  More on it here: https://www.sitepoint.com/immutability-javascript/
 */
 
+
+
+
+
+
+
+console.log("\n\n\n");
+
+// capture the array of i
+// i change to weightTraining
+let weightTraining = [];
+
+for (let i = 1; i<; i++) {
+	console.log(weightTraining[i]);
+}
+
+console.log(weightTraining.length);

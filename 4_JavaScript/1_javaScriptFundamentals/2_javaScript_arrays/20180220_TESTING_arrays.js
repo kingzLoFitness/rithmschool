@@ -1,4 +1,4 @@
-console.log("TESTING... \nTESTING... \nArray in Rows...");
+console.log("TESTING... \nTESTING... \nArray in Rows (multidimensioal arrays 2 dimensional)...");
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
 var row0 = [[0,0],[0,1],[0,2],[0,3],[0,4]];
 

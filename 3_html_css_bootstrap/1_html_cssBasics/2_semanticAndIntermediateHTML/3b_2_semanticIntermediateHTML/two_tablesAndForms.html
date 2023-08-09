@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forms</title>
+</head>
+<body>
+    <!-- Building Semantic HTML Tables 
+    <table> - encompasses the entire table and wraps all of your HTML code for a table
+
+    <tr> - table row element defines a row of cells which can include td and/or th tags
+
+    <th> - table header defines a cell as the 'header" for group of cells.  Traditionally placd inside of a thead tag.
+
+    <td> - table data tag defines a cell of a table that contains some data.
+
+    <thead> - table head tag defines a set of rows which dfine th column of a table
+
+    <tbody> (defined from MDN) - the table body element defines one or more <tr> element data-rows to be the body of its parent <table> element (as long as no <tr> elements are immediate children of that table element.)  In conjuction with the preceding <thead> and/or <tfoot> element, <tbody provides additional semantic information for devices such as printers and displays.  Of the parent table's child elements, <tbody> represents the content which, when linger than a page, will most likely differ for each page printed, while the content of <thead> and <tfoot> will be the same or similar for each page printed.  For displays, <tbody> will enaable separate scrolling of the <thead>, <tfoot> and <caption> elements of the same <table> element.
+
+    <tfoot> - defines a set of rows summarizing the colums of the table.
+    
+    -->
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>heading</th>
+                <th>heading</th>
+                <th>heading</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>conent</td>
+                <td>conent</td>
+                <td>conent</td>
+            </tr>
+            <tr>
+                <td>conent</td>
+                <td>conent</td>
+                <td>conent</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>conent</td>
+                <td>conent</td>
+                <td>conent</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Building HTML Forms 
+        - also will be used quite a bit in Server-side Programming.
+        - we use forms to transmit data to other pages and servers
+        - they allow users to send data to the wweb site. Most of the time that data is sent to the web server, but the web page can also intercept it on its own.
+
+        - An HMTL Form is made of one or more widgets.  Those widgets can be text fields (single line or multi line), select boxes, buttons, check boxes, or radio buttons.  Most of the time, those widgets are paired with a label that describes their purpose.
+
+        - Form tag has an action attribute (where the form shoiuld go when submitted).  We will use the # as the value of this attribute to signify that the form shoiuld not go anywhere.  Forms also have another essential atribute called method which specifies how the form should be submitted(but don't worry about this one, we'll talk more about it later.)
+
+        - widgets also known as inputs, which can be paired with a lable to describe their purpose.  
+    -->
+
+    <form action="">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="passwor">
+        </div>
+
+        <div>
+            <label>Favorite Instructor</label>
+            <label for="elie">Elie</label>
+            <input type="radio" name="favorite_instructor" id="elie">
+            <label for="matt">Matt</label>
+            <input type="radio" name="favorite_instructor" id="matt">
+            <label for="matt">Tim</label>
+            <input type="radio" name="favorite_instructor" id="tim">
+        </div>
+
+        <div>
+            <label>Favorite Programming Languages</label>
+            <label for="ruby">Ruby</label>
+            <input type="checkbox" name="favorite_language" value="Ruby" id="ruby">
+
+            <label for="ruby">JavaScript</label>
+            <input type="checkbox" name="favorite_language" value="JavaScript" id="javascriopt">
+
+            <label for="ruby">Python</label>
+            <input type="checkbox" name="favorite_language" value="Python" id="python">
+
+            <label for="ruby">Go</label>
+            <input type="checkbox" name="favorite_language" value="Go" id="go">
+        </div>
+
+    </form>
+
+
+
+</body>
+</html>

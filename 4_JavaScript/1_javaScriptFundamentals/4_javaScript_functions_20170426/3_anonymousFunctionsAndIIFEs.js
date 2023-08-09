@@ -1,9 +1,9 @@
-console.log("------  -----");
+console.log("------ Anonymous Functions and IIFEs -----");
 console.log("");
 /*
 Objectives
-- Create a function expressoin
-- Write immediately invoked function expression
+- Create Function Expressions
+- Write immediately invoked Function Expression
 - Describe some use cases for immediately invoked function expressions
 */
 
@@ -12,7 +12,7 @@ Objectives
 /* first is a function declaration:
 - has a function name
 */
-function functionDeclaration () {
+function functionDeclaration() {
 	return "I am a function declaration";
 }
 
@@ -20,7 +20,7 @@ function functionDeclaration () {
 - does not assign a name to the function
 - also known as "ananymous functions"
 */
-var expression = function() {
+let expression = function() {
 	return "I am a function expression";
 }
 
@@ -43,8 +43,8 @@ IIFE: Immediately Invoked Function Expressions
 - (Note: the parenthesis around the function declaration are not optional! If you don't include them, you'll get a SyntaxError. You should verify this for yourself.)
 
 */
-var result = (function functionDeclaration() {
-	var person = "Kingsley";
+let result = (function functionDeclaration() {
+	let person = "Kingsley";
 	return person;
 })();
 
@@ -54,8 +54,10 @@ console.log();
 
 
 
-/* IFFEs that Return Objects */
-var personObject = (function() {
+/* IIFEs that Return Objects 
+- common 
+*/
+let personObject = (function() {
 	return {
 		name: "Kingsley", 
 		age: 39, 
@@ -76,7 +78,7 @@ console.log();
 
 
 // another example
-var personObject = (function invokeRightAway() {
+var personObject1 = (function invokeRightAway() {
 	var person = "Kingsley";
 	return {
 		getName: function() {
@@ -89,11 +91,14 @@ var personObject = (function invokeRightAway() {
 })();
 
 /* Now the "personObject" we get back won't have data for each key, but rather a function that we can execute whenever we like: */
-console.log(personObject.getName());		// Kingsley
-console.log(personObject.setName("Mary"));	// undefined
-console.log(personObject.getName());		// Mary 
+console.log(personObject1.getName());		// Kingsley
+console.log(personObject1.setName("Mary"));	// undefined
+console.log(personObject1.getName());		// Mary 
 /* this piece of code give an error (so I commented it out):
 - ReferenceError: person is not defined
 
 console.log(person); */
 console.log();
+
+
+

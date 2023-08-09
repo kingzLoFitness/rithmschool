@@ -72,7 +72,7 @@ console.log(woahhh[1]);
 
 
 
-// This is an ecsample via Mozilla on dimensional arrays
+// This is an example via Mozilla on dimensional arrays
 console.log("TESTING... \nTESTING... \nArray in Rows...");
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
 let row0 = [[0,0],[0,1],[0,2],[0,3],[0,4]];
@@ -229,6 +229,13 @@ console.log("------- Removing from arrays --------");
 console.log(" ");		
 
 
+// this code snippet updated: July 6, 2023
+// manually set the length of the array to a number smaller than its current length
+let arr13 = [1, 2, 3];
+arr.length = 2; // returns the new length 
+arr;  // [1,2]
+
+
 // pop - removes from the END of the array
 let arr7 = [1,2,3];
 console.log(arr7);
@@ -302,7 +309,7 @@ console.log("arr.splice(0,1);");
 console.log("Splicing 0,1 values from 1,2,3,4 gives you: \n[" + arr10 + "]");
 console.log("");
 
-
+console.log("\n\n\n*******************\n*******************");
 let arr11 = [1,2,3,4];
 
 console.log(arr11);
@@ -416,3 +423,52 @@ num.splice(1,3,9,8,7,6,5,4,3);
 console.log(num);
 console.log("");
 
+
+
+
+
+console.log("\n\nRemoving from arrays");
+// this code snippet updated: July 6, 2023
+// manually set the length of the array to a number smaller than its current length
+let arr14 = [1, 2, 3];
+arr14.length = 2; // returns the new lenth 
+arr14;  // [1,2]
+console.log(arr14);
+
+
+// i believe i can redelare original array : theory
+console.log("This is original arr array");
+console.log(arr);
+
+arr = [1, 2, 4, "kingsley"];
+console.log(arr);
+
+
+
+
+// 2023 July 6
+// 20230706 07062023
+// theory
+console.log("\n\nTheory / My examples");
+arr = [1, 2, 3, 4];
+arr.splice(0, 1); // returns [1]
+
+console.log(arr.splice(0, 1));
+
+let spliceChange = arr.splice(0, 1);
+console.log(spliceChange);
+arr; // [2, 3, 4]
+
+
+
+const months = ['Jan', 'March','April', 'June'];
+console.log(months);
+
+
+months.splice(1,0, 'Feb');
+// Inserts at index 1
+console.log(months);
+
+
+months.splice(4, 1, 'May');
+console.log(months);

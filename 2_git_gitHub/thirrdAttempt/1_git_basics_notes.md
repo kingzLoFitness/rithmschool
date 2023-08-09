@@ -142,7 +142,7 @@ Stack Overflow Post - https://stackoverflow.com/questions/572549/difference-betw
 - add files to th staging area, and commit them, complete these steps:
 1. Ceate a folder called learn_git 
 2. cd into the learn_git folder 
-3. create a file alled first.txt
+3. create a file called first.txt
 4. initialize and empty git repository
 5. add first.txt to the staging area
 6. Commit the message "adding first.txt"

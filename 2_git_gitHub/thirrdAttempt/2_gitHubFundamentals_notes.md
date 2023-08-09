@@ -89,7 +89,7 @@ The commands one by one:
 =
 5. > git remote add origin https://github.com/elie/first_repo.git
 - tells our local repository about a remote repository located somewhere
-- the location of remote repository
+- the location of remote repositoryg
 - now we can send our code to GitHub by typing:
 > git push https://github.com/elie/first_repo.git master
 or for short

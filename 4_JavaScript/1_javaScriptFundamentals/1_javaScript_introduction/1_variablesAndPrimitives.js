@@ -84,7 +84,10 @@ console.log(" ");
 
 /*
 6 Primative Data Types
-- JavaScript is known as a "weakly" typed language. What this means is that when you create variables and assign them to values, you do not have to specify the type of data you are working with. In statically (or strongly) typed languages, like Java and C++, you do need to specify the type.
+- JavaScript is known as a "weakly" typed language. 
+- What this means is that when you "create variables and assign them to values", 
+	- you do not have to specify the type of data you are working with. 
+	- In statically (or strongly) typed languages, like Java and C++, you do need to specify the type.
 */
 
 // string 
@@ -501,3 +504,10 @@ console.log(thing);
 
 
 
+// Convierting to a boolean: !!
+// Reason for this is to remind my self that 0 is false and 1 is true     
+console.log("\n\nConverting to a boolean: !!");
+let nothing1 = 1;
+console.log(nothing1);
+
+console.log("Converting 0 (number) in  nothing variable with !!nothing1: " + !!nothing1);

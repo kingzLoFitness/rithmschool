@@ -183,3 +183,19 @@ console.log(" \n\n\n\n\n");
 
 
 
+console.log(`Truthy or Falsey for !false: ${!false}`);
+console.log(`Truthy or Falsey for !!false: ${!!false}`);
+
+
+console.log(`Truthy or Falsey for !1: ${!1}`);
+console.log(`Truthy or Falsey for !!1: ${!!1}`);
+
+
+console.log(`Truthy or Falsey for !-1: ${!-1}`);
+console.log(`Truthy or Falsey for !!-1: ${!!-1}`);
+
+// GET BACK TO 
+
+
+
+
